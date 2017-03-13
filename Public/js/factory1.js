@@ -7,7 +7,9 @@ app.factory("dataFactory", function($http) {
   return {
     getLovedOneInfo: getLovedOneInfo,
     updateLovedOnes: updateLovedOnes,
-    addPerson: addPerson
+    addPerson: addPerson,
+    removePerson: removePerson,
+    alterPerson:alterPerson
   }
 
   function getLovedOneInfo() {
@@ -42,4 +44,29 @@ app.factory("dataFactory", function($http) {
     });
     return promise;
   }
-});
+
+  function removePerson(personid){
+    var promise = $http({
+      method: 'DELETE',
+      url:'/lovedones-delete/'+ personid
+    }).then(function successfulCallback(response){
+      lovedones = response.data;
+    }, function(error){
+      console.log(error);
+    });
+    return promise;
+    }
+
+  function alterPerson(newObject, personid){
+    var promise = $http({
+      method: 'PUT',
+      url:'/lovedones-edit/'+ personid,
+      data: newObject
+    }).then(function successfulCallback(response){
+      lovedones = response.data;
+    }, function(error){
+      console.log(error);
+    });
+    return promise;
+  }
+  });

@@ -8,14 +8,14 @@ app.config(function($routeProvider, $locationProvider){
   })
   .when('/main',{
     controller:'mainController',
-    templateUrl:'view/main.html'
+    templateUrl:'view/lovedOnes.html'
   })
   .when('/content',{
     controller:'contentController',
-    templateUrl:'view/content.html'
+    templateUrl:'view/medList.html'
   })
   .otherwise({ redirectTo: '/login' });
 
   $locationProvider.hashPrefix('');
-  
+
 });

@@ -10,15 +10,22 @@
 <article>
   <table>
     <tr>
+      <th>Delete</th>
       <th>Name</th>
       <th>Weight(lb)</th>
       <th>Age</th>
+      <th>Edit</th>
     </tr>
     <tr ng-repeat ="person in personList">
-      <button type="button" name="delete" ng-click="removeLovedOne(person.id)">X</button>
+      <td><button type="button" name="delete" ng-click="removeLovedOne(person.id)">X</button></td>
       <td>{{person.name}}</td>
       <td>{{person.weight}}</td>
       <td>{{person.age}}</td>
+
+      <td>  <input type "text" placeholder="Loved One's Name" ng-model="newObject.name"></td>
+      <td>  <input type "text" placeholder="Weight" ng-model="newObject.weight"></td>
+      <td>  <input type "number" placeholder="Age" ng-model="newObject.age"></td>
+      <td><button type="button" name="edit" ng-click="alterLovedOne(newObject, person.id)">Edit</button></td>
     </tr>
 </table>
 

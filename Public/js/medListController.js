@@ -1,6 +1,9 @@
 var app = angular.module("medMod");
-app.controller("contentController", function($scope){
+app.controller("contentController", function($scope, medFactory){
 
-  $scope.practice = "contentpage";
+  medFactory.getMedListInfo().then(function(){
+    $scope.medicine = medFactory.updateMedList();
+  });
+
 
 });

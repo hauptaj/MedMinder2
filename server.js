@@ -115,7 +115,23 @@ app.put('/lovedones-edit/:id', function(req, res, next) {
   });
 });
 
+app.get('/meds', function(req, res, next) {
+  var medList = [];
 
+  pg.connect(connectionString, function(err, client, done) {
+    var query = client.query('SELECT * FROM medicine');
+
+    query.on('row', function(row) {
+      medList.push(row);
+    });
+
+    query.on('end', function() {
+      console.log(medList);
+      client.end();
+      return res.json(medList);
+    });
+  });
+});
 
 
 

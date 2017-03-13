@@ -6,12 +6,33 @@
 <article>
 <h2>John Doe</h2>
 </article>
+
 <article>
-<p>Weight :175lb Age:85</p>
+  <table>
+    <tr>
+      <th>Delete</th>
+      <th>Name</th>
+      <th>Dosage</th>
+      <th>Time</th>
+      <th>Edit</th>
+    </tr>
+    <tr ng-repeat ="med in medicine">
+      <td><button type="button" name="delete">X</button></td>
+      <td>{{med.name}}</td>
+      <td>{{med.dosage}}</td>
+      <td>{{med.time}}</td>
+      <td>{{med.rxnumber}}</td>
+
+      <td>  <input type "text" placeholder="Medicine Name" ng-model="newMed.name"></td>
+      <td>  <input type "text" placeholder="Dosage" ng-model="newMed.dosage"></td>
+      <td>  <input type "number" placeholder="Time" ng-model="newMed.time"></td>
+      <td><button type="button" name="edit">Edit</button></td>
+    </tr>
+</table>
 <input type "text" placeholder="medicine">
-<input type "text" placeholder="Dose">
-<input type="number" placeholder="time(optional)"><br>
-<a href="medList.html"><button>Add</button></a>
+<input type "number" placeholder="Dose">
+<input type="text" placeholder="04:00 ex."><br>
+<button>Add</button>
 </article>
 </section>
 

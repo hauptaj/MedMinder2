@@ -15,17 +15,19 @@
       <th>Age</th>
     </tr>
     <tr ng-repeat ="person in personList">
+      <button type="button" name="delete" ng-click="removeLovedOne(person.id)">X</button>
       <td>{{person.name}}</td>
       <td>{{person.weight}}</td>
-      <td>{{person.dob}}</td>
+      <td>{{person.age}}</td>
     </tr>
 </table>
 
 
-  <input type "text" placeholder="Loved Ones Name" ng-model="">
-  <input type "text" placeholder="Weight">
-  <input type="date" placeholder="D.O.B"><br>
-  <a href="main.html"><button>Add New User</button></a>
+  <input type "text" placeholder="Loved One's Name" ng-model="object.name">
+  <input type "text" placeholder="Weight" ng-model="object.weight">
+  <input type="number" placeholder="Age" ng-model="object.age"><br>
+  <button ng-click="addLovedOne(object)">Add New Loved One</button>
+
 </article>
 </section>
 <h1>{{practice}}</h1>

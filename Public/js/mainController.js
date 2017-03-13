@@ -7,4 +7,10 @@ app.controller("mainController", function($scope, dataFactory){
     console.log($scope.personList);
   });
 
+  $scope.addLovedOne = function(object) {
+    dataFactory.addPerson(object).then(function() {
+      $scope.personList = dataFactory.updateLovedOnes();
+    });
+  };
+  
 });

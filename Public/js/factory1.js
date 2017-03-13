@@ -6,7 +6,8 @@ app.factory("dataFactory", function($http) {
 
   return {
     getLovedOneInfo: getLovedOneInfo,
-    updateLovedOnes: updateLovedOnes
+    updateLovedOnes: updateLovedOnes,
+    addPerson: addPerson
   }
 
   function getLovedOneInfo() {
@@ -14,7 +15,6 @@ app.factory("dataFactory", function($http) {
       method: 'GET',
       url: '/lovedones'
     }).then(function successfulCallback(response) {
-      console.log(response.data);
       lovedones = response.data;
     }, function(error) {
       console.log(error);
@@ -26,5 +26,20 @@ app.factory("dataFactory", function($http) {
     return lovedones;
   }
 
-
+  function addPerson(object) {
+    var promise = $http({
+      method: 'POST',
+      url: '/lovedones-add',
+      data: {
+        name: object.name,
+        weight: object.weight,
+        age: object.age
+      }
+    }).then(function successfulCallback(response) {
+      lovedones = response.data;
+    }, function(error) {
+      console.log(error);
+    });
+    return promise;
+  }
 });

@@ -13,8 +13,14 @@
   <img id="logo" src="assets/MedMinderLogoOutline.png" alt="Med Minder Logo">
 
   <script>
-  var vid = document.getElementById("my-Video");
-  vid.defaultPlaybackRate = 0.5;
+
+
+  (function setPlaySpeed(){
+    var vid = document.getElementById("my-video");
+    vid.playbackRate = 0.1;
+  }());
+
+
   </script>
 
 <video id="my-video" class="video" autoplay="autoplay" loop="loop" muted="" poster="assets/video_screenshot.png">

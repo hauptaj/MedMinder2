@@ -133,6 +133,75 @@ app.get('/meds', function(req, res, next) {
   });
 });
 
+app.post('/meds-add', function(req, res, next) {
+  var medList = [];
+  data = {
+    name: req.body.name,
+    dosage: req.body.dosage,
+    time: req.body.time
+  }
+
+  pg.connect(connectionString, function(err, client, done) {
+    client.query('INSERT INTO medicine(name, dosage, time) values($1, $2, $3)', [data.name, data.dosage, data.time]);
+    var query = client.query('SELECT * FROM medicine');
+
+    query.on('row', function(row) {
+      medList.push(row);
+    });
+
+    query.on('end', function() {
+      console.log(medList);
+      client.end();
+      return res.json(medList);
+    });
+  });
+});
+
+app.delete('/meds-delete/:id', function(req, res, next) {
+  var medList = [];
+  var id = req.params.id;
+
+  pg.connect(connectionString, function(err, client, done) {
+    client.query('DELETE FROM medicine WHERE id=($1)', [id]);
+    var query = client.query('SELECT * FROM medicine');
+
+    query.on('row', function(row) {
+      medList.push(row);
+    });
+
+    query.on('end', function() {
+      console.log(medList);
+      client.end();
+      return res.json(medList);
+    });
+  });
+});
+
+app.put('/meds-update/:id', function(req, res, next) {
+  var medList = [];
+  var id = req.params.id;
+  var data = {
+    name: req.body.name,
+    dosage: req.body.dosage,
+    time:req.body.time
+  };
+
+  pg.connect(connectionString, function(err, client, done) {
+    client.query('UPDATE medicine SET name=($1), dosage=($2), time=($3) WHERE id=($4)', [data.name, data.dosage, data.time, id]);
+    var query = client.query('SELECT * FROM medicine');
+
+    query.on('row', function(row) {
+      medList.push(row);
+    });
+
+    query.on('end', function() {
+      console.log(medList);
+      client.end();
+      return res.json(medList);
+    });
+  });
+});
+
 
 
 

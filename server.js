@@ -2,14 +2,17 @@ var express = require('express');
 var app = express();
 var pg = require('pg');
 var bodyParser = require('body-parser');
-var connectionString = 'postgres://postgres:Thanks2016@localhost:5432/postgres';
+var password = require('./password.js');
+var connectionString = 'postgres://frytujbxbeiurr:' + password + '@ec2-54-83-25-217.compute-1.amazonaws.com:5432/dftsp1o7v96h4p?ssl=true';
 var client = new pg.Client(connectionString);
 
+
+
 var config = {
-  user: 'postgres',
-  database: 'postgres',
-  password: 'Thanks2016',
-  host: 'localhost',
+  user: 'frytujbxbeiurr',
+  database: 'dftsp1o7v96h4p',
+  password: password,
+  host: 'ec2-54-83-25-217.compute-1.amazonaws.com',
   port: 5432,
   max: 100,
   idleTimeoutMillis: 30000

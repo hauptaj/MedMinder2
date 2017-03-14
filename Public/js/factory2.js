@@ -2,13 +2,17 @@ var app = angular.module("medMod");
 
 app.factory("medFactory", function($http){
   var medicine = [];
+  var newRx = 0;
 
   return {
     getMedListInfo: getMedListInfo,
     updateMedList: updateMedList,
     addMedicine: addMedicine,
     deleteMedicine: deleteMedicine,
-    updateMedicine: updateMedicine
+    updateMedicine: updateMedicine,
+    findRx: findRx,
+    updateRxNumber: updateRxNumber,
+    sendRxArray: sendRxArray
   }
 
   function getMedListInfo() {
@@ -16,7 +20,7 @@ app.factory("medFactory", function($http){
       method: 'GET',
       url:'/meds'
     }).then(function successfulCallback(response){
-      console.log(response);
+      // console.log(response);
       medicine = response.data;
     }, function(error){
       console.log("error");
@@ -34,7 +38,7 @@ app.factory("medFactory", function($http){
         time: med.time
       }
     }).then(function successfulCallback(response){
-      console.log(response);
+      // console.log(response);
       medicine = response.data;
     }, function(error){
       console.log("error");
@@ -47,7 +51,7 @@ app.factory("medFactory", function($http){
       method: 'DELETE',
       url:'/meds-delete/' + medId
     }).then(function successfulCallback(response){
-      console.log(response);
+      // console.log(response);
       medicine = response.data;
     }, function(error){
       console.log("error");
@@ -66,7 +70,7 @@ app.factory("medFactory", function($http){
         time: newMed.time
       }
     }).then(function successfulCallback(response){
-      console.log(response);
+      // console.log(response);
       medicine = response.data;
     }, function(error){
       console.log("error");
@@ -74,8 +78,58 @@ app.factory("medFactory", function($http){
     return promise;
   }
 
+
+
+  function findRx(medName){
+    var promise = $http({
+      method: 'GET',
+      url: 'https://rxnav.nlm.nih.gov/REST/rxcui.json?name=' + medName
+    }).then(function successfulCallback(response) {
+      var updateMed = {};
+      updateMed.name = medName;
+      updateMed.rxnumber = response.data.idGroup.rxnormId[0];
+      // updateRxNumber(updateMed);
+      newRx = Number(response.data.idGroup.rxnormId[0]);
+    }, function(error) {
+      console.log(error);
+    });
+    return promise;
+  }
+
+  function updateRxNumber(updateMed) {
+    var promise = $http({
+      method: 'PUT',
+      url:'/rx-add/',
+      data: {
+        name: updateMed.name,
+        rxnumber: updateMed.rxnumber
+      }
+    }).then(function successfulCallback(response){
+      // console.log(response);
+      medicine = response.data;
+    }, function(error){
+      console.log("error");
+    });
+    return promise;
+  }
+
+  function sendRxArray(medList){
+    var rxList = [];
+    rxList.push(newRx);
+    console.log(rxList);
+    for(var i = 0; i< medList.length; i++){
+      rxList.push(medList[i].rxnumber);
+    }
+    console.log(rxList);
+  }
+
   function updateMedList(){
+    console.log("updateMedList run");
     return medicine;
+  }
+
+  function getNewRx() {
+    return newRx;
   }
 
 });

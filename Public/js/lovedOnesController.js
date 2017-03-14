@@ -13,15 +13,16 @@ app.controller("mainController", function($scope, dataFactory){
     });
   };
 
-$scope.removeLovedOne = function(personid) {
-  dataFactory.removePerson(personid).then(function(){
-    $scope.personList = dataFactory.updateLovedOnes();
+  $scope.removeLovedOne = function(personid) {
+    dataFactory.removePerson(personid).then(function(){
+      $scope.personList = dataFactory.updateLovedOnes();
+      });
+  };
+
+  $scope.alterLovedOne = function(newObject, personid){
+    dataFactory.alterPerson(newObject, personid).then(function(){
+      $scope.personList = dataFactory.updateLovedOnes();
     });
   };
 
-$scope.alterLovedOne = function(newObject, personid){
-  dataFactory.alterPerson(newObject, personid).then(function(){
-    $scope.personList = dataFactory.updateLovedOnes();
-  });
-};
 });

@@ -30,8 +30,10 @@ body {
 }
 
 a {
+  display: inline-block;
   color: #888;
   text-decoration: none;
+  padding: 20px;
 }
 
 #logo {
@@ -52,5 +54,5 @@ a {
   min-height: 100%;
   width: auto;
   height: auto;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);*/
 }

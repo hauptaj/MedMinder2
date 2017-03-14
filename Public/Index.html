@@ -13,24 +13,18 @@
 </head>
 
 <body ng-app="medMod">
+
+  <header>
+    <img class="headerImg" src="assets/MedMinderLogo.png" alt="Med Minder Logo">
+  </header>
+
     <div class="content">
       <nav class="nav">
           <a href="#/login">Login</a>
           <a href="#/main">Loved Ones</a>
           <a href="#/content">Meds</a>
       </nav>
-
-      <img id="logo" src="assets/MedMinderLogoOutline.png" alt="Med Minder Logo">
-
     </div>
-
-        <video id="my-video" class="video" autoplay="autoplay" loop="loop" muted="" poster="assets/video_screenshot.png">
-          <source src="assets/Pills.mp4" type="video/mp4" />
-          <source src="assets/Pills.ogv" type="video/ogg" />
-          <source src="assets/Pills.webm" type="video/webm" />
-        </video>
-
-
 
 
     <div>
@@ -38,7 +32,7 @@
     </div>
 
     <footer>
-        <p>All content found on this app was created for a student project and is for information purposes only.</p>
+        <p id = "disclaimer">All content found on this app was created for a student project and is for information purposes only.</p>
     </footer>
 
     <script type="text/javascript" src="js/module.js"></script>
@@ -48,11 +42,7 @@
     <script type="text/javascript" src="js/factory1.js"></script>
     <script type="text/javascript" src="js/factory2.js"></script>
 
-    <script>
-    var vid = document.getElementById("myVideo");
-    vid.defaultPlaybackRate = 0.5;
-}
-    </script>
+
 </body>
 
 </html>

@@ -13,6 +13,24 @@ body {
 }
 
 /* =============================================================================
+  HEADER
+============================================================================= */
+
+header {
+  display: block;
+  background-color: #86acd4;
+  height: 100px;
+  width: 100%;
+  text-align: center;
+}
+
+.headerImg {
+  display: inline;
+  position: relative;
+  height: 100%;
+}
+
+/* =============================================================================
   CONTENT
 ============================================================================= */
 
@@ -56,4 +74,24 @@ a {
   width: auto;
   height: auto;
   transform: translate(-50%, -25%);
+}
+
+/* =============================================================================
+  FOOTER
+============================================================================= */
+
+footer {
+  background-color: #86acd4;
+  height: 30px;
+  width: 100%;
+  /*margin-bottom: 0px;*/
+  position: fixed;
+  display: block;
+  text-align: center;
+}
+
+#disclaimer {
+  color: white;
+  padding: 5px;
+  /*text-align: center;*/
 }

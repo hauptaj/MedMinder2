@@ -69,4 +69,5 @@ app.factory("dataFactory", function($http) {
     });
     return promise;
   }
-  });
+
+});

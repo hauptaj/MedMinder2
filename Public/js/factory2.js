@@ -114,6 +114,10 @@ app.factory("medFactory", function($http){
   }
 
   function sendRxArray(medList){
+    findDrugInteraction(setMasterList(medList));
+  }
+
+  function setMasterList(medList){
     var rxList = [];
     rxList.push(newRx);
     console.log(rxList);
@@ -121,6 +125,22 @@ app.factory("medFactory", function($http){
       rxList.push(medList[i].rxnumber);
     }
     console.log(rxList);
+    var list = rxList.join("+");
+    console.log(list);
+    return list;
+
+  }
+
+  function findDrugInteraction(list){
+    var promise = $http({
+      method: 'GET',
+      url:'https://rxnav.nlm.nih.gov/REST/interaction/list.json?rxcuis=' + list
+    }).then(function successfulCallback(response){
+      console.log(response);
+    }, function(error){
+      console.log("error");
+    });
+    return promise;
   }
 
   function updateMedList(){

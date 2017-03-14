@@ -12,6 +12,7 @@ app.factory("dataFactory", function($http) {
     alterPerson:alterPerson
   }
 
+//sending GET request from /lovedones url
   function getLovedOneInfo() {
     var promise = $http({
       method: 'GET',
@@ -24,6 +25,7 @@ app.factory("dataFactory", function($http) {
     return promise;
   }
 
+//return the information from GET request
   function updateLovedOnes() {
     return lovedones;
   }
@@ -57,6 +59,7 @@ app.factory("dataFactory", function($http) {
     return promise;
     }
 
+//initiates the PUT request to the server
   function alterPerson(newObject, personid){
     var promise = $http({
       method: 'PUT',

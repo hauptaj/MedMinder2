@@ -206,6 +206,29 @@ app.put('/meds-update/:id', function(req, res, next) {
 });
 
 
+app.put('/rx-add', function(req, res, next) {
+  var medList = [];
+
+  var data = {
+    name: req.body.name,
+    rxnumber: req.body.rxnumber
+  };
+
+  pg.connect(connectionString, function(err, client, done) {
+    client.query('UPDATE medicine SET rxnumber=($1) WHERE name=($2)', [data.rxnumber, data.name]);
+    var query = client.query('SELECT * FROM medicine');
+
+    query.on('row', function(row) {
+      medList.push(row);
+    });
+
+    query.on('end', function() {
+      console.log(medList);
+      client.end();
+      return res.json(medList);
+    });
+  });
+});
 
 
 

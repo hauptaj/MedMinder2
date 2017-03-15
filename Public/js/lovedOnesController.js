@@ -8,19 +8,21 @@ app.controller("mainController", function($scope, dataFactory){
     console.log($scope.personList);
   });
 
+//initiates POST request in the factory and passes object to add
   $scope.addLovedOne = function(object) {
     dataFactory.addPerson(object).then(function() {
       $scope.personList = dataFactory.updateLovedOnes();
     });
   };
 
+//initiates DELETE request in the factory and passes person id
   $scope.removeLovedOne = function(personid) {
     dataFactory.removePerson(personid).then(function(){
       $scope.personList = dataFactory.updateLovedOnes();
       });
   };
 
-//initates PUT request in the factory that updates the object at a specific id
+//initates PUT request in the factory and passes new object and person id
   $scope.alterLovedOne = function(newObject, personid){
     dataFactory.alterPerson(newObject, personid).then(function(){
       $scope.personList = dataFactory.updateLovedOnes();

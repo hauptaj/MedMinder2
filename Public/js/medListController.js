@@ -5,12 +5,6 @@ app.controller("contentController", function($scope, medFactory, $timeout, $loca
     $scope.medicine = medFactory.updateMedList();
   });
 
-  // $scope.addMed = function(med) {
-  //   medFactory.addMedicine(med).then(function() {
-  //     medFactory.findRx(med.name);
-  //   });
-  // }
-
   $scope.addMed = function(med){
     medFactory.findRx(med.name).then(function(){
       med.rxnumber = medFactory.getNewRx();

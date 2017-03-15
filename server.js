@@ -42,7 +42,7 @@ app.get('/lovedones', function(req, res, next) {
   });
 });
 
-//This function is how the server deals with a post request
+//This function is how the server deals with a post request for new loved ones
 app.post('/lovedones-add', function(req, res, next) {
   var list = [];
   var data = {
@@ -70,12 +70,14 @@ app.post('/lovedones-add', function(req, res, next) {
   });
 });
 
+//This function is how the server deals with a delete request for a loved one
 app.delete('/lovedones-delete/:id', function(req, res, next) {
     var list = [];
     var id = req.params.id;
 
+//connect with database
     pg.connect(connectionString, function(err, client, done) {
-
+      //DELETE from the table at specific Id
       client.query('DELETE FROM lovedones WHERE id=($1)', [id]);
 
       var query = client.query('SELECT * FROM lovedones');
@@ -92,6 +94,7 @@ app.delete('/lovedones-delete/:id', function(req, res, next) {
     });
 });
 
+//This function is how the server deals with a put request for a loved one
 app.put('/lovedones-edit/:id', function(req, res, next) {
   var list = [];
   var id = req.params.id;
@@ -118,6 +121,7 @@ app.put('/lovedones-edit/:id', function(req, res, next) {
     });
   });
 });
+
 
 app.get('/meds', function(req, res, next) {
   var medList = [];

@@ -13,8 +13,8 @@ app.factory("medFactory", function($http){
     deleteMedicine: deleteMedicine,
     updateMedicine: updateMedicine,
     findRx: findRx,
-    updateRxNumber: updateRxNumber,
-    sendRxArray: sendRxArray,
+    // updateRxNumber: updateRxNumber,
+    // sendRxArray: sendRxArray,
     getNewRx: getNewRx
   }
 

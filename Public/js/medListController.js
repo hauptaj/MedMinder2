@@ -13,7 +13,11 @@ app.controller("contentController", function($scope, medFactory, $timeout, $loca
 
   $scope.addMed = function(med){
     medFactory.findRx(med.name).then(function(){
-      medFactory.sendRxArray($scope.medicine);
+      med.rxnumber = medFactory.getNewRx();
+      medFactory.addMedicine(med).then(function() {
+        $scope.medicine = medFactory.updateMedList();
+      });
+
     });
   }
 
@@ -24,8 +28,11 @@ app.controller("contentController", function($scope, medFactory, $timeout, $loca
   }
 
   $scope.updateMed = function(newMed,medId) {
-    medFactory.updateMedicine(newMed,medId).then(function(){
-      $scope.medicine = medFactory.updateMedList();
+    medFactory.findRx(newMed.name).then(function(){
+      newMed.rxnumber = medFactory.getNewRx();
+      medFactory.updateMedicine(newMed,medId).then(function(){
+        $scope.medicine = medFactory.updateMedList();
+      });
     });
   }
 

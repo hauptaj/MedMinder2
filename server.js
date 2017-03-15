@@ -142,11 +142,12 @@ app.post('/meds-add', function(req, res, next) {
   data = {
     name: req.body.name,
     dosage: req.body.dosage,
-    time: req.body.time
+    time: req.body.time,
+    rxnumber: req.body.rxnumber
   }
 
   pg.connect(connectionString, function(err, client, done) {
-    client.query('INSERT INTO medicine(name, dosage, time) values($1, $2, $3)', [data.name, data.dosage, data.time]);
+    client.query('INSERT INTO medicine(name, dosage, time, rxnumber) values($1, $2, $3, $4)', [data.name, data.dosage, data.time, data.rxnumber]);
     var query = client.query('SELECT * FROM medicine');
 
     query.on('row', function(row) {
@@ -187,11 +188,12 @@ app.put('/meds-update/:id', function(req, res, next) {
   var data = {
     name: req.body.name,
     dosage: req.body.dosage,
-    time:req.body.time
+    time: req.body.time,
+    rxnumber: req.body.rxnumber
   };
 
   pg.connect(connectionString, function(err, client, done) {
-    client.query('UPDATE medicine SET name=($1), dosage=($2), time=($3) WHERE id=($4)', [data.name, data.dosage, data.time, id]);
+    client.query('UPDATE medicine SET name=($1), dosage=($2), time=($3), rxnumber=($4) WHERE id=($5)', [data.name, data.dosage, data.time, data.rxnumber, id]);
     var query = client.query('SELECT * FROM medicine');
 
     query.on('row', function(row) {

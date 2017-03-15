@@ -66,8 +66,16 @@ a {
 
 .loginForm {
   diplay: inline;
-  position: absolute;
+  position: relative;
   margin: 226px, auto, 0, auto;
+}
+
+#logo {
+  display: inline-block;
+  position: relative;
+  margin: -55px, auto, 0, auto;
+  width: 40%;
+  z-index: 10;
 }
 
 .video {
@@ -84,14 +92,6 @@ a {
   /*transform: translate(-50%, -25%);*/
 }
 
-#logo {
-  display: inline-block;
-  position: absolute;
-  margin: -55px, auto, 0, auto;
-  width: 40%;
-
-  z-index: 10;
-}
 
 /* =============================================================================
   FOOTER

@@ -6,8 +6,6 @@ var password = require('./password.js');
 var connectionString = 'postgres://frytujbxbeiurr:' + password + '@ec2-54-83-25-217.compute-1.amazonaws.com:5432/dftsp1o7v96h4p?ssl=true';
 var client = new pg.Client(connectionString);
 
-
-
 var config = {
   user: 'frytujbxbeiurr',
   database: 'dftsp1o7v96h4p',
@@ -18,16 +16,17 @@ var config = {
   idleTimeoutMillis: 30000
 };
 
-
 var pool = new pg.Pool(config);
 
 app.use(bodyParser.json({extend: true}));
 app.use(express.static(__dirname + '/Public'));
 
+
 app.get('/lovedones', function(req, res, next) {
   var list = [];
 
   pg.connect(connectionString, function(err, client, done) {
+
     var query = client.query('SELECT * FROM lovedones');
 
     query.on('row', function(row) {

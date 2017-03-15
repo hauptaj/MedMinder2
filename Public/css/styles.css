@@ -91,20 +91,24 @@ a {
   height: auto;
   /*transform: translate(-50%, -25%);*/
 }
-/*.visible{
-  visibility: visible;
+
+
+.alert {
+  display: block;
 }
-.invisible{
-  visibility: hidden;
-}*/
+ .visiblity {
+   background-color: red;
+ }
+
+
 /* =============================================================================
   FOOTER
 ============================================================================= */
 
 footer {
   background-color: #86acd4;
-  top: 95%;
-  height: 30px;
+  top: 96%;
+  height: 40px;
   width: 100%;
   /*margin-bottom: 0px;*/
   position: fixed;

@@ -45,6 +45,11 @@ header {
 
 .nav {
   margin-bottom: 24px;
+  z-index: -20;
+}
+
+.hide {
+  color: white;
 }
 
 a {
@@ -54,30 +59,38 @@ a {
   padding: 20px;
 }
 
-#logo {
-  top: 50%;
-  width: 40%;
-  height: 40%;
-  margin-bottom: 24px;
-}
 
 /* =============================================================================
-  VIDEO
+  VIEW ELEMENTS
 ============================================================================= */
+
+.loginForm {
+  diplay: inline;
+  position: absolute;
+  margin: 226px, auto, 0, auto;
+}
 
 .video {
   position: fixed;
   top: 75%; left: 50%;
   z-index: 1;
   top: 0%; left: 0%;
-  opacity: 0.5;
-  z-index: -1;
-
+  /*opacity: 0.5;*/
+  z-index: -10;
   min-width: 100%;
   min-height: 100%;
   width: auto;
   height: auto;
   /*transform: translate(-50%, -25%);*/
+}
+
+#logo {
+  display: inline-block;
+  position: absolute;
+  margin: -55px, auto, 0, auto;
+  width: 40%;
+
+  z-index: 10;
 }
 
 /* =============================================================================

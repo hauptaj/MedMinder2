@@ -3,10 +3,11 @@
 <article>
   <table>
     <tr>
-      <th>Delete</th>
+      <th> </th>
       <th>Name</th>
       <th>Dosage</th>
       <th>Time</th>
+      <th>Rx Number</th>
       <th>Edit</th>
     </tr>
     <tr ng-repeat ="med in medicine">
@@ -14,6 +15,7 @@
       <td>{{med.name}}</td>
       <td>{{med.dosage}}</td>
       <td>{{med.time}}</td>
+      <td>{{med.rxnumber}}</td>
 
 
       <td>  <input type "text" placeholder="Medicine Name" ng-model="newMed.name"></td>

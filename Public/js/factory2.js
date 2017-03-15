@@ -12,7 +12,8 @@ app.factory("medFactory", function($http){
     updateMedicine: updateMedicine,
     findRx: findRx,
     updateRxNumber: updateRxNumber,
-    sendRxArray: sendRxArray
+    sendRxArray: sendRxArray,
+    getNewRx: getNewRx
   }
 
   function getMedListInfo() {
@@ -35,10 +36,12 @@ app.factory("medFactory", function($http){
       data: {
         name: med.name,
         dosage: med.dosage,
-        time: med.time
+        time: med.time,
+        rxnumber: med.rxnumber
       }
     }).then(function successfulCallback(response){
       // console.log(response);
+
       medicine = response.data;
     }, function(error){
       console.log("error");
@@ -67,7 +70,8 @@ app.factory("medFactory", function($http){
       data: {
         name: newMed.name,
         dosage: newMed.dosage,
-        time: newMed.time
+        time: newMed.time,
+        rxnumber: newMed.rxnumber
       }
     }).then(function successfulCallback(response){
       // console.log(response);
@@ -88,7 +92,7 @@ app.factory("medFactory", function($http){
       var updateMed = {};
       updateMed.name = medName;
       updateMed.rxnumber = response.data.idGroup.rxnormId[0];
-      // updateRxNumber(updateMed);
+      //updateRxNumber(updateMed);
       newRx = Number(response.data.idGroup.rxnormId[0]);
     }, function(error) {
       console.log(error);

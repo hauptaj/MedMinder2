@@ -47,10 +47,12 @@ app.factory("medFactory", function($http){
       // console.log(response);
 
       medicine = response.data;
+
     }, function(error){
       console.log("error");
     });
     return promise;
+    return "alert";
   }
 
   //Send a DELETE Request to Server to Delete Med from Table

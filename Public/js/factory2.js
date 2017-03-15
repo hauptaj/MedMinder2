@@ -121,7 +121,7 @@ app.factory("medFactory", function($http){
     var rxList = [];
     rxList.push(newRx);
     console.log(rxList);
-    for(var i = 0; i< medList.length; i++){
+    for (var i = 0; i< medList.length; i++){
       rxList.push(medList[i].rxnumber);
     }
     console.log(rxList);
@@ -137,6 +137,17 @@ app.factory("medFactory", function($http){
       url:'https://rxnav.nlm.nih.gov/REST/interaction/list.json?rxcuis=' + list
     }).then(function successfulCallback(response){
       console.log(response);
+      console.log(response.data.fullInteractionTypeGroup[0].fullInteractionType[0].interactionPair[0].severity);
+      var interactionLoop = response.data.fullInteractionTypeGroup[0].fullInteractionType;
+
+      for (var i = 0; i < interactionLoop.length; i++) {
+        if (interactionLoop[i].interactionPair[0].severity === "N/A") {
+          console.log("No issue");
+        } else if (interactionLoop[i].interactionPair[0].severity = "High") {
+          console.log("Issue!");
+        }
+      }
+
     }, function(error){
       console.log("error");
     });

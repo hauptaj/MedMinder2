@@ -21,10 +21,11 @@ var pool = new pg.Pool(config);
 app.use(bodyParser.json({extend: true}));
 app.use(express.static(__dirname + '/Public'));
 
-
+//This function is how the server handles a GET request from /lovedones view
 app.get('/lovedones', function(req, res, next) {
   var list = [];
 
+//This function is querying the data from the lovedones database the pushing to the "list" variable
   pg.connect(connectionString, function(err, client, done) {
 
     var query = client.query('SELECT * FROM lovedones');
@@ -41,7 +42,7 @@ app.get('/lovedones', function(req, res, next) {
   });
 });
 
-
+//This function is how the server deals with a post request
 app.post('/lovedones-add', function(req, res, next) {
   var list = [];
   var data = {
@@ -50,8 +51,9 @@ app.post('/lovedones-add', function(req, res, next) {
     age: req.body.age
   };
 
+//connect with database
   pg.connect(connectionString, function(err, client, done) {
-
+//insert into the table
     client.query('INSERT INTO lovedones(name, weight, age) values($1, $2, $3)', [data.name, data.weight, data.age]);
 
     var query = client.query('SELECT * FROM lovedones');

@@ -12,6 +12,7 @@
       <th>Age</th>
       <th>Edit</th>
     </tr>
+    <!-- iterates through personList array(data from controller) and placing on the page -->
     <tr ng-repeat ="person in personList">
       <td><button type="button" name="delete" ng-click="removeLovedOne(person.id)">X</button></td>
       <td>{{person.name}}</td>

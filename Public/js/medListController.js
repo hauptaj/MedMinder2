@@ -2,8 +2,6 @@ var app = angular.module("medMod");
 app.controller("contentController", function($scope, medFactory, $timeout, $location, sharedFactory) {
 
     $scope.personsPage = sharedFactory.passObject();
-    console.log($scope.personsPage);
-    console.log($scope.personsPage.personid);
 
     medFactory.getMedListInfo($scope.personsPage.personid).then(function() {
       console.log($scope.personsPage.personid);
@@ -17,10 +15,6 @@ app.controller("contentController", function($scope, medFactory, $timeout, $loca
               console.log(personsid);
                 $scope.medicine = medFactory.updateMedList();
 
-                $scope.med.name = " ";
-                $scope.med.dosage = 0;
-                $scope.med.time = "0:00";
-
                 $scope.message = 'WARNING: The drug you are about to add may have some potential interactions with other drugs on your list. Always check with your doctor before starting a new medication.';
                 $scope.showMessage = true;
                 $timeout(function() {
@@ -29,6 +23,9 @@ app.controller("contentController", function($scope, medFactory, $timeout, $loca
 
             });
 
+          $scope.med.name = "";
+          $scope.med.dosage = "";
+          $scope.med.time = "";
         });
     }
 

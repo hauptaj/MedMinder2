@@ -19,12 +19,16 @@ app.factory("medFactory", function($http){
     }
 
   //Send a Get Request to Server to Query Table Information
-  function getMedListInfo() {
+  function getMedListInfo(personsid) {
+    console.log(personsid);
     var promise = $http({
       method: 'GET',
-      url:'/meds'
+      url:'/meds/' + personsid,
+      params: {
+        personid: personsid
+      }
     }).then(function successfulCallback(response){
-      // console.log(response);
+      console.log(response);
       medicine = response.data;
     }, function(error){
       console.log("error");
@@ -33,7 +37,7 @@ app.factory("medFactory", function($http){
   }
 
   //Send a POST Request to Server to Add Med to Table
-  function addMedicine(med) {
+  function addMedicine(med, personsid) {
     var promise = $http({
       method: 'POST',
       url:'/meds-add',
@@ -41,7 +45,8 @@ app.factory("medFactory", function($http){
         name: med.name,
         dosage: med.dosage,
         time: med.time,
-        rxnumber: med.rxnumber
+        rxnumber: med.rxnumber,
+        personid: personsid
       }
     }).then(function successfulCallback(response){
       // console.log(response);
@@ -56,10 +61,14 @@ app.factory("medFactory", function($http){
   }
 
   //Send a DELETE Request to Server to Delete Med from Table
-  function deleteMedicine(medId) {
+  function deleteMedicine(medId, personsid) {
     var promise = $http({
       method: 'DELETE',
-      url:'/meds-delete/' + medId
+      url:'/meds-delete/' + medId + "/" + personsid,
+      // params: {
+      //   medId: medId,
+      //   personid: personsid
+      // }
     }).then(function successfulCallback(response){
       // console.log(response);
       medicine = response.data;
@@ -70,7 +79,7 @@ app.factory("medFactory", function($http){
   }
 
   //Send a PUT Request to Server to Update Medicine on Tabl
-  function updateMedicine(newMed,medId) {
+  function updateMedicine(newMed,medId, personsid) {
     var promise = $http({
       method: 'PUT',
       url:'/meds-update/'+ medId,
@@ -78,7 +87,8 @@ app.factory("medFactory", function($http){
         name: newMed.name,
         dosage: newMed.dosage,
         time: newMed.time,
-        rxnumber: newMed.rxnumber
+        rxnumber: newMed.rxnumber,
+        personid: personsid
       }
     }).then(function successfulCallback(response){
       // console.log(response);

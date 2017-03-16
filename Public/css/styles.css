@@ -66,6 +66,10 @@ a {
     text-decoration: none;
 }
 
+table a {
+  color: black;
+}
+
 .navLink {
     padding: 20px;
 }

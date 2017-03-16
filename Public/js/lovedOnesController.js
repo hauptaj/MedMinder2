@@ -1,6 +1,6 @@
 var app = angular.module("medMod");
 
-app.controller("mainController", function($scope, dataFactory){
+app.controller("mainController", function($scope, dataFactory, sharedFactory, $location){
 
 //initiates GET request in factory then runs the updateLovedOnes function that pulls the data from the factory
   dataFactory.getLovedOneInfo().then(function() {
@@ -32,5 +32,11 @@ app.controller("mainController", function($scope, dataFactory){
       $scope.personList = dataFactory.updateLovedOnes();
     });
   };
+
+  $scope.moveAndLoad = function(personObject) {
+    console.log(personObject);
+    sharedFactory.takeObject(personObject);
+    $location.path('/content');
+  }
 
 });

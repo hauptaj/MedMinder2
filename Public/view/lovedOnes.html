@@ -10,19 +10,21 @@
       <th>Name</th>
       <th>Weight(lb)</th>
       <th>Age</th>
+      <th>Person Id</th>
 
     </tr>
     <!-- iterates through personList array(data from controller) and placing on the page -->
     <tr ng-repeat ="person in personList">
-      <td><button type="button" name="delete" ng-click="removeLovedOne(person.id)">X</button></td>
-      <td>{{person.name}}</td>
+      <td><button type="button" name="delete" ng-click="removeLovedOne(person.personid)">X</button></td>
+      <td><a ng-click="moveAndLoad(person)" href="#/content"> {{person.name}} </a></td>
       <td>{{person.weight}}</td>
       <td>{{person.age}}</td>
+      <td>{{person.personid}}</td>
 
       <td>  <input type "text" placeholder="Loved One's Name" ng-model="newObject.name"></td>
       <td>  <input type "text" placeholder="Weight" ng-model="newObject.weight"></td>
       <td>  <input type "number" placeholder="Age" ng-model="newObject.age"></td>
-      <td><button type="button" name="edit" ng-click="alterLovedOne(newObject, person.id)">Edit</button></td>
+      <td><button type="button" name="edit" ng-click="alterLovedOne(newObject, person.personid)">Edit</button></td>
     </tr>
 </table>
 
@@ -34,4 +36,3 @@
 
 </article>
 </section>
-<h1>{{practice}}</h1>

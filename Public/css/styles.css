@@ -92,7 +92,11 @@ a {
   /*transform: translate(-50%, -25%);*/
 }
 
-.alert{
+.message{
+  color: red;
+}
+
+.alert {
   width:857px;
   color: red;
   text-align: center;

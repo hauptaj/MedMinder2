@@ -12,25 +12,24 @@
 
     </tr>
     <tr ng-repeat ="med in medicine">
-      <td><button type="button" name="delete" ng-click="deleteMed(med.id)">X</button></td>
+      <td><button type="button" name="delete" ng-click="deleteMed(med.id, personsPage.personid)">X</button></td>
       <td>{{med.name}}</td>
       <td>{{med.dosage}}</td>
       <td>{{med.time}}</td>
       <td>{{med.rxnumber}}</td>
 
 
-      <td>  <input type "text" placeholder="Medicine Name" ng-model="newMed.name"></td>
-      <td>  <input type "text" placeholder="Dosage" ng-model="newMed.dosage"></td>
-      <td>  <input type "number" placeholder="Time" ng-model="newMed.time"></td>
-      <td><button type="button" name="edit" ng-click="updateMed(newMed,med.id)">Edit</button></td>
+      <td>  <input type "text" placeholder="Medicine Name" ng-model="newMed.name" ></td>
+      <td>  <input type "number" placeholder="Dosage" ng-model="newMed.dosage" ></td>
+      <td>  <input type "text" placeholder="Time" ng-model="newMed.time"></td>
+      <td><button type="button" name="edit" ng-click="updateMed(newMed, med.id, personsPage.personid)">Edit</button></td>
     </tr>
 </table>
-<input type "text" placeholder="medicine" ng-model="med.name">
-<input type "number" placeholder="Dose" ng-model="med.dosage">
-<input type="text" placeholder=" ex.04:00" ng-model="med.time"><br>
+<input type "text" placeholder="Medicine Name" ng-model="med.name">
+<input type "number" placeholder="Dosage" ng-model="med.dosage">
+<input type="text" placeholder="04:00" ng-model="med.time"><br>
 <!-- <button onclick="document.getElementById('id01').style.display='block'" class="w3-button">Add</button> -->
-<button ng-click="addMed(med)">Add</button>
-
+<button ng-click="addMed(med, personsPage.personid)">Add</button>
 
  <!-- <div id="id01" class="w3-modal">
     <div class="w3-modal-content">

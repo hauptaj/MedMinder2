@@ -78,7 +78,8 @@ app.delete('/lovedones-delete/:id', function(req, res, next) {
 //connect with database
     pg.connect(connectionString, function(err, client, done) {
       //DELETE from the table at specific Id
-      client.query('DELETE FROM lovedones WHERE id=($1)', [id]);
+      client.query('DELETE FROM medicine WHERE personid=($1)',[id]);
+      client.query('DELETE FROM lovedones WHERE personid=($1)', [id]);
 
       var query = client.query('SELECT * FROM lovedones');
 
@@ -106,7 +107,7 @@ app.put('/lovedones-edit/:id', function(req, res, next) {
 
   pg.connect(connectionString, function(err, client, done) {
 
-    client.query('UPDATE lovedones SET name=($1), weight=($2), age=($3) WHERE id=($4)', [data.name, data.weight, data.age, id]);
+    client.query('UPDATE lovedones SET name=($1), weight=($2), age=($3) WHERE personid=($4)', [data.name, data.weight, data.age, id]);
 
     var query = client.query('SELECT * FROM lovedones');
 
@@ -123,11 +124,16 @@ app.put('/lovedones-edit/:id', function(req, res, next) {
 });
 
 
-app.get('/meds', function(req, res, next) {
+app.get('/meds/:personid', function(req, res, next) {
   var medList = [];
+  var personid = req.query.personid;
+  console.log(personid);
+  // var data = {
+  //   personid: req.query.personid
+  // };
 
   pg.connect(connectionString, function(err, client, done) {
-    var query = client.query('SELECT * FROM medicine');
+    var query = client.query('SELECT * FROM medicine WHERE personid=($1)', [personid]);
 
     query.on('row', function(row) {
       medList.push(row);
@@ -147,12 +153,14 @@ app.post('/meds-add', function(req, res, next) {
     name: req.body.name,
     dosage: req.body.dosage,
     time: req.body.time,
-    rxnumber: req.body.rxnumber
+    rxnumber: req.body.rxnumber,
+    personid: req.body.personid
   }
+  console.log(data);
 
   pg.connect(connectionString, function(err, client, done) {
-    client.query('INSERT INTO medicine(name, dosage, time, rxnumber) values($1, $2, $3, $4)', [data.name, data.dosage, data.time, data.rxnumber]);
-    var query = client.query('SELECT * FROM medicine');
+    client.query('INSERT INTO medicine(name, dosage, time, rxnumber, personid) values($1, $2, $3, $4, $5)', [data.name, data.dosage, data.time, data.rxnumber, data.personid]);
+    var query = client.query('SELECT * FROM medicine WHERE personid=($1)', [data.personid]);
 
     query.on('row', function(row) {
       medList.push(row);
@@ -166,13 +174,14 @@ app.post('/meds-add', function(req, res, next) {
   });
 });
 
-app.delete('/meds-delete/:id', function(req, res, next) {
+app.delete('/meds-delete/:id/:personid', function(req, res, next) {
   var medList = [];
   var id = req.params.id;
+  var personid = req.params.personid;
 
   pg.connect(connectionString, function(err, client, done) {
     client.query('DELETE FROM medicine WHERE id=($1)', [id]);
-    var query = client.query('SELECT * FROM medicine');
+    var query = client.query('SELECT * FROM medicine WHERE personid=($1)', [personid]);
 
     query.on('row', function(row) {
       medList.push(row);
@@ -193,12 +202,13 @@ app.put('/meds-update/:id', function(req, res, next) {
     name: req.body.name,
     dosage: req.body.dosage,
     time: req.body.time,
-    rxnumber: req.body.rxnumber
+    rxnumber: req.body.rxnumber,
+    personid: req.body.personid
   };
 
   pg.connect(connectionString, function(err, client, done) {
     client.query('UPDATE medicine SET name=($1), dosage=($2), time=($3), rxnumber=($4) WHERE id=($5)', [data.name, data.dosage, data.time, data.rxnumber, id]);
-    var query = client.query('SELECT * FROM medicine');
+    var query = client.query('SELECT * FROM medicine WHERE personid=($1)', [data.personid]);
 
     query.on('row', function(row) {
       medList.push(row);

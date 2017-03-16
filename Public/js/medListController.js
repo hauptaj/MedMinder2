@@ -1,7 +1,7 @@
 var app = angular.module("medMod");
 app.controller("contentController", function($scope, medFactory, $timeout, $location) {
 
-//initiates GET request then runs the updateLovedOnes function (in factory2) that pulls the data from factory1
+    //initiates GET request then runs the updateLovedOnes function (in factory2) that pulls the data from factory1
     medFactory.getMedListInfo().then(function() {
         $scope.medicine = medFactory.updateMedList();
     });

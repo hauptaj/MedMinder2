@@ -12,6 +12,10 @@ app.controller("mainController", function($scope, dataFactory){
   $scope.addLovedOne = function(object) {
     dataFactory.addPerson(object).then(function() {
       $scope.personList = dataFactory.updateLovedOnes();
+      $scope.object.name = '';
+      $scope.object.weight = '';
+      $scope.object.age = '';
+
     });
   };
 

@@ -15,7 +15,7 @@ app.factory("medFactory", function($http){
     findRx: findRx,
     // updateRxNumber: updateRxNumber,
     // sendRxArray: sendRxArray,
-    getNewRx: getNewRx,
+    getNewRx: getNewRx
     }
 
   //Send a Get Request to Server to Query Table Information
@@ -114,8 +114,8 @@ app.factory("medFactory", function($http){
     return newRx;
   }
 
-    
-  //Stretch Goal Below
+
+  // //Stretch Goal Below
   // function sendRxArray(medList){
   //   findDrugInteraction(setMasterList(medList));
   // }

@@ -16,7 +16,7 @@ app.controller("contentController", function($scope, medFactory, $timeout, $loca
                 $scope.med.dosage = '';
                 $scope.med.time = '';
 
-                $scope.message = 'WARNING: The drug you are about to add may have some potential interactions with other drugs on your list. Always check with your doctor before starting a new medication.';
+                $scope.message = 'The drug you are about to add may have some potential interactions with other drugs on your list. Always check with your doctor before starting a new medication.';
                 $scope.showMessage = true;
                 $timeout(function() {
                     $scope.showMessage = false;

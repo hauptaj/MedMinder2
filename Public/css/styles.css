@@ -51,6 +51,7 @@ header {
 
 .fakeNav {
     margin-top: 480px;
+    margin-left: 39%;
     z-index: 10;
     position: absolute;
 }
@@ -136,6 +137,11 @@ a {
   width: 780px;
   text-align: center;
 }
+
+/*.w3-table {
+	left: 50%;
+  transform: translateX(-50%);
+}*/
 
 .message {
     color: red;

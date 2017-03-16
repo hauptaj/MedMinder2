@@ -147,28 +147,17 @@ a {
     color: red;
 }
 
+#warn {
+  background-color: white;
+  box-shadow: 10px 10px 15px #888888;
+  border: 1px solid #888;
+  border-radius: 15px;
+  padding: 5px;
+}
 .alert {
     width: 857px;
     color: red;
     text-align: center;
-}
-
-.close {
-    width: 23px;
-    border-radius: 50%;
-    border-style: solid;
-    border-color: gray;
-    text-align: center;
-    float: right;
-    border-width: 1px;
-    margin-right: 5px;
-    margin-top: 5px;
-}
-
-.w3-modal-content {
-    text-align: right;
-    border-radius: 15px;
-    height: 106px;
 }
 
 #warning {
@@ -183,11 +172,9 @@ label {
     margin: 0 20px 0 0;
 }
 
-.loginInput {
-    width: 100%;
+input {
     height: 40px;
     padding: 8px 20px;
-    margin: 8px 0;
     border: 2px solid #86acd4;
     border-radius: 50px;
     text-align: center;
@@ -196,7 +183,12 @@ label {
     outline: none;
 }
 
-.loginInput:focus {
+.loginInput {
+    width: 100%;
+    margin: 8px 0 8px 0;
+}
+
+input:focus {
     background-color: #86acd4;
     border: 2px solid white;
     color: white;
@@ -206,21 +198,25 @@ label {
     width: 100px;
     height: 40px;
     background-color: transparent;
-    border: 2px solid white;
+    border: 2px solid #86acd4;
     border-radius: 50px;
-    color: white;
+    color: #86acd4;
     text-align: center;
     text-decoration: none;
     font-size: 16px;
     cursor: pointer;
-    margin: 20px;
+    /*margin: 20px;*/
 }
 
-.login {
+#loginButton {
     display: inline-block;
     position: relative;
     z-index: 10;
+    border: 2px solid white;
+    color: white;
 }
+
+
 
 
 /* =============================================================================
@@ -235,7 +231,7 @@ footer {
     position: fixed;
     display: block;
     text-align: center;
-    z-index: 2;
+    z-index: 30;
 }
 
 #disclaimer {

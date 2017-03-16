@@ -7,36 +7,37 @@
     <title>Med Minder</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-route.js"></script>
+    <link rel="stylesheet" href="css/auto-complete.css">
     <link rel="stylesheet" href="css/clearfix.css">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
     <link href="https://fonts.googleapis.com/css?family=Oxygen:400,300,700" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body ng-app="medMod">
 
-  <header>
-    <img class="headerImg" src="assets/MedMinderLogo.png" alt="Med Minder Logo">
-    <nav class="nav">
-        <a class="hide navLink" href="#/login">Login</a>
-        <a class="hide navLink" href="#/main">Loved Ones</a>
-        <a class="hide navLink" href="#/content">Meds</a>
-    </nav>
-  </header>
+    <header>
+        <img class="headerImg" src="assets/MedMinderLogo.png" alt="Med Minder Logo">
+        <nav class="nav">
+            <a class="navLink" href="#/login">Login</a>
+            <a class="navLink" href="#/main">Loved Ones</a>
+            <a class="navLink" href="#/content">Meds</a>
+        </nav>
+    </header>
 
-    <div class="content">
-      <!-- remove this nav later -->
-      <nav class="fakeNav">
-          <a class="navLink" href="#/login">Login</a>
-          <a class="navLink" href="#/main">Loved Ones</a>
-          <a class="navLink" href="#/content">Meds</a>
-      </nav>
+
+        <!-- remove this nav later -->
+        <nav class="fakeNav">
+            <a class="hide navLink" href="#/login">Login</a>
+            <a class="hide navLink" href="#/main">Loved Ones</a>
+            <a class="hide navLink" href="#/content">Meds</a>
+        </nav>
 
         <ng-view></ng-view>
-    </div>
+    
 
     <footer>
-        <p id = "disclaimer">All content found on this app was created for a student project and is for information purposes only.</p>
+        <p id="disclaimer">All content found on this app was created for a student project and is for information purposes only.</p>
     </footer>
 
     <script type="text/javascript" src="js/module.js"></script>
@@ -45,7 +46,7 @@
     <script type="text/javascript" src="js/loginController.js"></script>
     <script type="text/javascript" src="js/factory1.js"></script>
     <script type="text/javascript" src="js/factory2.js"></script>
-
+    <script type="text/javascript" src="js/auto-complete.min.js"></script>
 
 </body>
 

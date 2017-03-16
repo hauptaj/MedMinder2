@@ -1,70 +1,72 @@
-
 /* =============================================================================
   HTML, BODY
 ============================================================================= */
 
-html,
-body {
-  height: 100%;
+html, body {
+    height: 100%;
 }
 
 body {
-  font-family: "Oxygen", sans-serif;
+    font-family: "Oxygen", sans-serif;
 }
+
 
 /* =============================================================================
   HEADER
 ============================================================================= */
 
 header {
-  display: block;
-  background-color: #86acd4;
-  height: 100px;
-  width: 100%;
-  text-align: center;
+    display: block;
+    background-color: #86acd4;
+    height: 100px;
+    width: 100%;
+    text-align: center;
 }
 
 .headerImg {
-  display: inline;
-  position: relative;
-  height: 100%;
+    display: inline;
+    position: relative;
+    height: 100%;
 }
+
 
 /* =============================================================================
   CONTENT
 ============================================================================= */
 
 .content {
-  position: relative;
-  /*top: 30%;*/
-  z-index: 2;
-  margin: 0 auto;
-  max-width: 720px;
-  text-align: center;
+    position: relative;
+    /*top: 30%;*/
+    z-index: 2;
+    margin: 0 auto;
+    max-width: 720px;
+    text-align: center;
 }
 
 .nav {
-  margin-bottom: 24px;
-  z-index: -20;
+    margin-bottom: 24px;
+    z-index: 30;
+    color: #888;
 }
 
 .fakeNav {
-  margin-top: -70px;
-  z-index: -20;
+    margin-top: 480px;
+    z-index: 10;
+    position: absolute;
 }
 
 .hide {
-  color: white;
+    color: white;
 }
 
 a {
-  display: inline-block;
-  color: white;
-  text-decoration: none;
+    display: inline-block;
+    /*color: white;*/
+    text-decoration: none;
 }
 
 .navLink {
-  padding: 20px;
+    padding: 20px;
 }
 
 
@@ -73,94 +75,109 @@ a {
 ============================================================================= */
 
 .loginForm {
-  /*diplay: inline-block;*/
-  position: relative;
-  /*top: 450px;*/
-  width: 100%;
-  /*margin: 226px, auto, 0, auto;*/
+    /*diplay: inline-block;*/
+    position: relative;
+    /*top: 450px;*/
+    width: 100%;
+    /*margin: 226px, auto, 0, auto;*/
 }
 
 #logo {
-  width: 60%;
+    width: 60%;
 }
 
 .logoOutline {
-  display: inline-block;
-  position: relative;
-  /*top: 320px;*/
-  z-index: 10;
+    display: inline-block;
+    position: relative;
+    /*top: 320px;*/
+    z-index: 10;
 }
 
 #overlay {
-  position: fixed;
-  top: 75%; left: 50%;
-  z-index: 1;
-  top: 0%; left: 0%;
-  background-color: LIGHTSTEELBLUE;
-  opacity: 0.7;
-  z-index: -8;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
+    position: fixed;
+    top: 75%;
+    left: 50%;
+    z-index: 1;
+    top: 0%;
+    left: 0%;
+    background-color: LIGHTSTEELBLUE;
+    opacity: 0.7;
+    z-index: -8;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
 }
 
 .video {
-  position: fixed;
-  top: 75%; left: 50%;
-  z-index: 1;
-  top: 0%; left: 0%;
-  /*opacity: 0.5;*/
-  z-index: -10;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  /*transform: translate(-50%, -25%);*/
+    position: fixed;
+    top: 75%;
+    left: 50%;
+    z-index: 1;
+    top: 0%;
+    left: 0%;
+    /*opacity: 0.5;*/
+    z-index: -10;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    /*transform: translate(-50%, -25%);*/
 }
 
-.message{
-  color: red;
+.tablePosition {
+  position: absolute;
+  display: block;
+  top: 180px;
+  left: 50%;
+    transform: translateX(-50%);
+  z-index: 2;
+  max-width: 720px;
+  width: 780px;
+  text-align: center;
+}
+
+.message {
+    color: red;
 }
 
 .alert {
-  width:857px;
-  color: red;
-  text-align: center;
+    width: 857px;
+    color: red;
+    text-align: center;
 }
 
+.close {
+    width: 23px;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: gray;
+    text-align: center;
+    float: right;
+    border-width: 1px;
+    margin-right: 5px;
+    margin-top: 5px;
+}
 
-.close{
-  width: 23px;
-  border-radius: 50%;
-  border-style: solid;
-  border-color: gray;
-  text-align: center;
-  float:right;
-  border-width: 1px;
-  margin-right: 5px;
-  margin-top: 5px;
-  }
-
-  .w3-modal-content{
+.w3-modal-content {
     text-align: right;
     border-radius: 15px;
     height: 106px;
-  }
-
-#warning{
-  font-weight: bold;
-  font-size: 36px;
-  text-shadow: 2px 2px 5px #666;
-  }
-
-label {
-  width: 200px;
-  float: left;
-  margin: 0 20px 0 0;
 }
 
-  .loginInput{
+#warning {
+    font-weight: bold;
+    font-size: 36px;
+    text-shadow: 2px 2px 5px #666;
+}
+
+label {
+    width: 200px;
+    float: left;
+    margin: 0 20px 0 0;
+}
+
+.loginInput {
     width: 100%;
     height: 40px;
     padding: 8px 20px;
@@ -171,9 +188,9 @@ label {
     -webkit-transition: 0.5s;
     transition: 0.5s;
     outline: none;
-  }
+}
 
-  .loginInput:focus {
+.loginInput:focus {
     background-color: #86acd4;
     border: 2px solid white;
     color: white;
@@ -182,7 +199,7 @@ label {
 .button {
     width: 100px;
     height: 40px;
-   background-color: transparent;
+    background-color: transparent;
     border: 2px solid white;
     border-radius: 50px;
     color: white;
@@ -191,31 +208,31 @@ label {
     font-size: 16px;
     cursor: pointer;
     margin: 20px;
-
 }
 
 .login {
-  display: inline-block;
-  position: relative;
-  z-index: 10;
+    display: inline-block;
+    position: relative;
+    z-index: 10;
 }
+
 
 /* =============================================================================
   FOOTER
 ============================================================================= */
 
 footer {
-  background-color: #86acd4;
-  top: 95%;
-  height: 40px;
-  width: 100%;
-  position: fixed;
-  display: block;
-  text-align: center;
-  z-index: 2;
+    background-color: #86acd4;
+    top: 95%;
+    height: 40px;
+    width: 100%;
+    position: fixed;
+    display: block;
+    text-align: center;
+    z-index: 2;
 }
 
 #disclaimer {
-  color: white;
-  padding: 7px;
+    color: white;
+    padding: 7px;
 }

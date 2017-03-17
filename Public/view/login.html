@@ -1,31 +1,32 @@
 <div class="content">
+
+<!-- VIDEO -->
     <div id="overlay"></div>
+      <video id="my-video" class="video" autoplay="autoplay" loop="loop" muted="" poster="assets/video_screenshot2.png">
+        <source src="assets/Pills2.mp4" type="video/mp4" />
+        <source src="assets/Pills2.ogv" type="video/ogg" />
+        <source src="assets/Pills2.webm" type="video/webm" />
+      </video>
 
-    <video id="my-video" class="video" autoplay="autoplay" loop="loop" muted="" poster="assets/video_screenshot2.png">
-  <source src="assets/Pills2.mp4" type="video/mp4" />
-  <source src="assets/Pills2.ogv" type="video/ogg" />
-  <source src="assets/Pills2.webm" type="video/webm" />
-</video>
-
+<!-- LOGO -->
     <div class="logoOutline">
         <img id="logo" src="assets/MedMinderLogoOutline.png" alt="Med Minder Logo">
     </div>
 
+<!-- LOGIN INPUTS -->
     <div class="login">
-        <!-- <section class="loginForm"> -->
-            <label for="userName">
-      <input class="loginInput" type "text" placeholder="User Name">
+        <label for="userName">
+          <input class="loginInput" type "text" placeholder="User Name">
+        </label>
+
+        <label for="password">
+            <input class="loginInput" type "text" placeholder="Password">
             </label>
-            <label for="password">
-      <input class="loginInput" type "text" placeholder="Password">
-            </label>
-        <!-- </section> -->
     </div>
 
+<!-- LOGIN BUTTONS -->
     <div class="login">
-
-            <a href="lovedOnes.html"><button class="button" id="loginButton">Login</button></a>
+            <a href="#/main"><button class="button" id="loginButton">Login</button></a>
             <a href="registration.html"><button class="button" id="loginButton">Register</button></a>
-
     </div>
 </div>

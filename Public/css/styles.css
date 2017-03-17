@@ -50,13 +50,6 @@ header {
     color: #888;
 }
 
-.fakeNav {
-    margin-top: 480px;
-    margin-left: 39%;
-    z-index: 10;
-    position: absolute;
-}
-
 .hide {
     color: white;
 }
@@ -101,13 +94,10 @@ table a {
 
 #overlay {
     position: fixed;
-    top: 75%;
-    left: 50%;
-    z-index: 1;
     top: 0%;
     left: 0%;
     background-color: LIGHTSTEELBLUE;
-    opacity: 0.7;
+    opacity: 0.4;
     z-index: -8;
     min-width: 100%;
     min-height: 100%;
@@ -117,9 +107,6 @@ table a {
 
 .video {
     position: fixed;
-    top: 75%;
-    left: 50%;
-    z-index: 1;
     top: 0%;
     left: 0%;
     /*opacity: 0.5;*/
@@ -201,15 +188,15 @@ input {
     outline: none;
 }
 
-.loginInput {
-    width: 100%;
-    margin: 8px 0 8px 0;
-}
-
 input:focus {
     background-color: #86acd4;
     border: 2px solid white;
     color: white;
+}
+
+.loginInput {
+    width: 100%;
+    margin: 8px 0 8px 0;
 }
 
 .button {

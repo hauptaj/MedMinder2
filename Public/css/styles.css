@@ -37,7 +37,6 @@ header {
 
 .content {
     position: relative;
-    /*top: 30%;*/
     z-index: 2;
     margin: 0 auto;
     max-width: 720px;
@@ -73,13 +72,13 @@ table a {
   VIEW ELEMENTS
 ============================================================================= */
 
-.loginForm {
-    /*diplay: inline-block;*/
+/*.loginForm {
+
     position: relative;
-    /*top: 450px;*/
+
     width: 100%;
-    /*margin: 226px, auto, 0, auto;*/
-}
+
+}*/
 
 #logo {
     width: 60%;
@@ -88,7 +87,6 @@ table a {
 .logoOutline {
     display: inline-block;
     position: relative;
-    /*top: 320px;*/
     z-index: 10;
 }
 
@@ -118,7 +116,7 @@ table a {
     /*transform: translate(-50%, -25%);*/
 }
 
-.tablePosition {
+/*.tablePosition {
   position: absolute;
   display: block;
   top: 180px;
@@ -129,7 +127,7 @@ table a {
   width: 780px;
   text-align: center;
   padding-bottom: 200px;
-}
+}*/
 
 /*.w3-table {
 	left: 50%;
@@ -195,8 +193,11 @@ input:focus {
 }
 
 .loginInput {
+    display: inline-block;
+    position: relative;
     width: 100%;
     margin: 8px 0 8px 0;
+    text-alight: center;
 }
 
 .button {
@@ -225,8 +226,9 @@ input:focus {
   display: inline-block;
   position: relative;
   z-index: 10;
-  margin-left: 50%;
-  transform: translateX(-50%);
+  margin-left: auto;
+  margin-right: auto;
+  /*transform: translateX(-50%);*/
   width: 100%;
 }
 
@@ -252,7 +254,7 @@ footer {
 }
 
 /* Practice Styling */
-div.addDiv {
+/*div.addDiv {
   position: relative;
   top: 200px;
 }
@@ -321,4 +323,4 @@ div.editView.slideLeft {
     transform: translateX(0%);
     z-index: 10;
   }
-}
+}*/

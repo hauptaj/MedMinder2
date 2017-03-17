@@ -9,29 +9,38 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-route.js"></script>
     <!-- <link rel="stylesheet" href="css/auto-complete.css"> -->
     <link rel="stylesheet" href="css/clearfix.css">
-    <link rel="stylesheet" href="css/w3css.css">
+    <!-- <link rel="stylesheet" href="css/w3css.css"> -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Oxygen:400,300,700" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <!-- <link rel="stylesheet" href="css/styles1.css"> -->
+
 </head>
 
 <body ng-app="medMod">
+  <div class="row">
 
     <header>
-        <img class="headerImg" src="assets/MedMinderLogo.png" alt="Med Minder Logo">
-        <nav class="nav">
+        <a href="#/main"><img class="headerImg" src="assets/MedMinderLogo.png" alt="Med Minder Logo"></a>
+
+
+        <!-- <nav class="nav">
             <a class="navLink" href="#/login">Login</a>
             <a class="navLink" href="#/main">Loved Ones</a>
             <a class="navLink" href="#/content">Meds</a>
-        </nav>
+        </nav> -->
     </header>
+  </div>
 
-        <ng-view></ng-view>
+  <div class-"row">
+          <ng-view></ng-view>
+  </div>
 
-
+  <div class="row">
     <footer>
         <p id="disclaimer">All content found on this app was created for a student project and is for information purposes only.</p>
     </footer>
+  </div>
 
     <script type="text/javascript" src="js/module.js"></script>
     <script type="text/javascript" src="js/medListController.js"></script>
@@ -43,7 +52,7 @@
     <script type="text/javascript" src="js/sharedFactory.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
 
-
+</div>
 </body>
 
 </html>

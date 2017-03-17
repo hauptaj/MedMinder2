@@ -50,13 +50,6 @@ header {
     color: #888;
 }
 
-.fakeNav {
-    margin-top: 480px;
-    margin-left: 39%;
-    z-index: 10;
-    position: absolute;
-}
-
 .hide {
     color: white;
 }
@@ -101,9 +94,6 @@ table a {
 
 #overlay {
     position: fixed;
-    top: 75%;
-    left: 50%;
-    z-index: 1;
     top: 0%;
     left: 0%;
     background-color: LIGHTSTEELBLUE;
@@ -117,9 +107,6 @@ table a {
 
 .video {
     position: fixed;
-    top: 75%;
-    left: 50%;
-    z-index: 1;
     top: 0%;
     left: 0%;
     /*opacity: 0.5;*/

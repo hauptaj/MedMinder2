@@ -49,4 +49,8 @@ app.controller("mainController", function($scope, dataFactory, sharedFactory, $l
 
   };
 
+  $scope.user {
+    name: 'awesome person'
+  };
+
 });

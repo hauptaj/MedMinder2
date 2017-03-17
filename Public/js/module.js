@@ -1,4 +1,4 @@
-var app = angular.module("medMod",["ngRoute"]);
+var app = angular.module("medMod",["ngRoute", "xeditable"]);
 
 app.config(function($routeProvider, $locationProvider){
   $routeProvider
@@ -18,4 +18,8 @@ app.config(function($routeProvider, $locationProvider){
 
   $locationProvider.hashPrefix('');
 
+});
+
+app.run(function(editableOptions) {
+  editableOptions.theme = 'bs3';
 });

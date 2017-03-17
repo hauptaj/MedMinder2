@@ -13,7 +13,8 @@ var config = {
   host: 'ec2-54-83-25-217.compute-1.amazonaws.com',
   port: 5432,
   max: 100,
-  idleTimeoutMillis: 30000
+  idleTimeoutMillis: 30000,
+  ssl: true
 };
 
 var pool = new pg.Pool(config);
@@ -26,7 +27,7 @@ app.get('/lovedones', function(req, res, next) {
   var list = [];
 
 //This function is querying the data from the lovedones database the pushing to the "list" variable
-  pg.connect(connectionString, function(err, client, done) {
+  pool.connect(function(err, client, done) {
 
     var query = client.query('SELECT * FROM lovedones');
 
@@ -52,7 +53,7 @@ app.post('/lovedones-add', function(req, res, next) {
   };
 
 //connect with database
-  pg.connect(connectionString, function(err, client, done) {
+  pool.connect(function(err, client, done) {
 //insert into the table
     client.query('INSERT INTO lovedones(name, weight, age) values($1, $2, $3)', [data.name, data.weight, data.age]);
 
@@ -76,7 +77,7 @@ app.delete('/lovedones-delete/:id', function(req, res, next) {
     var id = req.params.id;
 
 //connect with database
-    pg.connect(connectionString, function(err, client, done) {
+    pool.connect(function(err, client, done) {
       //DELETE from the table at specific Id
       client.query('DELETE FROM medicine WHERE personid=($1)',[id]);
       client.query('DELETE FROM lovedones WHERE personid=($1)', [id]);
@@ -105,7 +106,7 @@ app.put('/lovedones-edit/:id', function(req, res, next) {
     age: req.body.age
   };
 
-  pg.connect(connectionString, function(err, client, done) {
+  pool.connect(function(err, client, done) {
 
     client.query('UPDATE lovedones SET name=($1), weight=($2), age=($3) WHERE personid=($4)', [data.name, data.weight, data.age, id]);
 
@@ -132,7 +133,7 @@ app.get('/meds/:personid', function(req, res, next) {
   //   personid: req.query.personid
   // };
 
-  pg.connect(connectionString, function(err, client, done) {
+  pool.connect(function(err, client, done) {
     var query = client.query('SELECT * FROM medicine WHERE personid=($1)', [personid]);
 
     query.on('row', function(row) {
@@ -158,7 +159,7 @@ app.post('/meds-add', function(req, res, next) {
   }
   console.log(data);
 
-  pg.connect(connectionString, function(err, client, done) {
+  pool.connect(function(err, client, done) {
     client.query('INSERT INTO medicine(name, dosage, time, rxnumber, personid) values($1, $2, $3, $4, $5)', [data.name, data.dosage, data.time, data.rxnumber, data.personid]);
     var query = client.query('SELECT * FROM medicine WHERE personid=($1)', [data.personid]);
 
@@ -179,7 +180,7 @@ app.delete('/meds-delete/:id/:personid', function(req, res, next) {
   var id = req.params.id;
   var personid = req.params.personid;
 
-  pg.connect(connectionString, function(err, client, done) {
+  pool.connect(function(err, client, done) {
     client.query('DELETE FROM medicine WHERE id=($1)', [id]);
     var query = client.query('SELECT * FROM medicine WHERE personid=($1)', [personid]);
 
@@ -206,7 +207,7 @@ app.put('/meds-update/:id', function(req, res, next) {
     personid: req.body.personid
   };
 
-  pg.connect(connectionString, function(err, client, done) {
+  pool.connect(function(err, client, done) {
     client.query('UPDATE medicine SET name=($1), dosage=($2), time=($3), rxnumber=($4) WHERE id=($5)', [data.name, data.dosage, data.time, data.rxnumber, id]);
     var query = client.query('SELECT * FROM medicine WHERE personid=($1)', [data.personid]);
 
@@ -231,7 +232,7 @@ app.put('/rx-add', function(req, res, next) {
     rxnumber: req.body.rxnumber
   };
 
-  pg.connect(connectionString, function(err, client, done) {
+  pool.connect(function(err, client, done) {
     client.query('UPDATE medicine SET rxnumber=($1) WHERE name=($2)', [data.rxnumber, data.name]);
     var query = client.query('SELECT * FROM medicine');
 

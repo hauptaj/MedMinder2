@@ -32,14 +32,16 @@
   <div class="editView" id="editView">
     <div class="backDrop">
       <button type="button" name="button" id="flipButton" ng-click="switchForms()">Edit</button>
-    <table>
-      <tr ng-repeat="person in personList">
-        <td>  <input type "text" placeholder="Loved One's Name" ng-model="newObject.name"></td>
-        <td>  <input type "text" placeholder="Weight" ng-model="newObject.weight"></td>
-        <td>  <input type "number" placeholder="Age" ng-model="newObject.age"></td>
-        <td><button type="button" name="edit" ng-click="alterLovedOne(newObject, person.personid)">Edit</button></td>
-      </tr>
-    </table>
+      <div class="editContainer">
+
+        <div class="editRow" ng-repeat="person in personList">
+            <input type "text" placeholder="Loved One's Name" ng-model="newObject.name">
+            <input type "text" placeholder="Weight" ng-model="newObject.weight">
+            <input type "number" placeholder="Age" ng-model="newObject.age">
+            <button type="button" name="edit" ng-click="alterLovedOne(newObject, person.personid)">Edit</button>
+        </div>
+
+        </div>
     </div>
   </div>
 </div>
@@ -52,4 +54,6 @@
 </div>
 
 </article>
+
+  <input editable-text="user.name" formmethod="" type="text" name="" ng-value="{{user.name || 'empty'}} ">
 </section>

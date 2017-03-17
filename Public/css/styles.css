@@ -322,3 +322,15 @@ div.editView.slideLeft {
     z-index: 10;
   }
 }
+
+div.editContainer {
+  display: block;
+}
+
+div.editRow {
+  display: block;
+}
+
+div.editRow p, div.editRow button {
+  display: inline;
+}

@@ -272,14 +272,12 @@ div.backDrop {
 div.personView {
   position: absolute;
   z-index: 10;
-  height: 500px;
   width: 100%;
 }
 
 div.editView {
   position: absolute;
   z-index: 9;
-  height: 500px;
   width: 100%;
 }
 

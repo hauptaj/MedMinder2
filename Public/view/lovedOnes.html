@@ -4,35 +4,52 @@
 <h2>Loved Ones</h2>
 </article>
 <article>
-  <table class= "w3-table">
-    <tr>
-      <th> </th>
-      <th>Name</th>
-      <th>Weight(lb)</th>
-      <th>Age</th>
-      <th>Person Id</th>
 
-    </tr>
-    <!-- iterates through personList array(data from controller) and placing on the page -->
-    <tr ng-repeat ="person in personList">
-      <td><button type="button" name="delete" ng-click="removeLovedOne(person.personid)">X</button></td>
-      <td><a ng-click="moveAndLoad(person)" href="#/content"> {{person.name}} </a></td>
-      <td>{{person.weight}}</td>
-      <td>{{person.age}}</td>
-      <td>{{person.personid}}</td>
+<div class="container">
+  <div class="personView" id="personView">
+    <div class="backDrop">
+    <table class= "w3-table">
+      <tr>
+        <th> </th>
+        <th>Name</th>
+        <th>Weight(lb)</th>
+        <th>Age</th>
+        <th>Person Id</th>
 
-      <td>  <input type "text" placeholder="Loved One's Name" ng-model="newObject.name"></td>
-      <td>  <input type "text" placeholder="Weight" ng-model="newObject.weight"></td>
-      <td>  <input type "number" placeholder="Age" ng-model="newObject.age"></td>
-      <td><button type="button" name="edit" ng-click="alterLovedOne(newObject, person.personid)">Edit</button></td>
-    </tr>
-</table>
+      </tr>
+      <!-- iterates through personList array(data from controller) and placing on the page -->
+      <tr ng-repeat ="person in personList">
+        <td><button type="button" name="delete" ng-click="removeLovedOne(person.personid)">X</button></td>
+        <td><a ng-click="moveAndLoad(person)" href="#/content"> {{person.name}} </a></td>
+        <td>{{person.weight}}</td>
+        <td>{{person.age}}</td>
+        <td>{{person.personid}}</td>
+      </tr>
+    </table>
+    </div>
+  </div>
 
+  <div class="editView" id="editView">
+    <div class="backDrop">
+      <button type="button" name="button" id="flipButton" ng-click="switchForms()">Edit</button>
+    <table>
+      <tr ng-repeat="person in personList">
+        <td>  <input type "text" placeholder="Loved One's Name" ng-model="newObject.name"></td>
+        <td>  <input type "text" placeholder="Weight" ng-model="newObject.weight"></td>
+        <td>  <input type "number" placeholder="Age" ng-model="newObject.age"></td>
+        <td><button type="button" name="edit" ng-click="alterLovedOne(newObject, person.personid)">Edit</button></td>
+      </tr>
+    </table>
+    </div>
+  </div>
+</div>
 
+<div class="addDiv">
   <input type "text" placeholder="Loved One's Name" ng-model="object.name">
   <input type "text" placeholder="Weight" ng-model="object.weight">
   <input type="number" placeholder="Age" ng-model="object.age"><br>
   <button ng-click="addLovedOne(object)">Add New Loved One</button>
+</div>
 
 </article>
 </section>

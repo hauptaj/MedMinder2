@@ -263,3 +263,77 @@ footer {
     color: white;
     padding: 7px;
 }
+
+/* Practice Styling */
+div.addDiv {
+  position: relative;
+  top: 200px;
+}
+
+div.backDrop {
+  width: auto;
+  height: auto;
+  background-color: white;
+}
+
+#flipButton {
+  position: absolute;
+  top: -30px;
+  right: 0;
+}
+
+div.personView {
+  position: absolute;
+  z-index: 10;
+  height: 500px;
+  width: 100%;
+}
+
+div.editView {
+  position: absolute;
+  z-index: 9;
+  height: 500px;
+  width: 100%;
+}
+
+div.editView {
+  margin: 5%;
+}
+
+div.personView.slideRight {
+  animation: slideRightThenLeft 1s;
+  animation-interaction-count: 1;
+  animation-fill-mode: forwards;
+}
+
+div.editView.slideLeft {
+  animation: slideLeftThenRight 1s;
+  animation-interaction-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideRightThenLeft {
+  0% {
+    tranform: translateX(0%);
+  }
+  50% {
+    transform: translateX(60%);
+  }
+  100% {
+    transform: translateX(0%);
+    z-index: 9;
+  }
+}
+
+@keyframes slideLeftThenRight {
+  0% {
+    tranform: translateX(0%);
+  }
+  50% {
+    transform: translateX(-60%);
+  }
+  100% {
+    transform: translateX(0%);
+    z-index: 10;
+  }
+}

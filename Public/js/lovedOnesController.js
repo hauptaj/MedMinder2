@@ -37,6 +37,16 @@ app.controller("mainController", function($scope, dataFactory, sharedFactory, $l
     console.log(personObject);
     sharedFactory.takeObject(personObject);
     $location.path('/content');
-  }
+  };
+
+  $scope.switchForms = function() {
+    var topForm = document.getElementById('personView');
+    var bottomForm = document.getElementById('editView');
+    console.log(topForm);
+    console.log(bottomForm);
+    topForm.classList.add('slideRight');
+    bottomForm.classList.add('slideLeft');
+
+  };
 
 });

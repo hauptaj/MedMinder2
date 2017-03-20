@@ -50,4 +50,26 @@ app.controller("contentController", function($scope, medFactory, $timeout, $loca
         $scope.medicine = medFactory.updateMedList();
     }
 
+    //Auto-Complete Functionality Below
+    medFactory.requestMedNames().then(function() {
+    $scope.masterList = medFactory.returnMedNames();
+  });
+
+  $scope.complete = function(string) {
+  var output = [];
+  angular.forEach($scope.masterList, function(medString) {
+    if(medString.toLowerCase().indexOf(string.toLowerCase()) >= 0) {
+      output.push(medString);
+    }
+  });
+
+  $scope.filterMedicine = output;
+  };
+
+  $scope.fillTextBox = function(string) {
+    $scope.medString = string;
+    $scope.hidethis = true;
+  };
+
+
 });

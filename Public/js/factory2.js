@@ -5,6 +5,7 @@ var app = angular.module("medMod");
 app.factory("medFactory", function($http){
   var medicine = [];
   var newRx = 0;
+  var medNames = [];
 
   return {
     getMedListInfo: getMedListInfo,
@@ -15,7 +16,9 @@ app.factory("medFactory", function($http){
     findRx: findRx,
     // updateRxNumber: updateRxNumber,
     // sendRxArray: sendRxArray,
-    getNewRx: getNewRx
+    getNewRx: getNewRx,
+    requestMedNames: requestMedNames,
+    returnMedNames: returnMedNames
     }
 
   //Send a Get Request to Server to Query Table Information
@@ -122,6 +125,23 @@ app.factory("medFactory", function($http){
   //Returns RxCui number to controller to be added to Medicine Object
   function getNewRx() {
     return newRx;
+  }
+
+  function requestMedNames() {
+    var promise = $http({
+      method: 'GET',
+      url: 'https://rxnav.nlm.nih.gov/REST/displaynames.json'
+    }).then(function successfullCallback(response) {
+      console.log(response.data.displayTermsList.term);
+      medNames = response.data.displayTermsList.term;
+    }, function(error) {
+      console.log(error);
+    });
+    return promise;
+  }
+
+  function returnMedNames() {
+    return medNames;
   }
 
 

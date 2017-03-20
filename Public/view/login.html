@@ -1,33 +1,92 @@
-<div class="content">
+<div class="container-fluid">
 
-<!-- VIDEO -->
-    <div id="overlay"></div>
-      <video id="my-video" class="video" autoplay="autoplay" loop="loop" muted="" poster="assets/video_ScreenShot.png">
-        <source src="assets/pillsBW.mp4" type="video/mp4" />
-        <!-- <source src="assets/Pills2.ogv" type="video/ogg" /> -->
-        <!-- <source src="assets/Pills2.webm" type="video/webm" /> -->
-      </video>
-
-<!-- LOGO -->
-    <div class="logoOutline">
-        <img id="logo" src="assets/MedMinderLogoOutline.png" alt="Med Minder Logo">
+    <div class="row overlayRow">
+        <div class="col-xs-12">
+            <!-- blank see-through blue container over video -->
+        </div>
     </div>
 
-<!-- LOGIN INPUTS -->
-<div class = "row justify-content-md-" >
-    <div class="login">
-        <label for="userName">
-          <input class="loginInput" type "text" placeholder="User Name">
-        </label>
-
-        <label for="password">
-            <input class="loginInput" type "text" placeholder="Password">
-            </label>
+    <div class="row videoRow">
+            <!-- VIDEO -->
+            <video id="my-video" class="video" autoplay="autoplay" loop="loop" muted="" poster="assets/video_ScreenShot.png">
+                    <source src="assets/pillsBW.mp4" type="video/mp4" />
+                    <source src="assets/PillsBW.ogv" type="video/ogg" />
+                    <source src="assets/PillsBW.webm" type="video/webm" />
+            </video>
     </div>
+
+    <div class="row outlineLogo">
+            <img src="assets/MedMinderLogoOutline.png" class="img-responsive" alt="Med Minder Logo">
+    </div>
+
 </div>
 <!-- LOGIN BUTTONS -->
     <div class="login">
             <a href="#/main"><button class="button" id="loginButton">Login</button></a>
             <a href="registration.html"><button class="button" id="loginButton">Register</button></a>
+
+
+    <!-- LOGIN INPUTS -->
+    <div class="row login">
+        <div class="col-xs-6 col-xs-offset-3" id="loginContainer">
+            <!-- <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Please sign in</h3>
+                </div>
+                <div class="panel-body"> -->
+
+            <form class="form-inline">
+                <label class="sr-only" for="inlineFormInput">Username</label>
+                <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0 inlineFormInput" placeholder="Username">
+
+                <label class="sr-only" for="inlineFormInput">Password</label>
+                <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0 inlineFormInput" placeholder="Password">
+
+
+                <a href="#/main"><input class="btn btn-lg btn-success btn-block" type="submit" value="Login" id="logButton"></a>
+
+                <p class="registerNow">Not a user? <a href="#/register">Register</a> now.</p>
+                <!-- </fieldset> -->
+            </form>
+        </div>
+
+        <!-- </div> -->
+        <!-- </div> -->
     </div>
+</div>
+
+
+
+<!-- <label for="userName">
+                        <input class="loginInput" type "text" placeholder="User Name">
+                      </label>
+
+                <label for="password">
+                        <input class="loginInput" type "text" placeholder="Password">
+                      </label> -->
+
+
+<!-- EXAMPLE -->
+
+
+
+<!-- <div class="form-group">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="text-center">
+                                            <a href="http://phpoll.com/recover" tabindex="5" class="forgot-password">Forgot Password?</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+
+
+<!-- END EXAMPLE   -->
+<!-- LOGIN BUTTONS -->
+
+<!-- <a href="#/main"><button class="button" id="loginButton">Login</button></a>
+<a href="#/register"><button class="button" id="loginButton">Register</button></a> -->
+
+
+<!-- close fluid container -->
 </div>

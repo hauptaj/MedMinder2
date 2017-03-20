@@ -8,6 +8,7 @@ html, body {
 
 body {
     font-family: "Oxygen", sans-serif;
+    color: #888;
 }
 
 
@@ -15,19 +16,37 @@ body {
 /* =============================================================================
   HEADER
 ============================================================================= */
+.navbar-default
+.navbar-toggle
+{
+  border-color: #86acd4;
+  border-radius: 50px;
+}
 
-header {
-    display: block;
-    background-color: #86acd4;
-    height: 100px;
-    width: 100%;
-    text-align: center;
+button.navbar-toggle:visited {
+  background-color: transparent;
+}
+
+.navbar-header {
+  background: #86acd4; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#fff, #86acd4); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#fff, #86acd4); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#fff, #86acd4); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#fff, #86acd4); /* Standard syntax */
+}
+
+.navbar-nav>li>a {
+  padding-top: 5px;
+}
+
+.navbar-nav>li>a:hover {
+  color: #000;
+  text-decoration: underline;
 }
 
 .headerImg {
-    display: inline;
-    position: relative;
-    height: 100%;
+    display: block;
+    margin: 0 auto 0 auto;
 }
 
 
@@ -35,28 +54,26 @@ header {
   CONTENT
 ============================================================================= */
 
-.content {
+row.overlay {
     position: relative;
     z-index: 2;
     margin: 0 auto;
     max-width: 720px;
     text-align: center;
-}
-
-.nav {
-    margin-bottom: 24px;
-    z-index: 30;
     color: #888;
 }
 
-.hide {
-    color: white;
+. {
+    /*margin-bottom: 24px;
+    z-index: 30;*/
+    /*color: #888;
 }
 
+
 a {
-    display: inline-block;
+    display: inline-block;*/
     /*color: white;*/
-    text-decoration: none;
+    /*text-decoration: none;
 }
 
 table a {
@@ -66,57 +83,70 @@ table a {
 .navLink {
     padding: 20px;
 }
-
+*/
 
 /* =============================================================================
   VIEW ELEMENTS
 ============================================================================= */
 
-/*.loginForm {
-
-    position: relative;
-
-    width: 100%;
-
-}*/
-
-#logo {
-    width: 60%;
+.login {
+  position: relative;
+  top: -100px;
+  z-index: 5;
+  /*margin: 0 auto 0 auto;*/
 }
 
 .logoOutline {
     display: inline-block;
     position: relative;
     z-index: 10;
+
+/*input.form-control {
+  border-color: #86acd4;
+  border-radius: 50px;
+}*/
+
+.outlineLogo {
+  width: 50%;
+  z-index: 5;
+  margin: 0 auto 0 auto;
+
 }
 
-#overlay {
+.img-responsive {
+  position: relative;
+  top: -100px;
+}
+.overlayRow {
     position: fixed;
     top: 0%;
     left: 0%;
     background-color: LIGHTSTEELBLUE;
     opacity: 0.4;
-    z-index: -8;
-    min-width: 100%;
+    z-index: 2;
+    min-width: 110%;
     min-height: 100%;
     width: auto;
     height: auto;
 }
 
-.video {
+.videoRow {
     position: fixed;
     top: 0%;
     left: 0%;
-    /*opacity: 0.5;*/
-    z-index: -10;
     min-width: 100%;
     min-height: 100%;
     width: auto;
     height: auto;
-    /*transform: translate(-50%, -25%);*/
+    z-index: 0;
 }
 
-/*.tablePosition {
+video {
+  min-width: 110%;
+}
+
+/*
+.tablePosition {
   position: absolute;
   display: block;
   top: 180px;
@@ -134,7 +164,7 @@ table a {
   transform: translateX(-50%);
 }*/
 
-.message {
+/*.message {
     color: red;
 }
 
@@ -173,25 +203,79 @@ label {
     width: 200px;
     float: left;
     margin: 0 20px 0 0;
+}*/
+
+.form-inline {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
 }
 
-input {
+.form-control {
+display: inline-block;
+  width: 100%;
+  color: white;
+  margin: 0 auto 0 auto;
+}
+
+input.form-control {
+    display: inline-block;
     height: 40px;
+    width: 50%;
+    margin: 5px;
     padding: 8px 20px;
-    border: 2px solid #86acd4;
+    border: 2px solid white;
+    background-color: transparent;
     border-radius: 50px;
     text-align: center;
     -webkit-transition: 0.5s;
     transition: 0.5s;
     outline: none;
+    color: white;
 }
 
-input:focus {
+input.form-control:focus {
     background-color: #86acd4;
     border: 2px solid white;
     color: white;
 }
 
+
+/*label.sr-only {
+  color: white;
+}*/
+
+input.inlineFormInput {
+  color: white;
+}
+
+input.btn.btn-lg.btn-success.btn-block {
+  display: block;
+  height: 40px;
+  width: 30%;
+  margin: 15px auto 0 auto;
+  padding: 0;
+  text-align: center;
+  background-color: transparent;
+  background-image: none;
+  border-radius: 50px;
+  color: white;
+  text-decoration: none;
+  border: 2px solid white;
+}
+
+p.registerNow {
+  color: white;
+    font-size: 18px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+p.registerNow a {
+  color: #c0c0c0;
+  text-decoration: underline;
+}
+/*
 .loginInput {
     display: inline-block;
     position: relative;
@@ -210,9 +294,9 @@ input:focus {
     text-align: center;
     text-decoration: none;
     font-size: 16px;
-    cursor: pointer;
+    cursor: pointer;*/
     /*margin: 20px;*/
-}
+/*}
 
 #loginButton {
     display: inline-block;
@@ -230,28 +314,65 @@ input:focus {
   margin-right: auto;
   /*transform: translateX(-50%);*/
   width: 100%;
+}*/
+
+
+.list-group.listView {
+  width: 20%;
 }
 
+input.form-control#medicine {
+  width: 20%;
+}
 
 /* =============================================================================
   FOOTER
 ============================================================================= */
 
-footer {
-    background-color: #86acd4;
-    top: 95%;
-    height: 40px;
-    width: 100%;
-    position: fixed;
-    display: block;
-    text-align: center;
-    z-index: 30;
-}
-
 #disclaimer {
     color: white;
     padding: 7px;
+    text-align: center;
 }
+
+.navbar-fixed-bottom {
+  background-color: rgba(0,0,0,0.5);
+}
+
+/* =============================================================================
+  Media Queries
+============================================================================= */
+@media only screen and (max-width: 768px) {
+  .outlineLogo {
+    margin-top: 40px;
+  }
+  .inlineFormInput {
+    min-width: 150px;
+  }
+  #logButton {
+    min-width: 100px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #loginContainer {
+    margin-left: 15%;
+  }
+  #logButton {
+    margin-left: 25px;
+  }
+  .outlineLogo {
+    width: 65%;
+  }
+  p.registerNow {
+    width: 130%;
+    font-size: 12px;
+  }
+  p#disclaimer {
+    font-size: 10px;
+  }
+}
+
 
 /* Practice Styling */
 /*div.addDiv {

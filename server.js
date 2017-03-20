@@ -247,6 +247,30 @@ app.put('/rx-add', function(req, res, next) {
   });
 });
 
+app.post('/users-add', function(req, res, next) {
+  var list = [];
+  var data = {
+    firstname: req.body.firstname,
+    lastname: req.body.lastname,
+    email: req.body.email,
+    password: req.body.password,
+    username: req.body.username
+  };
+
+  pg.connect(connectionString, function(err, client, done) {
+  var query = client.query('INSERT INTO usertable(firstname, lastname, email, password, username) values($1, $2, $3, $4, $5)', [data.firstname, data.lastname, data.email, data.password, data.username]);
+
+    query.on('row', function(row){
+      list.push(row);
+    });
+
+    query.on('end', function(){
+      console.log(list);
+      client.end();
+      return res.json(list);
+    });
+  });
+});
 
 
 var server = app.listen(3000, function(){

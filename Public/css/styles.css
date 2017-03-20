@@ -364,6 +364,10 @@ input.form-control#medicine {
   #logButton {
     margin-left: 25px;
   }
+
+  input.btn.btn-lg.btn-success.btn-block:hover {
+    text-decoration: none;
+  }
   .outlineLogo {
     width: 65%;
   }

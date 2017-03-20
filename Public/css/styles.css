@@ -320,10 +320,49 @@ p.registerNow a {
 ============================================================================= */
 
 #disclaimer {
-    color: black;
+    color: white;
     padding: 7px;
     text-align: center;
 }
+
+.navbar-fixed-bottom {
+  background-color: rgba(0,0,0,0.5);
+}
+
+/* =============================================================================
+  Media Queries
+============================================================================= */
+@media only screen and (max-width: 768px) {
+  .outlineLogo {
+    margin-top: 40px;
+  }
+  .inlineFormInput {
+    min-width: 150px;
+  }
+  #logButton {
+    min-width: 100px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #loginContainer {
+    margin-left: 15%;
+  }
+  #logButton {
+    margin-left: 25px;
+  }
+  .outlineLogo {
+    width: 65%;
+  }
+  p.registerNow {
+    width: 130%;
+    font-size: 12px;
+  }
+  p#disclaimer {
+    font-size: 10px;
+  }
+}
+
 
 /* Practice Styling */
 div.addDiv {

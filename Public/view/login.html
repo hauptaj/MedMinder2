@@ -7,28 +7,23 @@
     </div>
 
     <div class="row videoRow">
-        <div class="hidden-xs col-sm-12">
-
             <!-- VIDEO -->
             <video id="my-video" class="video" autoplay="autoplay" loop="loop" muted="" poster="assets/video_ScreenShot.png">
                     <source src="assets/pillsBW.mp4" type="video/mp4" />
                     <source src="assets/PillsBW.ogv" type="video/ogg" />
                     <source src="assets/PillsBW.webm" type="video/webm" />
             </video>
-        </div>
     </div>
 
     <!-- LOGO -->
 
     <div class="row outlineLogo">
-        <div class="hidden-xs col-sm-12">
             <img src="assets/MedMinderLogoOutline.png" class="img-responsive" alt="Med Minder Logo">
-        </div>
     </div>
 
     <!-- LOGIN INPUTS -->
     <div class="row login">
-        <div class="col-xs-6 col-xs-offset-3">
+        <div class="col-xs-6 col-xs-offset-3" id="loginContainer">
             <!-- <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title">Please sign in</h3>
@@ -43,11 +38,11 @@
                 <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0 inlineFormInput" placeholder="Password">
 
 
-                <a href="#/main"><input class="btn btn-lg btn-success btn-block" type="submit" value="Login"></a>
+                <a href="#/main"><input class="btn btn-lg btn-success btn-block" type="submit" value="Login" id="logButton"></a>
 
                 <p class="registerNow">Not a user? <a href="#/register">Register</a> now.</p>
                 <!-- </fieldset> -->
-</form>
+            </form>
         </div>
 
         <!-- </div> -->

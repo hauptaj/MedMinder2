@@ -202,12 +202,19 @@ label {
     margin: 0 20px 0 0;
 }*/
 
+.form-inline {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .form-control {
 display: inline-block;
   width: 100%;
   color: white;
   margin: 0 auto 0 auto;
 }
+
 input.form-control {
     display: inline-block;
     height: 40px;
@@ -221,6 +228,7 @@ input.form-control {
     -webkit-transition: 0.5s;
     transition: 0.5s;
     outline: none;
+    color: white;
 }
 
 input.form-control:focus {
@@ -229,13 +237,14 @@ input.form-control:focus {
     color: white;
 }
 
+
 /*label.sr-only {
   color: white;
-}
-
-input#inlineFormInput {
-  color: white;
 }*/
+
+input.inlineFormInput {
+  color: white;
+}
 
 input.btn.btn-lg.btn-success.btn-block {
   display: block;

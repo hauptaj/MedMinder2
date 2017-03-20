@@ -21,35 +21,50 @@
     <!-- LOGO -->
 
     <div class="row outlineLogo">
-        <div class="col-xs-12">
+        <div class="hidden-xs col-sm-12">
             <img src="assets/MedMinderLogoOutline.png" class="img-responsive" alt="Med Minder Logo">
         </div>
     </div>
 
     <!-- LOGIN INPUTS -->
     <div class="row login">
-        <div class="col-md-6 col-md-offset-3">
-            <div class="panel panel-default">
+        <div class="col-xs-6 col-xs-offset-3">
+            <!-- <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title">Please sign in</h3>
                 </div>
-                <div class="panel-body">
-                    <form accept-charset="UTF-8" role="form">
-                        <fieldset>
-                            <div class="form-group">
-                                <input class="form-control" placeholder="Username" name="username" type="text">
-                            </div>
-                            <div class="form-group">
-                                <input class="form-control" placeholder="Password" name="password" type="password" value="">
-                            </div>
+                <div class="panel-body"> -->
 
-                            <a href="#/main"><input class="btn btn-lg btn-success btn-block" type="submit" value="Login"></a>
+            <form class="form-inline">
+                <label class="sr-only" for="inlineFormInput">Username</label>
+                <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" placeholder="Username">
 
-                            <p class="registerNow">Not a user? <a href="#/register">Register</a> now.</p>
-                        </fieldset>
-                    </form>
+                <label class="sr-only" for="inlineFormInput">Password</label>
+                <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" placeholder="Password">
+
+
+
+                <!-- <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <form accept-charset="UTF-8" role="form">
+                <fieldset>
+                    <div class="form-inline">
+                        <label class="sr-only" for="inlineFormInput">Username</label>
+                        <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" placeholder="Username">
+                    </div>
+                    <div class="form-inline">
+                        <label class="sr-only" for="inlineFormInput">Password</label>
+                        <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" placeholder="Password" value="">
+                    </div> -->
+
+                    <a href="#/main"><input class="btn btn-lg btn-success btn-block" type="submit" value="Login"></a>
+
+                    <p class="registerNow">Not a user? <a href="#/register">Register</a> now.</p>
+                <!-- </fieldset> -->
                 </div>
-            </div>
+            </form>
+            <!-- </div> -->
+            <!-- </div> -->
         </div>
     </div>
 

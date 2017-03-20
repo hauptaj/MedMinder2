@@ -1,11 +1,12 @@
 var app = angular.module("medMod");
 
 app.controller("mainController", function($scope, dataFactory, sharedFactory, $location){
-
+  //$scope.userPage = sharedFactory.passUser().then(function(){
 //initiates GET request in factory1 then runs the updateLovedOnes function that pulls the data from factory2
-  dataFactory.getLovedOneInfo().then(function() {
+  dataFactory.getLovedOneInfo(sharedFactory.passUser()).then(function() {
     $scope.personList = dataFactory.updateLovedOnes();
-    console.log($scope.personList);
+    //console.log($scope.userPage);
+  //});
   });
 
 //initiates POST request in the factory1 and passes object to add

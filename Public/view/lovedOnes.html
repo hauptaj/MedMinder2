@@ -18,7 +18,7 @@
 
       </tr>
       <!-- iterates through personList array(data from controller) and placing on the page -->
-      <tr ng-repeat ="person in personList">
+      <tr ng-repeat = "person in personList">
         <td><button type="button" name="delete" ng-click="removeLovedOne(person.personid)">X</button></td>
         <td><a ng-click="moveAndLoad(person)" href="#/content"> {{person.name}} </a></td>
         <td>{{person.weight}}</td>

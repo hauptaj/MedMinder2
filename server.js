@@ -21,14 +21,37 @@ var pool = new pg.Pool(config);
 app.use(bodyParser.json({extend: true}));
 app.use(express.static(__dirname + '/Public'));
 
+app.get('/login/:username/:password', function(req, res, next){
+  var user = [];
+  var username = req.params.username;
+  var password = req.params.password;
+  console.log(username);
+  console.log(password);
+
+  pg.connect(connectionString, function(err, client, done){
+    var query = client.query('SELECT userid FROM usertable WHERE username=($1) AND password=($2)',[username, password]);
+
+    query.on('row', function(row){
+      user.push(row);
+    });
+    query.on('end', function(){
+      console.log(user);
+      client.end();
+      return res.json(user);
+    });
+  });
+});
+
 //This function is how the server handles a GET request from /lovedones view
-app.get('/lovedones', function(req, res, next) {
+app.get('/lovedones/:userid', function(req, res, next) {
   var list = [];
+  var userid = req.params.userid;
+  console.log(userid);
 
 //This function is querying the data from the lovedones database the pushing to the "list" variable
   pg.connect(connectionString, function(err, client, done) {
 
-    var query = client.query('SELECT * FROM lovedones');
+    var query = client.query('SELECT * FROM lovedones WHERE userid=($1)', [userid]);
 
     query.on('row', function(row) {
       list.push(row);

@@ -1,13 +1,32 @@
 var app = angular.module("medMod");
 
 app.factory("userFactory", function($http) {
-  var users = [];
+  var users = "";
 
   return {
     addUser: addUser,
-    updateUser: updateUser
-
+    updateUser: updateUser,
+    getUserInfo: getUserInfo
   }
+
+function getUserInfo(user){
+  console.log(user);
+  var promise = $http({
+    method: 'GET',
+    url: '/login/'+ user.username + '/' + user.password,
+    params: {
+      username: user.username,
+      password: user.password
+    }
+
+  }).then(function successCallback(response) {
+    console.log(response.data[0].userid);
+    users = response.data[0].userid;
+  }, function(error) {
+    console.log(error);
+  });
+  return promise;
+}
 
 function updateUser() {
   return users;

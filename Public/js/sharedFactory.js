@@ -2,10 +2,12 @@ var app = angular.module("medMod");
 
 app.factory("sharedFactory", function() {
   var storedPerson = {};
-
+  var storedUser= "";
   return {
     takeObject: takeObject,
-    passObject: passObject
+    passObject: passObject,
+    passUser: passUser,
+    takeUser: takeUser
   }
 
   function takeObject(personObject) {
@@ -18,4 +20,15 @@ app.factory("sharedFactory", function() {
     return storedPerson;
   }
 
+  // store the user id in this factory
+  function takeUser(userid) {
+    storedUser = userid;
+    console.log("takeUser", storedUser);
+  }
+
+  // get the user id out of this factory (what was stored earlier)
+  function passUser() {
+    console.log("passUser", storedUser);
+    return storedUser;
+  }
 });

@@ -26,12 +26,26 @@
       <td><button type="button" name="edit" ng-click="updateMed(newMed, med.id, personsPage.personid)">Edit</button></td>
     </tr>
 </table>
-<input type "text" placeholder="Medicine Name" ng-model="med.name">
+<!-- <input type "text" placeholder="Medicine Name" ng-model="med.name"> -->
+<input type="text" name="medicine" value="" id="medicine" ng-model="med.name" ng-keyup="complete(med.name)">
+<ul ng-model="hidethis" ng-hide="hidethis" class="list-group listView">
+  <li ng-repeat="medData in filterMedicine" ng-click="fillTextBox(medData)" class="list-group-item"> {{ medData }}</li>
+</ul>
 <input type "number" placeholder="Dosage" ng-model="med.dosage">
 <input type="text" placeholder="04:00" ng-model="med.time"><br>
 <!-- <button onclick="document.getElementById('id01').style.display='block'" class="w3-button">Add</button> -->
 <button type="button" ng-click="addMed(med, personsPage.personid)">Add</button>
 
- 
+
+
+ <!-- <div id="id01" class="w3-modal">
+    <div class="w3-modal-content">
+        <span class="close" onclick="document.getElementById('id01').style.display='none'" ng-click="addMed(med)" class="w3-button w3-display-topright">&times;</span>
+        <p class="alert"><span id="warning">WARNING:<br></span> The drug you are about to add may have some potential interactions with other drugs on your list. Always check with your doctor before starting a new medication.</p>
+    </div>
+  </div> -->
+
+
+
 </article>
 </section>

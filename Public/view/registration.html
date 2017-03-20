@@ -1,61 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>HTML5</title>
-<!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-</script>
-<![endif]-->
-<style>
-body {
-    font-family: Verdana,sans-serif;
-    font-size: 0.9em;
-}
-
-header, footer{
-    padding: 10px;
-    color: white;
-    background-color: black;
-}
-
-section {
-    margin: 5px;
-    padding: 10px;
-    background-color: lightgrey;
-}
-
-article {
-    margin: 5px;
-    padding: 10px;
-    background-color: white;
-}
-
-</style>
-</head>
-<body>
-
-<header>
-<h1>Midminder</h1>
-</header>
-
 <section>
 
 <article>
 <h2>Rgister Now</h2>
   </article>
-<article>
-  <input type "text" placeholder="First Name">
-  <input type "text" placeholder="Last Name"><br>
-  <input type "text" placeholder="User Name">
-   <input type "text" placeholder="Password"><br>
-  <input type="email" placeholder="Email"><br>
-  <a href="lovedOnes.html"><button>Continue</button></a>
-</article>
-</section>
-<footer>
-<p>Demo Project</p>
-</footer>
+  
+<form class="" action="index.html" method="post">
+  <input type "text" placeholder="First Name" ng-model="object.firstname">
+  <input type "text" placeholder="Last Name" ng-model="object.lastname"><br>
+  <input type "text" placeholder="User Name" ng-model="object.username">
+   <input type "text" placeholder="Password" ng-model="object.password"><br>
+  <input type="email" placeholder="Email" ng-model="object.email"><br>
+  <button ng-click="addUser(object)">Continue</button>
+</form>
 
-</body>
-</html>
+</section>

@@ -14,6 +14,10 @@ app.config(function($routeProvider, $locationProvider){
     controller:'contentController',
     templateUrl:'view/medList.html'
   })
+  .when('/register',{
+    controller:'registrationController',
+    templateUrl: 'view/registration.html'
+  })
   .otherwise({ redirectTo: '/login' });
 
   $locationProvider.hashPrefix('');

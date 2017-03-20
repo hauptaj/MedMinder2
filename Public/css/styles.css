@@ -126,7 +126,7 @@ table a {
     background-color: LIGHTSTEELBLUE;
     opacity: 0.4;
     z-index: 2;
-    min-width: 100%;
+    min-width: 110%;
     min-height: 100%;
     width: auto;
     height: auto;
@@ -142,6 +142,11 @@ table a {
     height: auto;
     z-index: 0;
 }
+
+video {
+  min-width: 110%;
+}
+
 /*
 .tablePosition {
   position: absolute;

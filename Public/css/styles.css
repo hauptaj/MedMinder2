@@ -8,6 +8,7 @@ html, body {
 
 body {
     font-family: "Oxygen", sans-serif;
+    color: #888;
 }
 
 
@@ -15,19 +16,37 @@ body {
 /* =============================================================================
   HEADER
 ============================================================================= */
+.navbar-default
+.navbar-toggle
+{
+  border-color: #86acd4;
+  border-radius: 50px;
+}
 
-header {
-    display: block;
-    background-color: #86acd4;
-    height: 100px;
-    width: 100%;
-    text-align: center;
+button.navbar-toggle:visited {
+  background-color: transparent;
+}
+
+.navbar-header {
+  background: #86acd4; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#fff, #86acd4); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#fff, #86acd4); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#fff, #86acd4); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#fff, #86acd4); /* Standard syntax */
+}
+
+.navbar-nav>li>a {
+  padding-top: 5px;
+}
+
+.navbar-nav>li>a:hover {
+  color: #000;
+  text-decoration: underline;
 }
 
 .headerImg {
-    display: inline;
-    position: relative;
-    height: 100%;
+    display: block;
+    margin: 0 auto 0 auto;
 }
 
 
@@ -35,29 +54,27 @@ header {
   CONTENT
 ============================================================================= */
 
-.content {
+row.overlay {
     position: relative;
     /*top: 30%;*/
     z-index: 2;
     margin: 0 auto;
     max-width: 720px;
     text-align: center;
-}
-
-.nav {
-    margin-bottom: 24px;
-    z-index: 30;
     color: #888;
 }
 
-.hide {
-    color: white;
+. {
+    /*margin-bottom: 24px;
+    z-index: 30;*/
+    /*color: #888;
 }
 
+
 a {
-    display: inline-block;
+    display: inline-block;*/
     /*color: white;*/
-    text-decoration: none;
+    /*text-decoration: none;
 }
 
 table a {
@@ -67,29 +84,29 @@ table a {
 .navLink {
     padding: 20px;
 }
-
+*/
 
 /* =============================================================================
   VIEW ELEMENTS
 ============================================================================= */
 
-.loginForm {
+/*.loginForm {*/
     /*diplay: inline-block;*/
-    position: relative;
+    /*position: relative;*/
     /*top: 450px;*/
-    width: 100%;
+    /*width: 100%;*/
     /*margin: 226px, auto, 0, auto;*/
 }
 
-#logo {
+/*#logo {
     width: 60%;
 }
 
 .logoOutline {
     display: inline-block;
-    position: relative;
+    position: relative;*/
     /*top: 320px;*/
-    z-index: 10;
+    /*z-index: 10;
 }
 
 #overlay {
@@ -108,15 +125,15 @@ table a {
 .video {
     position: fixed;
     top: 0%;
-    left: 0%;
+    left: 0%;*/
     /*opacity: 0.5;*/
-    z-index: -10;
+    /*z-index: -10;
     min-width: 100%;
     min-height: 100%;
     width: auto;
-    height: auto;
+    height: auto;*/
     /*transform: translate(-50%, -25%);*/
-}
+/*}
 
 .tablePosition {
   position: absolute;
@@ -129,14 +146,14 @@ table a {
   width: 780px;
   text-align: center;
   padding-bottom: 200px;
-}
+}*/
 
 /*.w3-table {
 	left: 50%;
   transform: translateX(-50%);
 }*/
 
-.message {
+/*.message {
     color: red;
 }
 
@@ -209,9 +226,9 @@ input:focus {
     text-align: center;
     text-decoration: none;
     font-size: 16px;
-    cursor: pointer;
+    cursor: pointer;*/
     /*margin: 20px;*/
-}
+/*}
 
 #loginButton {
     display: inline-block;
@@ -228,27 +245,17 @@ input:focus {
   margin-left: 50%;
   transform: translateX(-50%);
   width: 100%;
-}
+}*/
 
 
 /* =============================================================================
   FOOTER
 ============================================================================= */
 
-footer {
-    background-color: #86acd4;
-    top: 95%;
-    height: 40px;
-    width: 100%;
-    position: fixed;
-    display: block;
-    text-align: center;
-    z-index: 30;
-}
-
 #disclaimer {
-    color: white;
+    color: black;
     padding: 7px;
+    text-align: center;
 }
 
 /* Practice Styling */

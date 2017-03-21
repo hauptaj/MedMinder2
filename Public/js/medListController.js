@@ -2,6 +2,9 @@ var app = angular.module("medMod");
 
 app.controller("contentController", function($scope, medFactory, $timeout, $location, sharedFactory) {
 
+    $scope.pageClass = "med-page";
+
+
     $scope.personsPage = sharedFactory.passObject();
 
     medFactory.getMedListInfo($scope.personsPage.personid).then(function() {

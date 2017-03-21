@@ -2,6 +2,9 @@ var app = angular.module("medMod");
 
 app.controller("loginController", function($scope, userFactory, sharedFactory, $location){
 
+  $scope.pageClass = "login-page";
+
+
   $scope.moveAndUse = function(user) {
     userFactory.getUserInfo(user).then(function(){
       $scope.userid = userFactory.updateUser();

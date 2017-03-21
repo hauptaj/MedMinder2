@@ -1,32 +1,29 @@
 <section class="tablePosition">
 
   <article>
-    <h2>Loved Ones</h2>
-  </article>
 
-  <article>
+    <div class="table-view">
+      <h2>Loved Ones</h2>
+      <ul class="list-group header">
+        <li class="list-group-item">
+                <span><strong>Name</strong></span>
+                <span><strong>Weight(lb)</strong></span>
+                <span><strong>Age</strong></span>
+                <span><strong>Person Id</strong></span>
+            </li>
+          </ul>
 
-    <div class="container">
-      <div class="personView" id="personView">
-        <div class="backDrop">
-          <table class= "w3-table">
-            <tr>
-                <th> </th>
-                <th>Name</th>
-                <th>Weight(lb)</th>
-                <th>Age</th>
-                <th>Person Id</th>
-            </tr>
-            <tr ng-repeat ="person in personList">
-                <td><button type="button" name="delete" ng-click="removeLovedOne(person.personid, userId)">X</button></td>
-                <td><a ng-click="moveAndLoad(person)" href="#/content"> {{person.name}} </a></td>
-                <td>{{person.weight}}</td>
-                <td>{{person.age}}</td>
-                <td>{{person.personid}}</td>
-            </tr>
-          </table>
+            <ul class="list-group" ng-repeat ="person in personList">
+                <li class="list-group-item"><button type="button" name="delete" class="li-delete" ng-click="removeLovedOne(person.personid, userId)"><span class="glyphicon glyphicon-remove"></button>
+
+                <span><a ng-click="moveAndLoad(person)" href="#/content"> {{person.name}} </a></span>
+                <span>{{person.weight}}</span>
+                <span>{{person.age}}</span>
+                <span>{{person.personid}}</span>
+            </li>
+          </ul>
         </div>
-      </div>
+
 
       <div class="editView" id="editView">
         <div class="backDrop">

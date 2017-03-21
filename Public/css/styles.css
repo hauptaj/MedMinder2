@@ -495,6 +495,11 @@ div.editView.slideLeft {
   animation-fill-mode: forwards;
 }
 
+/* =============================================================================
+  Media Queries
+============================================================================= */
+
+
 @keyframes slideRightThenLeft {
   0% {
     tranform: translateX(0%);
@@ -519,4 +524,36 @@ div.editView.slideLeft {
     transform: translateX(0%);
     z-index: 10;
   }
-}*/
+}
+
+@keyframes scaleUp {
+  from {
+    opacity: 0.1;
+    transform: scale(0.4);
+  }
+}
+
+@keyframes slideOutLeft {
+  to { transform: translateX(-100%);
+  }
+}
+@keyframes slideInRight {
+    from    { transform:translateX(100%); }
+    to      { transform: translateX(0); }
+}
+
+.page {
+  bottom:0;
+  position:absolute;
+  text-align:center;
+  top:0;
+  width:100%;
+}
+
+.ng-enter {
+  animation: slideInRight 0.7s both ease-in;
+}
+
+.ng-leave {
+  animation: slideOutLeft 0.4s both ease-in;
+}

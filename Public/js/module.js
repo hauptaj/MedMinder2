@@ -1,4 +1,4 @@
-var app = angular.module("medMod",["ngRoute"]);
+var app = angular.module("medMod",["ngRoute", "ngAnimate"]);
 
 app.config(function($routeProvider, $locationProvider){
   $routeProvider

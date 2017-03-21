@@ -1,6 +1,5 @@
 var app = angular.module("medMod");
 
-
 app.factory("dataFactory", function($http) {
   var lovedones = [];
 
@@ -12,7 +11,6 @@ app.factory("dataFactory", function($http) {
     alterPerson:alterPerson
   }
 
-//sending GET request from /lovedones url
   function getLovedOneInfo(userid) {
     var promise = $http({
       method: 'GET',
@@ -28,7 +26,6 @@ app.factory("dataFactory", function($http) {
     return promise;
   }
 
-//return the information from GET request
   function updateLovedOnes() {
     return lovedones;
   }
@@ -63,7 +60,6 @@ app.factory("dataFactory", function($http) {
     return promise;
     }
 
-//initiates the PUT request to the server
   function alterPerson(newObject, personid, userId){
     var promise = $http({
       method: 'PUT',

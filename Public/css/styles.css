@@ -49,7 +49,6 @@ button.navbar-toggle:visited {
     margin: 0 auto 0 auto;
 }
 
-
 /* =============================================================================
   CONTENT
 ============================================================================= */
@@ -63,27 +62,9 @@ row.overlay {
     color: #888;
 }
 
-. {
-    /*margin-bottom: 24px;
-    z-index: 30;*/
-    /*color: #888;
-}
-
-
 a {
-    display: inline-block;*/
-    /*color: white;*/
-    /*text-decoration: none;
-}
-
-table a {
-  color: black;
-}
-
-.navLink {
-    padding: 20px;
-}
-*/
+    display: inline-block;
+  }
 
 /* =============================================================================
   VIEW ELEMENTS
@@ -94,27 +75,12 @@ h2 {
   text-align: center;
 }
 
-/*.loginForm {*/
-    /*diplay: inline-block;*/
-    /*position: relative;*/
-    /*top: 450px;*/
-    /*width: 100%;*/
-    /*margin: 226px, auto, 0, auto;*/
-}
-
-
 .login {
   position: relative;
   top: -100px;
   z-index: 5;
-  /*margin: 0 auto 0 auto;*/
 }
 
-
-/*input.form-control {
-  border-color: #86acd4;
-  border-radius: 50px;
-}*/
 .outlineLogo {
   width: 40%;
   z-index: 5;
@@ -125,6 +91,7 @@ h2 {
   position: relative;
   top: -100px;
 }
+
 .overlayRow {
     position: fixed;
     top: 0%;
@@ -153,24 +120,6 @@ video {
   min-width: 110%;
 }
 
-/*
-.tablePosition {
-  position: absolute;
-  display: block;
-  top: 180px;
-  left: 50%;
-    transform: translateX(-50%);
-  z-index: 2;
-  max-width: 720px;
-  width: 780px;
-  text-align: center;
-  padding-bottom: 200px;
-}*/
-
-/*.w3-table {
-	left: 50%;
-  transform: translateX(-50%);
-}*/
 
 /*.message {
     color: red;
@@ -351,46 +300,6 @@ p.registerNow a {
   color: #c0c0c0;
   text-decoration: underline;
 }
-/*
-.loginInput {
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    margin: 8px 0 8px 0;
-    text-alight: center;
-}
-
-.button {
-    width: 100px;
-    height: 40px;
-    background-color: transparent;
-    border: 2px solid #86acd4;
-    border-radius: 50px;
-    color: #86acd4;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    cursor: pointer;*/
-    /*margin: 20px;*/
-/*}
-
-#loginButton {
-    display: inline-block;
-    position: relative;
-    z-index: 10;
-    border: 2px solid white;
-    color: white;
-}
-
-.login {
-  display: inline-block;
-  position: relative;
-  z-index: 10;
-  margin-left: auto;
-  margin-right: auto;
-transform: translateX(-50%);
-  width: 100%;
-}*/
 
 div.table-view {
   display: table;

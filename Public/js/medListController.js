@@ -56,18 +56,21 @@ app.controller("contentController", function($scope, medFactory, $timeout, $loca
   });
 
   $scope.complete = function(string) {
+    $scope.hidethis = false;
   var output = [];
-  angular.forEach($scope.masterList, function(medString) {
-    if(medString.toLowerCase().indexOf(string.toLowerCase()) >= 0) {
-      output.push(medString);
-    }
-  });
+  if (string.length >= 2) {
+    angular.forEach($scope.masterList, function(medString) {
+      if(medString.toLowerCase().indexOf(string.toLowerCase()) >= 0) {
+        output.push(medString);
+      }
+    });
+  }
 
-  $scope.filterMedicine = output;
+    $scope.filterMedicine = output;
   };
 
   $scope.fillTextBox = function(string) {
-    $scope.medString = string;
+    $scope.med.name = string;
     $scope.hidethis = true;
   };
 

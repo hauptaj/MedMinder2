@@ -1,35 +1,32 @@
 <section class="tablePosition">
 
-<article>
-  <h2>Medication List</h2>
-  <div id="warn" ng-model="message" ng-show="showMessage" class="message fadein fadeout"><p id="bigWarn">WARNING:<p>{{message}}</p></div>
-  <table class="w3-table">
-    <tr>
-      <th> </th>
-      <th>Name</th>
-      <th>Dosage</th>
-      <th>Time</th>
-      <th>Rx Number</th>
+  <article>
+    <h2>Medication List</h2>
+    <div id="warn" ng-model="message" ng-show="showMessage" class="message fadein fadeout"><p id="bigWarn">WARNING:<p>{{message}}</p></div>
+    <table class="w3-table">
+      <tr>
+        <th> </th>
+        <th>Name</th>
+        <th>Dosage</th>
+        <th>Time</th>
+        <th>Rx Number</th>
+      </tr>
+      <tr ng-repeat ="med in medicine">
+        <td><button type="button" name="delete" ng-click="deleteMed(med.id, personsPage.personid)">X</button></td>
+        <td>{{med.name}}</td>
+        <td>{{med.dosage}}</td>
+        <td>{{med.time}}</td>
+        <td>{{med.rxnumber}}</td>
 
-    </tr>
-    <tr ng-repeat ="med in medicine">
-      <td><button type="button" name="delete" ng-click="deleteMed(med.id, personsPage.personid)">X</button></td>
-      <td>{{med.name}}</td>
-      <td>{{med.dosage}}</td>
-      <td>{{med.time}}</td>
-      <td>{{med.rxnumber}}</td>
-
-
-      <td>  <input type "text" placeholder="Medicine Name" ng-model="newMed.name" ></td>
-      <td>  <input type "number" placeholder="Dosage" ng-model="newMed.dosage" ></td>
-      <td>  <input type "text" placeholder="Time" ng-model="newMed.time"></td>
-      <td><button type="button" name="edit" ng-click="updateMed(newMed, med.id, personsPage.personid)">Edit</button></td>
-    </tr>
-</table>
-<!-- <input type "text" placeholder="Medicine Name" ng-model="med.name"> -->
-<input type="text" name="medicine" value="" id="medicine" ng-model="med.name" ng-keyup="complete(med.name)">
-<ul ng-model="hidethis" ng-hide="hidethis" class="list-group listView">
-  <li ng-repeat="medData in filterMedicine" ng-click="fillTextBox(medData)" class="list-group-item"> {{ medData }}</li>
+        <td>  <input type "text" placeholder="Medicine Name" ng-model="newMed.name" ></td>
+        <td>  <input type "number" placeholder="Dosage" ng-model="newMed.dosage" ></td>
+        <td>  <input type "text" placeholder="Time" ng-model="newMed.time"></td>
+        <td><button type="button" name="edit" ng-click="updateMed(newMed, med.id, personsPage.personid)">Edit</button></td>
+      </tr>
+    </table>
+    <input type="text" name="medicine" value="" id="medicine" ng-model="med.name" ng-keyup="complete(med.name)">
+    <ul ng-model="hidethis" ng-hide="hidethis" class="list-group listView">
+      <li ng-repeat="medData in filterMedicine" ng-click="fillTextBox(medData)" class="list-group-item"> {{ medData }}</li>
 </ul>
 <input type "number" placeholder="Dosage" ng-model="med.dosage">
 <input type="text" placeholder="04:00" ng-model="med.time"><br>

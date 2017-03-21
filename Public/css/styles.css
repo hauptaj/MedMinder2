@@ -243,11 +243,6 @@ input.form-control:focus {
     color: white;
 }
 
-
-/*label.sr-only {
-  color: white;
-}*/
-
 input.inlineFormInput {
   color: white;
 }
@@ -267,6 +262,23 @@ input.btn.btn-lg.btn-success.btn-block {
   border: 2px solid white;
 }
 
+#userInput::-webkit-input-placeholder, #passInput::-webkit-input-placeholder {
+  color: white;
+}
+
+#userInput:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: white;
+   opacity:  1;
+}
+
+#userInput::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: white;
+   opacity:  1;
+}
+
+#userInput:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: white;
+}
 
 /* =============================================================================
   Registration Form

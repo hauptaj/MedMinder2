@@ -32,10 +32,10 @@
 
             <form class="form-inline">
                 <label class="sr-only" for="inlineFormInput">Username</label>
-                <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0 inlineFormInput" placeholder="Username" ng-model="user.username">
+                <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0 inlineFormInput" placeholder="Username" ng-model="user.username" id="userInput">
 
                 <label class="sr-only" for="inlineFormInput">Password</label>
-                <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0 inlineFormInput" placeholder="Password" ng-model="user.password">
+                <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0 inlineFormInput" placeholder="Password" ng-model="user.password" id="passInput">
 
 
                 <input class="btn btn-lg btn-success btn-block" type="submit" value="Login" id="logButton" ng-click="moveAndUse(user)">

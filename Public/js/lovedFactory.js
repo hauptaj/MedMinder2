@@ -40,7 +40,8 @@ app.factory("dataFactory", function($http) {
       data: {
         name: object.name,
         weight: object.weight,
-        age: object.age
+        age: object.age,
+        userid: object.userid
       }
     }).then(function successfulCallback(response) {
       lovedones = response.data;
@@ -50,10 +51,10 @@ app.factory("dataFactory", function($http) {
     return promise;
   }
 
-  function removePerson(personid){
+  function removePerson(personid, userId){
     var promise = $http({
       method: 'DELETE',
-      url:'/lovedones-delete/'+ personid
+      url:'/lovedones-delete/'+ personid + '/' + userId
     }).then(function successfulCallback(response){
       lovedones = response.data;
     }, function(error){
@@ -63,10 +64,10 @@ app.factory("dataFactory", function($http) {
     }
 
 //initiates the PUT request to the server
-  function alterPerson(newObject, personid){
+  function alterPerson(newObject, personid, userId){
     var promise = $http({
       method: 'PUT',
-      url:'/lovedones-edit/'+ personid,
+      url:'/lovedones-edit/'+ personid + '/' + userId,
       data: newObject
     }).then(function successfulCallback(response){
       lovedones = response.data;

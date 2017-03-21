@@ -10,8 +10,11 @@ console.log(sharedFactory.passUser());
     console.log($scope.personList);
   });
 
+$scope.userId = sharedFactory.passUser();
 //initiates POST request in the factory1 and passes object to add
   $scope.addLovedOne = function(object) {
+    object.userid = sharedFactory.passUser();
+    console.log(object);
     dataFactory.addPerson(object).then(function() {
       $scope.personList = dataFactory.updateLovedOnes();
       $scope.object.name = '';
@@ -22,15 +25,17 @@ console.log(sharedFactory.passUser());
   };
 
 //initiates DELETE request in the factory1 and passes person id
-  $scope.removeLovedOne = function(personid) {
-    dataFactory.removePerson(personid).then(function(){
+  $scope.removeLovedOne = function(personid, userId) {
+    
+    dataFactory.removePerson(personid, userId).then(function(){
       $scope.personList = dataFactory.updateLovedOnes();
       });
   };
 
 //initates PUT request in the factory1 and passes new object and person id
-  $scope.alterLovedOne = function(newObject, personid){
-    dataFactory.alterPerson(newObject, personid).then(function(){
+  $scope.alterLovedOne = function(newObject, personid, userId){
+
+    dataFactory.alterPerson(newObject, personid, userId).then(function(){
       $scope.personList = dataFactory.updateLovedOnes();
     });
   };

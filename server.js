@@ -72,15 +72,16 @@ app.post('/lovedones-add', function(req, res, next) {
   var data = {
     name: req.body.name,
     weight: req.body.weight,
-    age: req.body.age
+    age: req.body.age,
+    userid: req.body.userid
   };
 
 //connect with database
   pg.connect(connectionString, function(err, client, done) {
 //insert into the table
-    client.query('INSERT INTO lovedones(name, weight, age) values($1, $2, $3)', [data.name, data.weight, data.age]);
+    client.query('INSERT INTO lovedones(name, weight, age, userid) values($1, $2, $3, $4)', [data.name, data.weight, data.age, data.userid]);
 
-    var query = client.query('SELECT * FROM lovedones');
+    var query = client.query('SELECT * FROM lovedones WHERE userid=($1)', [data.userid]);
 
     query.on('row', function(row) {
       list.push(row);
@@ -95,9 +96,10 @@ app.post('/lovedones-add', function(req, res, next) {
 });
 
 //This function is how the server deals with a delete request for a loved one
-app.delete('/lovedones-delete/:id', function(req, res, next) {
+app.delete('/lovedones-delete/:id/:userId', function(req, res, next) {
     var list = [];
     var id = req.params.id;
+    var userId = req.params.userId;
 
 //connect with database
     pg.connect(connectionString, function(err, client, done) {
@@ -105,7 +107,7 @@ app.delete('/lovedones-delete/:id', function(req, res, next) {
       client.query('DELETE FROM medicine WHERE personid=($1)',[id]);
       client.query('DELETE FROM lovedones WHERE personid=($1)', [id]);
 
-      var query = client.query('SELECT * FROM lovedones');
+      var query = client.query('SELECT * FROM lovedones WHERE userid=($1)', [userId]);
 
       query.on('row', function(row) {
         list.push(row);
@@ -120,9 +122,10 @@ app.delete('/lovedones-delete/:id', function(req, res, next) {
 });
 
 //This function is how the server deals with a put request for a loved one
-app.put('/lovedones-edit/:id', function(req, res, next) {
+app.put('/lovedones-edit/:id/:userId', function(req, res, next) {
   var list = [];
   var id = req.params.id;
+  var userId = req.params.userId;
   var data = {
     name: req.body.name,
     weight: req.body.weight,
@@ -133,7 +136,7 @@ app.put('/lovedones-edit/:id', function(req, res, next) {
 
     client.query('UPDATE lovedones SET name=($1), weight=($2), age=($3) WHERE personid=($4)', [data.name, data.weight, data.age, id]);
 
-    var query = client.query('SELECT * FROM lovedones');
+    var query = client.query('SELECT * FROM lovedones WHERE userid=($1)', [userId]);
 
     query.on('row', function(row) {
       list.push(row);

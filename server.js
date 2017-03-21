@@ -299,8 +299,8 @@ app.post('/users-add', function(req, res, next) {
   });
 });
 
-
-var server = app.listen(3000, function(){
+var port = process.env.PORT || 3000;
+var server = app.listen(port, function(){
   var port = server.address().port;
   console.log('postgreSQL server running at http://localhost:%s', port);
 });

@@ -40,16 +40,15 @@
             <td><button type="button" name="edit" ng-click="updateMed(newMed, med.id, personsPage.personid)">Edit</button></td>
             </tr>
         </table>
-        <!-- <input type "text" placeholder="Medicine Name" ng-model="med.name"> -->
-        <input type="text" name="medicine" value="" id="medicine" ng-model="med.name" ng-keyup="complete(med.name)">
-        <ul ng-model="hidethis" ng-hide="hidethis" class="list-group listView">
-            <li ng-repeat="medData in filterMedicine" ng-click="fillTextBox(medData)" class="list-group-item"> {{ medData }}</li>
-        </ul>
-        <input type "number" placeholder="Dosage" ng-model="med.dosage">
-        <input type="text" placeholder="04:00" ng-model="med.time"><br>
-        <!-- <button onclick="document.getElementById('id01').style.display='block'" class="w3-button">Add</button> -->
-        <button type="button" ng-click="addMed(med, personsPage.personid)">Add</button>
-
+        <div class="addDiv">
+          <input type="text" placeholder="Medicine" name="medicine" value="" ng-model="med.name" ng-keyup="complete(med.name)" class="form-control">
+          <ul ng-model="hidethis" ng-hide="hidethis" class="list-group listView">
+              <li ng-repeat="medData in filterMedicine" ng-click="fillTextBox(medData)" class="list-group-item"> {{ medData }}</li>
+          </ul>
+          <input type "number" placeholder="Dosage" ng-model="med.dosage" class="form-control">
+          <input type="text" placeholder="04:00" ng-model="med.time" class="form-control"><br>
+          <button type="button" ng-click="addMed(med, personsPage.personid)" id="addButton">Add</button>
+        </div>
 
 
 

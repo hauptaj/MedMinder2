@@ -1,6 +1,9 @@
 var app = angular.module("medMod");
 app.controller("contentController", function($scope, medFactory, $timeout, $location, sharedFactory) {
 
+    $scope.pageClass = "med-page";
+
+
     $scope.personsPage = sharedFactory.passObject();
 
         //initiates GET request then runs the updateLovedOnes function (in factory2) that pulls the data from factory1

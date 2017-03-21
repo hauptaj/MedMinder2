@@ -550,10 +550,18 @@ div.editView.slideLeft {
   width:100%;
 }
 
-.ng-enter {
+/*.ng-enter {
   animation: slideInRight 0.7s both ease-in;
+}*/
+
+/*.ng-leave {
+  animation: slideOutLeft 0.4s both ease-in;
+}*/
+
+.loved-page.ng-enter, .med-page.ng-enter, .registration-page.ng-enter {
+  animation: scaleUp 0.7s both ease-in;
 }
 
-.ng-leave {
-  animation: slideOutLeft 0.4s both ease-in;
+.loved-page.ng-leave, .med-page.ng-leave, .registration-page.ng-leave {
+  animation: slideOutLeft 0.7s both ease-in;
 }

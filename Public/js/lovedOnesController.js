@@ -2,6 +2,7 @@ var app = angular.module("medMod");
 
 app.controller("mainController", function($scope, dataFactory, sharedFactory, $location){
 
+  $scope.pageClass = "loved-page";
 //initiates GET request in factory1 then runs the updateLovedOnes function that pulls the data from factory2
 
 console.log(sharedFactory.passUser());
@@ -26,7 +27,7 @@ $scope.userId = sharedFactory.passUser();
 
 //initiates DELETE request in the factory1 and passes person id
   $scope.removeLovedOne = function(personid, userId) {
-    
+
     dataFactory.removePerson(personid, userId).then(function(){
       $scope.personList = dataFactory.updateLovedOnes();
       });

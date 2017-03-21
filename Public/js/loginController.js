@@ -4,6 +4,9 @@ var app = angular.module("medMod");
 //control video speed
 app.controller("loginController", function($scope, userFactory, sharedFactory, $location){
 
+  $scope.pageClass = "login-page";
+
+
   $scope.moveAndUse = function(user) {
     console.log(user);
     userFactory.getUserInfo(user).then(function(){

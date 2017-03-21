@@ -267,9 +267,52 @@ input.btn.btn-lg.btn-success.btn-block {
   border: 2px solid white;
 }
 
+
+/* =============================================================================
+  Registration Form
+============================================================================= */
+div.registrationContainer {
+  width: 100%;
+  text-align: center;
+}
+
+#registrationForm.form-control {
+  width: 25%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#registrationForm input {
+  margin: 5%;
+  color: black;
+}
+
+#registrationForm input:focus {
+  color: white;
+}
+
+input#registerButton {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #86acd4;
+  color: white;
+  width: 50%;
+  -webkit-box-shadow: -9px 10px 22px -2px rgba(0,0,0,0.51);
+  -moz-box-shadow: -9px 10px 22px -2px rgba(0,0,0,0.51);
+  box-shadow: -9px 10px 22px -2px rgba(0,0,0,0.51);
+}
+
+input#registerButton:hover {
+  border-color: #86acd4;
+  background-color: white;
+  color: black;
+}
+
 p.registerNow {
   color: white;
-    font-size: 18px;
+  font-size: 18px;
   margin-top: 20px;
   text-align: center;
 }

@@ -111,7 +111,7 @@ table a {
   border-radius: 50px;
 }*/
 .outlineLogo {
-  width: 50%;
+  width: 40%;
   z-index: 5;
   margin: 0 auto 0 auto;
 }
@@ -288,8 +288,13 @@ div.registrationContainer {
   text-align: center;
 }
 
+div.registrationSpacer {
+  height: 70px;
+}
+
 #registrationForm.form-control {
   width: 25%;
+  min-width: 285px;
   height: auto;
   margin-left: auto;
   margin-right: auto;
@@ -299,6 +304,7 @@ div.registrationContainer {
 #registrationForm input {
   margin: 5%;
   color: black;
+  min-width: 195px;
 }
 
 #registrationForm input:focus {

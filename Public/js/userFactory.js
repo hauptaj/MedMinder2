@@ -2,17 +2,14 @@ var app = angular.module("medMod");
 
 app.factory("userFactory", function($http) {
   var users = [];
-  //Quotation versus array
 
   return {
     addUser: addUser,
     updateUser: updateUser,
     getUserInfo: getUserInfo
-
   }
 
 function updateUser() {
-  console.log('this function is running');
   return users;
 }
 
@@ -36,7 +33,6 @@ function addUser(object) {
 }
 
 function getUserInfo(user){
-  console.log(user);
   var promise = $http({
     method: 'GET',
     url: '/login/'+ user.username + '/' + user.password,
@@ -46,16 +42,11 @@ function getUserInfo(user){
     }
 
  }).then(function successCallback(response) {
-    console.log(response.data[0].userid);
     users = response.data[0].userid;
   }, function(error) {
     console.log(error);
   });
   return promise;
 }
-
-
-
-
 
 });

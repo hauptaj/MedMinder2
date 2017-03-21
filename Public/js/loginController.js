@@ -5,8 +5,10 @@ var app = angular.module("medMod");
 app.controller("loginController", function($scope, userFactory, sharedFactory, $location){
 
   $scope.moveAndUse = function(user) {
+    console.log(user);
     userFactory.getUserInfo(user).then(function(){
       $scope.userid = userFactory.updateUser();
+      console.log($scope.userid);
       sharedFactory.takeUser($scope.userid);
       $location.path('/main');
     });

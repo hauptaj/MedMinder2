@@ -13,10 +13,13 @@ app.factory("dataFactory", function($http) {
   }
 
 //sending GET request from /lovedones url
-  function getLovedOneInfo() {
+  function getLovedOneInfo(userid) {
     var promise = $http({
       method: 'GET',
-      url: '/lovedones'
+      url: '/lovedones/' + userid,
+      params: {
+        userid: userid
+      }
     }).then(function successfulCallback(response) {
       lovedones = response.data;
     }, function(error) {

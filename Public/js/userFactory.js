@@ -3,7 +3,7 @@ var app = angular.module("medMod");
 app.factory("userFactory", function($http) {
   var users = [];
   //Quotation versus array
-  
+
   return {
     addUser: addUser,
     updateUser: updateUser,
@@ -12,6 +12,7 @@ app.factory("userFactory", function($http) {
   }
 
 function updateUser() {
+  console.log('this function is running');
   return users;
 }
 

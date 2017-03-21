@@ -365,6 +365,12 @@ li>span {
   lovedOnes input Form
 ============================================================================= */
 
+.add{
+  float:left;
+}
+.list{
+  float:right;
+}
 .addDiv {
   width: 50%;
   min-width: 285px;
@@ -386,7 +392,7 @@ button#addButton{
   margin-right: auto;
   background-color: #86acd4;
   color: white;
-  width: 25%;
+  width: 50%;
   border-radius: 50px;
   border:2px solid white;
   -webkit-box-shadow: -9px 10px 22px -2px rgba(0,0,0,0.51);
@@ -431,7 +437,7 @@ button#addButton{
   margin-right: auto;
   background-color: #86acd4;
   color: white;
-  width: 25%;
+  width: 50%;
   border-radius: 50px;
   border:2px solid white;
   -webkit-box-shadow: -9px 10px 22px -2px rgba(0,0,0,0.51);

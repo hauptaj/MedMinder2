@@ -417,7 +417,8 @@ li.list-group-item {
   padding: 0 0 10px 50px;
   border: 0px;
   margin: 0 auto 0 auto;
-  display: table-cell;
+  margin-bottom: 5%;
+  display: block;
 }
 
 button.li-delete {
@@ -551,6 +552,63 @@ div.editView.slideLeft {
   animation-fill-mode: forwards;
 }
 
+/* Flipping Styling */
+div.switchContainer {
+ width: 100%;
+ text-align: center;
+ margin-top: 5%;
+ margin-bottom: 10px;
+ position: relative;
+}
+
+.flip-container {
+	perspective: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.flip-container, .front, .back {
+	width: 700px;
+	height: 50px;
+}
+
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+  transform-origin: 100% 25px;
+	position: relative;
+}
+
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+.back {
+	transform: rotateX(180deg);
+}
+
+.flip-container.flip .flipper {
+	transform: rotateX(-180deg);
+}
+
+.editFlip {
+  display: inline;
+  float: right;
+  position: absolute;
+  right: -61px;
+}
 /* =============================================================================
   Media Queries
 ============================================================================= */

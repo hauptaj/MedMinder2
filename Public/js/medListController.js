@@ -4,12 +4,13 @@ app.controller("contentController", function($scope, medFactory, $timeout, $loca
 
     $scope.pageClass = "med-page";
 
-
     $scope.personsPage = sharedFactory.passObject();
 
     medFactory.getMedListInfo($scope.personsPage.personid).then(function() {
         $scope.medicine = medFactory.updateMedList();
     });
+
+
 
     $scope.addMed = function(med, personsid) {
         medFactory.findRx(med.name).then(function() {
@@ -62,6 +63,13 @@ app.controller("contentController", function($scope, medFactory, $timeout, $loca
   $scope.fillTextBox = function(string) {
     $scope.med.name = string;
     $scope.hidethis = true;
+  };
+
+
+  $scope.flipped = false;
+
+  $scope.flip = function() {
+    $scope.flipped = !$scope.flipped;
   };
 
 });

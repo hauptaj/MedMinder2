@@ -88,6 +88,11 @@ table a {
 /* =============================================================================
   VIEW ELEMENTS
 ============================================================================= */
+h2 {
+  margin: 0 auto 0 auto;
+  font-family: Helvetica, Arial, sans-serif;
+  text-align: center;
+}
 
 /*.loginForm {*/
     /*diplay: inline-block;*/
@@ -111,7 +116,7 @@ table a {
   border-radius: 50px;
 }*/
 .outlineLogo {
-  width: 50%;
+  width: 40%;
   z-index: 5;
   margin: 0 auto 0 auto;
 }
@@ -319,6 +324,10 @@ transform: translateX(-50%);
   width: 100%;
 }*/
 
+div.table-view {
+  display: table;
+  margin: 0 auto 0 auto;
+}
 
 .list-group.listView {
   width: 20%;
@@ -326,6 +335,53 @@ transform: translateX(-50%);
 
 input.form-control#medicine {
   width: 20%;
+}
+
+ul.list-group.header {
+  border-bottom: 2px solid lightgray;
+  padding-bottom: 10px;
+  color: black;
+  display: table;
+  line-height: 20px;
+}
+
+li.list-group-item {
+  padding: 0 0 10px 50px;
+  border: 0px;
+  margin: 0 auto 0 auto;
+  display: table-cell;
+}
+
+button.li-delete {
+  border-radius: 50%;
+  background-color: red;
+  border-color: white;
+  color: white;
+  margin-left: -40px;
+  margin-right: 10px;
+  box-shadow: 2px 2px 7px grey;
+}
+
+button.li-delete:hover {
+  background-color: white;
+  color: #333;
+}
+
+button.li-delete:active {
+  background-color: white;
+  border-color: white;
+  color: #333;
+}
+
+button.li-delete .glyphicon {
+  top: 3px;
+}
+
+li>span {
+  display: inline-block;
+  width: 90px;
+  padding: 0 2% 0 2%;
+  text-align: center;
 }
 
 /* =============================================================================

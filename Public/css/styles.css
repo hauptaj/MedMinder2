@@ -322,6 +322,13 @@ input#registerButton:hover {
   color: black;
 }
 
+input#registerButton:active {
+  -webkit-box-shadow: -9px 10px 22px -26px rgba(0,0,0,0.51);
+  -moz-box-shadow: -9px 10px 22px -26px rgba(0,0,0,0.51);
+  box-shadow: -9px 10px 22px -26px rgba(0,0,0,0.51);
+  transform: translateY(-3px);
+}
+
 p.registerNow {
   color: white;
   font-size: 18px;

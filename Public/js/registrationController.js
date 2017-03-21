@@ -1,7 +1,7 @@
 var app = angular.module("medMod");
 
 app.controller("registrationController", function($scope, userFactory, $location) {
-  
+
   $scope.addUser= function(object){
     console.log('adduser function ran');
     // userFactory.addUser(object).then(function(){
@@ -15,4 +15,6 @@ app.controller("registrationController", function($scope, userFactory, $location
     $location.path('/login');
     console.log('should redirect');
   };
+
+  
 });

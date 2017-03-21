@@ -551,6 +551,51 @@ div.editView.slideLeft {
   animation-fill-mode: forwards;
 }
 
+/* Additional Flip Practice Styling */
+flipper {
+  perspective: 1000;
+}
+
+div.flipper {
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.front, .back {
+  backface-visibility: hidden;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform ease 500ms;
+}
+
+.front {
+  z-index: 2;
+}
+
+/*.back {
+
+}*/
+
+flipper[horizontal] {
+  .front {
+    transform: rotateY(0deg);
+  }
+  .back {
+    transform: rotateY(-180deg);
+  }
+}
+
+div.flipper.flipped {
+  .front {
+    transform: rotateY(180deg);
+  }
+
+  .back {
+    transform: rotateY(0deg);
+  }
+}
+
+
 /* =============================================================================
   Media Queries
 ============================================================================= */
@@ -605,14 +650,6 @@ div.editView.slideLeft {
   top:0;
   width:100%;
 }
-
-/*.ng-enter {
-  animation: slideInRight 0.7s both ease-in;
-}*/
-
-/*.ng-leave {
-  animation: slideOutLeft 0.4s both ease-in;
-}*/
 
 .loved-page.ng-enter, .med-page.ng-enter, .registration-page.ng-enter {
   animation: scaleUp 0.7s both ease-in;

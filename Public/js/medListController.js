@@ -3,6 +3,11 @@ app.controller("contentController", function($scope, medFactory, $timeout, $loca
 
     $scope.pageClass = "med-page";
 
+    $scope.flipped = false;
+
+    $scope.flip= function() {
+      $scope.flipped = !$scope.flipped;
+    };
 
     $scope.personsPage = sharedFactory.passObject();
 

@@ -19,19 +19,44 @@
                 </li>
             </ul>
 
-            <ul class="list-group" ng-repeat="med in medicine">
-                <li class="list-group-item">
+            <ul class="list-group">
+                <li class="list-group-item" ng-repeat="med in medicine">
                   <button type="button" name="delete" class="li-delete" ng-click="deleteMed(med.id, personsPage.personid)">
                     <span class="glyphicon glyphicon-remove">
                   </button>
-                  <span>{{med.name}}</span>
-                  <span>{{med.dosage}}</span>
-                  <span>{{med.time}}</span>
-                  <span>{{med.rxnumber}}</span>
+                  <flipper flipped="flipped" horizontal>
+                  <front>
+                    <span>{{med.name}}</span>
+                    <span>{{med.dosage}}</span>
+                    <span>{{med.time}}</span>
+                    <span>{{med.rxnumber}}</span>
+                    <span>Flip</span>
+                  </front>
+                  <back>
+                    <span>BACK NAME</span>
+                    <span>BACK DOSAGE</span>
+                    <span>BACK TIME</span>
+                    <span>BACK RX NU</span>
+                  </back>
               </li>
             </ul>
-            
+
         </div>
+
+
+        <flipper flipped="flipped" horizontal>
+        <front>
+          <span>{{med.name}}</span>
+          <span>{{med.dosage}}</span>
+          <span>{{med.time}}</span>
+          <span>{{med.rxnumber}}</span>
+        </front>
+        <back>
+          <span>BACK NAME</span>
+          <span>BACK DOSAGE</span>
+          <span>BACK TIME</span>
+          <span>BACK RX NU</span>
+        </back>
 
 
         <table>

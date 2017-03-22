@@ -5,23 +5,24 @@ app.controller("mainController", function($scope, dataFactory, sharedFactory, $l
 
   $scope.pageClass = "loved-page";
 
-//initiates GET request in factory1 then runs the updateLovedOnes function that pulls the data from factory2
-
+//initiate GET request in lovedFactory and stores the response in the lovedOnesController
   dataFactory.getLovedOneInfo(sharedFactory.passUser()).then(function() {
     $scope.personList = dataFactory.updateLovedOnes();
   });
 
-  $scope.userId = sharedFactory.passUser();
-  $scope.addLovedOne = function(object) {
-    object.userid = sharedFactory.passUser();
-    dataFactory.addPerson(object).then(function() {
-      $scope.personList = dataFactory.updateLovedOnes();
-      $scope.object.name = '';
-      $scope.object.weight = '';
-      $scope.object.age = '';
-    });
+//initiate the POST request in lovedFactory and stores the response in the lovedOnesController
+    $scope.userId = sharedFactory.passUser();
+    $scope.addLovedOne = function(object) {
+      object.userid = sharedFactory.passUser();
+      dataFactory.addPerson(object).then(function() {
+        $scope.personList = dataFactory.updateLovedOnes();
+        $scope.object.name = '';
+        $scope.object.weight = '';
+        $scope.object.age = '';
+      });
   };
 
+//initiate the DELETE request in the lovedFactory and stores the updateLovedOneslist in the controller
   $scope.removeLovedOne = function(personid, userId) {
 
     dataFactory.removePerson(personid, userId).then(function(){
@@ -29,22 +30,19 @@ app.controller("mainController", function($scope, dataFactory, sharedFactory, $l
     });
   };
 
+//initiate the PUT request in the lovedFactory and stores the response in the lovedOnesController
   $scope.alterLovedOne = function(newObject, personid, userId){
     dataFactory.alterPerson(newObject, personid, userId).then(function(){
       $scope.personList = dataFactory.updateLovedOnes();
     });
   };
 
+//shared factory taking the patient details from the lovedonesController
   $scope.moveAndLoad = function(personObject) {
     sharedFactory.takeObject(personObject);
     $location.path('/content');
   };
 
-  $scope.switchForms = function() {
-    var topForm = document.getElementById('personView');
-    var bottomForm = document.getElementById('editView');
-    topForm.classList.add('slideRight');
-    bottomForm.classList.add('slideLeft');
-  };
+
 
 });

@@ -370,11 +370,12 @@ ul.list-group.header {
 }
 
 li.list-group-item {
-    padding: 0 0 10px 50px;
+    /*padding: 0 0 10px 50px;*/
     border: 0px;
     margin: 0 auto 0 auto;
-    margin-bottom: 5%;
+    padding-bottom: 25px;
     display: block;
+    width: 500px;
 }
 
 button.li-delete {
@@ -651,8 +652,11 @@ div.front button, div.front span {
     right: 0;
 }
 
+ul.itemList {
+  background-color: grey
+}
+
 span.medSpan {
-    padding: 25px;
     width: 95px;
     float: left;
 }

@@ -36,6 +36,8 @@ button.navbar-toggle:visited {
     /* For Firefox 3.6 to 15 */
     background: linear-gradient(#fff, #86acd4);
     /* Standard syntax */
+    height: 80px;
+    width: 100%;
 }
 
 .navbar-collapse {
@@ -56,6 +58,7 @@ button.navbar-toggle:visited {
 .headerImg {
     display: block;
     margin: 0 auto 0 auto;
+    width: 100px;
 }
 
 
@@ -550,55 +553,6 @@ button#addButton:active {
     height: 5%;
 }
 
-
-/* Practice Styling */
-
-
-/*div.addDiv {
-  position: relative;
-  top: 200px;
-}
-
-div.backDrop {
-  width: auto;
-  height: auto;
-  background-color: white;
-}
-
-#flipButton {
-  position: absolute;
-  top: -30px;
-  right: 0;
-}
-
-div.personView {
-  position: absolute;
-  z-index: 10;
-  width: 100%;
-}
-
-div.editView {
-  position: absolute;
-  z-index: 9;
-  width: 100%;
-}
-
-div.editView {
-  margin: 5%;
-}
-
-div.personView.slideRight {
-  animation: slideRightThenLeft 1s;
-  animation-interaction-count: 1;
-  animation-fill-mode: forwards;
-}
-
-div.editView.slideLeft {
-  animation: slideLeftThenRight 1s;
-  animation-interaction-count: 1;
-  animation-fill-mode: forwards;
-}
-
 /* Flipping Styling */
 
 div.switchContainer {
@@ -857,14 +811,15 @@ div.addMedFormContainer {
     #loginContainer {
         margin-left: 15%;
     }
-    #logButton {
-        margin-left: 25px;
+    input#logButton {
+        margin-left: 30px;
     }
     input.btn.btn-lg.btn-success.btn-block:hover {
         text-decoration: none;
     }
     .outlineLogo {
-        width: 30%;
+        width: 60%;
+        margin-left: 45px;
     }
     p.registerNow {
         width: 130%;
@@ -872,6 +827,13 @@ div.addMedFormContainer {
     }
     p#disclaimer {
         font-size: 10px;
+    }
+    .addMedForm.form-control {
+      margin-left: -100px;
+    }
+    div.medListContainer {
+      width: 320px;
+      padding: 5px;
     }
 }
 

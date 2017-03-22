@@ -282,17 +282,17 @@ div.registrationSpacer {
   text-align: center;
 }
 
-#registrationForm input {
+#registrationForm input, .addMedForm input {
   margin: 5%;
   color: black;
   min-width: 195px;
 }
 
-#registrationForm input:focus {
+#registrationForm input:focus, .addMedForm input:focus {
   color: white;
 }
 
-input#registerButton {
+input#registerButton, input#addMedButton {
   margin-left: auto;
   margin-right: auto;
   background-color: #86acd4;
@@ -303,13 +303,13 @@ input#registerButton {
   box-shadow: -9px 10px 22px -2px rgba(0,0,0,0.51);
 }
 
-input#registerButton:hover {
+input#registerButton:hover, input#addMedButton:hover {
   border-color: #86acd4;
   background-color: white;
   color: black;
 }
 
-input#registerButton:active {
+input#registerButton:active, input#addMedButton:active {
   -webkit-box-shadow: -9px 10px 22px -26px rgba(0,0,0,0.51);
   -moz-box-shadow: -9px 10px 22px -26px rgba(0,0,0,0.51);
   box-shadow: -9px 10px 22px -26px rgba(0,0,0,0.51);
@@ -336,6 +336,8 @@ p.registerNow a:hover {
 div.table-view {
   display: table;
   margin: 0 auto 0 auto;
+  width: 100%;
+  text-align: center;
 }
 
 .list-group.listView {
@@ -352,13 +354,17 @@ ul.list-group.header {
   color: black;
   display: table;
   line-height: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 li.list-group-item {
   padding: 0 0 10px 50px;
   border: 0px;
   margin: 0 auto 0 auto;
-  display: table-cell;
+  margin-bottom: 5%;
+  display: block;
+
 }
 
 button.li-delete {
@@ -504,45 +510,6 @@ button#addButton:active {
   height: 5%;
 }
 
-/* =============================================================================
-  Media Queries
-============================================================================= */
-@media only screen and (max-width: 768px) {
-  .outlineLogo {
-    margin-top: 40px;
-  }
-  .inlineFormInput {
-    min-width: 150px;
-  }
-  #logButton {
-    min-width: 100px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  #loginContainer {
-    margin-left: 15%;
-  }
-  #logButton {
-    margin-left: 25px;
-  }
-
-  input.btn.btn-lg.btn-success.btn-block:hover {
-    text-decoration: none;
-  }
-  .outlineLogo {
-    width: 65%;
-  }
-  p.registerNow {
-    width: 130%;
-    font-size: 12px;
-  }
-  p#disclaimer {
-    font-size: 10px;
-  }
-}
-
-
 /* Practice Styling */
 /*div.addDiv {
   position: relative;
@@ -587,6 +554,116 @@ div.editView.slideLeft {
   animation: slideLeftThenRight 1s;
   animation-interaction-count: 1;
   animation-fill-mode: forwards;
+}
+
+/* Flipping Styling */
+div.switchContainer {
+ width: 100%;
+ height: auto;
+ text-align: center;
+ margin-top: 5%;
+ margin-bottom: 10px;
+ position: relative;
+}
+
+.flip-container {
+	perspective: 1000px;
+  display: inline;
+  position: relative;
+}
+
+.flip-container, .front, .back {
+	width: auto;
+	height: auto;
+}
+
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+  transform-origin: 100% 25px;
+	position: relative;
+  margin-left: -19%;
+  height: 10px;
+}
+
+.front, .back {
+	backface-visibility: hidden;
+}
+
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+  margin-left: 138px;
+}
+
+div.front button, div.front span {
+  display: inline;
+}
+
+.back {
+	transform: rotateX(180deg);
+  margin-left: 100px;
+}
+
+.back input {
+  width: 15%;
+  min-width: 10px;
+  margin-right: 10px;
+}
+
+.flip-container.flip .flipper {
+	transform: rotateX(-180deg);
+}
+
+.editFlip {
+  display: inline;
+  position: relative;
+  right: 0;
+}
+
+span.medSpan {
+  padding: 25px;
+}
+
+.list-group.medList {
+  width: 90%;
+  margin: 0;
+}
+
+li.list-group-item.autoCompleteItem {
+  color: black;
+}
+
+/* Med Form */
+.addMedForm.form-control {
+  width: 25%;
+  min-width: 285px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.addMedForm h2 {
+  color: black;
+  text-decoration: underline;
+}
+
+div.medListContainer {
+  float: right;
+  width: 60%;
+  margin-right: 10%;
+}
+
+div.addMedFormContainer {
+  float: left;
+  width: 30%;
+}
+
+#addMedButton {
+  width: 50%;
 }
 
 /* =============================================================================
@@ -658,4 +735,60 @@ div.editView.slideLeft {
 
 .loved-page.ng-leave, .med-page.ng-leave, .registration-page.ng-leave {
   animation: slideOutLeft 0.7s both ease-in;
+}
+
+/* =============================================================================
+  Media Queries
+============================================================================= */
+@media only screen and (max-width: 768px) {
+  .outlineLogo {
+    margin-top: 40px;
+  }
+  .inlineFormInput {
+    min-width: 150px;
+  }
+  #logButton {
+    min-width: 100px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #loginContainer {
+    margin-left: 15%;
+  }
+  #logButton {
+    margin-left: 25px;
+  }
+
+  input.btn.btn-lg.btn-success.btn-block:hover {
+    text-decoration: none;
+  }
+  .outlineLogo {
+    width: 65%;
+  }
+  p.registerNow {
+    width: 130%;
+    font-size: 12px;
+  }
+  p#disclaimer {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 1061px) {
+  div.medListContainer {
+    min-width: 420px;
+    float: none;
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  div.addMedFormContainer {
+    float: none;
+    clear: both;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

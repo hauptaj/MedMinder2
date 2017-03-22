@@ -29,7 +29,7 @@
                             </button>
                       			<span class="medSpan">{{med.name}}</span>
                             <span class="medSpan">{{med.dosage}}</span>
-                            <span class="medSpan">{{med.time}}</span>
+                            <span class="medSpan">{{med.time.substr(0,5)}}</span>
                             <span class="medSpan">{{med.rxnumber}}</span>
                             <button class="editFlip" ng-click="med.flipped = true;">Edit</button>
                       		</div>

@@ -13,6 +13,7 @@ function updateUser() {
   return users;
 }
 
+//sending a post request to the server to add a new user
 function addUser(object) {
   var promise = $http({
     method: 'POST',
@@ -32,6 +33,7 @@ function addUser(object) {
     return promise;
 }
 
+//sending a get request to the server to get the userid
 function getUserInfo(user){
   var promise = $http({
     method: 'GET',

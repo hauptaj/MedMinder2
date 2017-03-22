@@ -11,6 +11,7 @@ app.factory("dataFactory", function($http) {
     alterPerson:alterPerson
   }
 
+//sending a get requst to the server to get lovedones info.
   function getLovedOneInfo(userid) {
     var promise = $http({
       method: 'GET',
@@ -30,6 +31,7 @@ app.factory("dataFactory", function($http) {
     return lovedones;
   }
 
+//sending an post request to the server to add a lovedone
   function addPerson(object) {
     var promise = $http({
       method: 'POST',
@@ -48,6 +50,7 @@ app.factory("dataFactory", function($http) {
     return promise;
   }
 
+//sending a delete request to the server to delete a lovedone
   function removePerson(personid, userId){
     var promise = $http({
       method: 'DELETE',
@@ -60,6 +63,7 @@ app.factory("dataFactory", function($http) {
     return promise;
     }
 
+//sending a put request to the server to alter a lovedone
   function alterPerson(newObject, personid, userId){
     var promise = $http({
       method: 'PUT',

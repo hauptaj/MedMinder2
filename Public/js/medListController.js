@@ -4,7 +4,6 @@ app.controller("contentController", function($scope, medFactory, $timeout, $loca
 
     $scope.pageClass = "med-page";
 
-
     $scope.personsPage = sharedFactory.passObject();
 
     medFactory.getMedListInfo($scope.personsPage.personid).then(function() {
@@ -45,6 +44,10 @@ app.controller("contentController", function($scope, medFactory, $timeout, $loca
     }
 
   //Auto-Complete Functionality Below
+  medFactory.requestMedNames().then(function() {
+    $scope.masterList = medFactory.returnMedNames();
+  });
+  
   $scope.complete = function(string) {
     $scope.hidethis = false;
     var output = [];

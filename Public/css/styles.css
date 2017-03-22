@@ -851,14 +851,15 @@ div.addMedFormContainer {
     #loginContainer {
         margin-left: 15%;
     }
-    #logButton {
-        margin-left: 25px;
+    input#logButton {
+        margin-left: 30px;
     }
     input.btn.btn-lg.btn-success.btn-block:hover {
         text-decoration: none;
     }
     .outlineLogo {
-        width: 30%;
+        width: 60%;
+        margin-left: 45px;
     }
     p.registerNow {
         width: 130%;
@@ -866,6 +867,13 @@ div.addMedFormContainer {
     }
     p#disclaimer {
         font-size: 10px;
+    }
+    .addMedForm.form-control {
+      margin-left: -100px;
+    }
+    div.medListContainer {
+      width: 320px;
+      padding: 5px;
     }
 }
 

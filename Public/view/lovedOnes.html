@@ -18,7 +18,7 @@
                       <button type="button" name="delete" class="li-delete" ng-click="removeLovedOne(person.personid, userId)">
                         <span class="glyphicon glyphicon-remove">
                       </button>
-                      <span class="medSpan">{{person.name}}</span>
+                      <span class="medSpan"><a ng-click="moveAndLoad(person)" href="#/content">{{person.name}}</a></span>
                       <span class="medSpan">{{person.weight}}</span>
                       <span class="medSpan">{{person.age}}</span>
                       <button class="editFlip" ng-click="med.flipped = true;">Edit</button>

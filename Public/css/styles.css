@@ -306,17 +306,17 @@ div.registrationSpacer {
   text-align: center;
 }
 
-#registrationForm input {
+#registrationForm input, .addMedForm input {
   margin: 5%;
   color: black;
   min-width: 195px;
 }
 
-#registrationForm input:focus {
+#registrationForm input:focus, .addMedForm input:focus {
   color: white;
 }
 
-input#registerButton {
+input#registerButton, input#addMedButton {
   margin-left: auto;
   margin-right: auto;
   background-color: #86acd4;
@@ -327,13 +327,13 @@ input#registerButton {
   box-shadow: -9px 10px 22px -2px rgba(0,0,0,0.51);
 }
 
-input#registerButton:hover {
+input#registerButton:hover, input#addMedButton:hover {
   border-color: #86acd4;
   background-color: white;
   color: black;
 }
 
-input#registerButton:active {
+input#registerButton:active, input#addMedButton:active {
   -webkit-box-shadow: -9px 10px 22px -26px rgba(0,0,0,0.51);
   -moz-box-shadow: -9px 10px 22px -26px rgba(0,0,0,0.51);
   box-shadow: -9px 10px 22px -26px rgba(0,0,0,0.51);
@@ -395,7 +395,7 @@ transform: translateX(-50%);
 div.table-view {
   display: table;
   margin: 0 auto 0 auto;
-  width: 45%;
+  width: 100%;
   text-align: center;
 }
 
@@ -423,6 +423,7 @@ li.list-group-item {
   margin: 0 auto 0 auto;
   margin-bottom: 5%;
   display: block;
+
 }
 
 button.li-delete {
@@ -631,6 +632,10 @@ span.medSpan {
   margin: 0;
 }
 
+li.list-group-item.autoCompleteItem {
+  color: black;
+}
+
 .addMedForm.form-control {
   width: 25%;
   min-width: 285px;
@@ -638,7 +643,25 @@ span.medSpan {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  padding-bottom: 10px;
 }
+
+.addMedForm h2 {
+  color: black;
+  text-decoration: underline;
+}
+
+div.medListContainer {
+  float: right;
+  width: 60%;
+  margin-right: 10%;
+}
+
+div.addMedFormContainer {
+  float: left;
+  width: 30%;
+}
+
 /* =============================================================================
   Media Queries
 ============================================================================= */

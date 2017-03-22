@@ -7,7 +7,7 @@
         </div>
 
         <div class="table-view">
-          <div class="medList">
+          <div class="medListContainer">
             <h2>Medication List</h2>
               <ul class="list-group header">
                   <li class="list-group-item">
@@ -48,9 +48,10 @@
 
         <div class="addMedFormContainer">
           <form class="form-control form-inline addMedForm" >
-            <input type="text" name="medicine" value="" ng-model="med.name" ng-keyup="complete(med.name)" class="form-control">
+            <h2>Add a Medicine</h2>
+            <input type="text" name="medicine" value="" ng-model="med.name" ng-keyup="complete(med.name)" class="form-control" placeholder="medicine">
             <ul ng-model="hidethis" ng-hide="hidethis" class="list-group listView">
-                <li ng-repeat="medData in filterMedicine" ng-click="fillTextBox(medData)" class="list-group-item"> {{ medData }}</li>
+                <li ng-repeat="medData in filterMedicine" ng-click="fillTextBox(medData)" class="list-group-item autoCompleteItem"> {{ medData }}</li>
             </ul>
             <input type "number" placeholder="Dosage" ng-model="med.dosage" class="form-control">
             <input type="text" placeholder="04:00" ng-model="med.time" class="form-control"><br>

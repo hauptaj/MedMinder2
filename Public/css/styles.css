@@ -37,6 +37,7 @@ button.navbar-toggle:visited {
     background: linear-gradient(#fff, #86acd4);
     /* Standard syntax */
     height: 80px;
+    width: 100%;
 }
 
 .navbar-nav>li>a {
@@ -51,7 +52,7 @@ button.navbar-toggle:visited {
 .headerImg {
     display: block;
     margin: 0 auto 0 auto;
-    width: 8%;
+    width: 100px;
 }
 
 
@@ -544,55 +545,6 @@ button#addButton:active {
 .navbar-fixed-bottom {
     background-color: rgba(0, 0, 0, 0.5);
     height: 5%;
-}
-
-
-/* Practice Styling */
-
-
-/*div.addDiv {
-  position: relative;
-  top: 200px;
-}
-
-div.backDrop {
-  width: auto;
-  height: auto;
-  background-color: white;
-}
-
-#flipButton {
-  position: absolute;
-  top: -30px;
-  right: 0;
-}
-
-div.personView {
-  position: absolute;
-  z-index: 10;
-  width: 100%;
-}
-
-div.editView {
-  position: absolute;
-  z-index: 9;
-  width: 100%;
-}
-
-div.editView {
-  margin: 5%;
-}
-
-div.personView.slideRight {
-  animation: slideRightThenLeft 1s;
-  animation-interaction-count: 1;
-  animation-fill-mode: forwards;
-}
-
-div.editView.slideLeft {
-  animation: slideLeftThenRight 1s;
-  animation-interaction-count: 1;
-  animation-fill-mode: forwards;
 }
 
 /* Flipping Styling */

@@ -375,6 +375,7 @@ button.li-delete {
   margin-left: -40px;
   margin-right: 10px;
   box-shadow: 2px 2px 7px grey;
+float:left;
 }
 
 button.li-delete:hover {
@@ -626,6 +627,8 @@ div.front button, div.front span {
 
 span.medSpan {
   padding: 25px;
+  width: 95px;
+  float: left;
 }
 
 .list-group.medList {

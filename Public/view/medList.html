@@ -8,7 +8,7 @@
 
         <!-- <div class="table-view"> -->
           <div class="medListContainer">
-            <h2>{{ personsPage.name }}'s Med List</h2>
+            <h2>Medication List</h2>
               <ul class="list-group header">
                   <li class="list-group-item">
                       <span><strong>Name</strong></span>
@@ -16,7 +16,9 @@
                       <span><strong>Time</strong></span>
                       <span><strong>Rx Number</strong></span>
                   </li>
+                </ul>
 
+                <ul>
                     <div class="switchContainer" ng-repeat="med in medicine">
                       <li class="list-group-item medListItem">
                       <div class="flip-container" ng-class="{flip: med.flipped}">
@@ -42,6 +44,7 @@
                       </div>
                       </li>
                     </div>
+                  </ul>
 
 <!-- <<<<<<< HEAD -->
         <!-- <table>

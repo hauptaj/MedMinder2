@@ -36,6 +36,7 @@ button.navbar-toggle:visited {
     /* For Firefox 3.6 to 15 */
     background: linear-gradient(#fff, #86acd4);
     /* Standard syntax */
+    height: 80px;
 }
 
 .navbar-nav>li>a {
@@ -50,6 +51,7 @@ button.navbar-toggle:visited {
 .headerImg {
     display: block;
     margin: 0 auto 0 auto;
+    width: 8%;
 }
 
 

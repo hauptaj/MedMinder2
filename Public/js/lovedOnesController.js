@@ -2,7 +2,7 @@ var app = angular.module("medMod");
 
 app.controller("mainController", function($scope, dataFactory, sharedFactory, $location){
 
-
+//assigns page class to loved ones page
   $scope.pageClass = "loved-page";
 
 //initiate GET request in lovedFactory and stores the response in the lovedOnesController

@@ -2,8 +2,10 @@ var app = angular.module("medMod");
 
 app.controller("contentController", function($scope, medFactory, $timeout, $location, sharedFactory) {
 
+//assigns page class to med page
     $scope.pageClass = "med-page";
 
+//Takes the loved one object from the shared factory and stores in the medListController
     $scope.personsPage = sharedFactory.passObject();
 
 //initiate the GET request in medFactory and store the response in the medListController

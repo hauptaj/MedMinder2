@@ -9,6 +9,7 @@ var pool = require('./pg-connection-pool');
 app.use(bodyParser.json({extend: true}));
 app.use(express.static(__dirname + '/Public'));
 
+//This function is how the server handles a GET request from the login view
 app.get('/login/:username/:password', function(req, res, next){
   var user = [];
   var username = req.params.username;
@@ -16,6 +17,7 @@ app.get('/login/:username/:password', function(req, res, next){
   console.log(username);
   console.log(password);
 
+  //This function is querying the data from the usertable and pushing to the "user" variable
  pool.connect(function(err, client, done){
     var query = client.query('SELECT userid FROM usertable WHERE username=($1) AND password=($2)',[username, password]);
 
@@ -30,11 +32,11 @@ app.get('/login/:username/:password', function(req, res, next){
   });
 });
 
-//This function is how the server handles a GET request from /lovedones view
+//This function is how the server handles a GET request from the lovedones view
 app.get('/lovedones/:userid', function(req, res, next) {
   var list = [];
   var userid = req.params.userid;
-  console.log(userid);
+
 
 //This function is querying the data from the lovedones database the pushing to the "list" variable
   pool.connect(function(err, client, done) {
@@ -46,7 +48,7 @@ app.get('/lovedones/:userid', function(req, res, next) {
     });
 
    query.on('end', function() {
-      console.log(list);
+
       done();
       return res.json(list);
     });
@@ -109,7 +111,7 @@ app.delete('/lovedones-delete/:id/:userId', function(req, res, next) {
     });
 });
 
-//This function is how the server deals with a put request for a loved one
+//This function is how the server deals with a put request for the lovedones
 app.put('/lovedones-edit/:id/:userId', function(req, res, next) {
   var list = [];
   var id = req.params.id;
@@ -121,7 +123,7 @@ app.put('/lovedones-edit/:id/:userId', function(req, res, next) {
   };
 
   pool.connect(function(err, client, done) {
-
+//update from the table at specific Id
     client.query('UPDATE lovedones SET name=($1), weight=($2), age=($3) WHERE personid=($4)', [data.name, data.weight, data.age, id]);
 
     var query = client.query('SELECT * FROM lovedones WHERE userid=($1)', [userId]);
@@ -138,14 +140,11 @@ app.put('/lovedones-edit/:id/:userId', function(req, res, next) {
   });
 });
 
-
+//This function is how the server deals with a GET request for getting medicinelist
 app.get('/meds/:personid', function(req, res, next) {
   var medList = [];
   var personid = req.query.personid;
-  console.log(personid);
-  // var data = {
-  //   personid: req.query.personid
-  // };
+
 
   pool.connect(function(err, client, done) {
     var query = client.query('SELECT * FROM medicine WHERE personid=($1)', [personid]);
@@ -162,6 +161,7 @@ app.get('/meds/:personid', function(req, res, next) {
   });
 });
 
+//This function is how the server deals with a POST request for adding new medicine to the lovedones medList
 app.post('/meds-add', function(req, res, next) {
   var medList = [];
   data = {
@@ -171,7 +171,6 @@ app.post('/meds-add', function(req, res, next) {
     rxnumber: req.body.rxnumber,
     personid: req.body.personid
   }
-  console.log(data);
 
   pool.connect(function(err, client, done) {
     client.query('INSERT INTO medicine(name, dosage, time, rxnumber, personid) values($1, $2, $3, $4, $5)', [data.name, data.dosage, data.time, data.rxnumber, data.personid]);
@@ -182,13 +181,13 @@ app.post('/meds-add', function(req, res, next) {
     });
 
     query.on('end', function() {
-      console.log(medList);
       done();
       return res.json(medList);
     });
   });
 });
 
+//This function is how the server deals with a DELETE request for deleting medicin
 app.delete('/meds-delete/:id/:personid', function(req, res, next) {
   var medList = [];
   var id = req.params.id;
@@ -203,13 +202,13 @@ app.delete('/meds-delete/:id/:personid', function(req, res, next) {
     });
 
     query.on('end', function() {
-      console.log(medList);
       done();
       return res.json(medList);
     });
   });
 });
 
+//This function is how the server deals with a PUT request for updating medlist
 app.put('/meds-update/:id', function(req, res, next) {
   var medList = [];
   var id = req.params.id;
@@ -237,7 +236,7 @@ app.put('/meds-update/:id', function(req, res, next) {
   });
 });
 
-
+//This function is how the server deals with a PUT request for adding rxnumber to medicine table
 app.put('/rx-add', function(req, res, next) {
   var medList = [];
 
@@ -262,6 +261,7 @@ app.put('/rx-add', function(req, res, next) {
   });
 });
 
+//This function is how the server deals with a POST request for adding new user
 app.post('/users-add', function(req, res, next) {
   var list = [];
   var data = {
@@ -280,7 +280,6 @@ app.post('/users-add', function(req, res, next) {
     });
 
     query.on('end', function(){
-      console.log(list);
       done();
       return res.json(list);
     });

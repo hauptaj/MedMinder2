@@ -96,6 +96,8 @@ h2 {
 .img-responsive {
     position: relative;
     top: -100px;
+    width: 80%;
+    margin: 0 auto 0 auto;
 }
 
 .overlayRow {
@@ -653,7 +655,7 @@ div.front button, div.front span {
 }
 
 ul.itemList {
-  background-color: grey
+  /*background-color: grey*/
 }
 
 span.medSpan {
@@ -809,7 +811,7 @@ div.addMedFormContainer {
         text-decoration: none;
     }
     .outlineLogo {
-        width: 65%;
+        width: 30%;
     }
     p.registerNow {
         width: 130%;

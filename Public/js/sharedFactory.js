@@ -10,20 +10,23 @@ app.factory("sharedFactory", function() {
     passUser: passUser,
     takeUser: takeUser
   }
-//take the patient details from the patient table
+
+//take the patient  details from lovedonesController and storing it in the sharedFactory
   function takeObject(personObject) {
     storedPerson = personObject;
   }
 
-//pass the patient details to the medListController
+//take the patient details from the shared factory and pass it to the medListController
   function passObject() {
     return storedPerson;
   }
-//take the userid from the user table
+
+//take the userid from the loginControllerand stored it in the shared factory
   function takeUser(userid) {
     storedUser = userid;
   }
-//pass the userid to the lovedOnesController
+  
+//take the userid from the sharedFactory and pass it to the lovedOnesController
   function passUser() {
     return storedUser;
   }

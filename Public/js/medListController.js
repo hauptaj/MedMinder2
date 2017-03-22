@@ -6,12 +6,12 @@ app.controller("contentController", function($scope, medFactory, $timeout, $loca
 
     $scope.personsPage = sharedFactory.passObject();
 
+//initiate the GET request in medFactory and store the response in the medListController
     medFactory.getMedListInfo($scope.personsPage.personid).then(function() {
         $scope.medicine = medFactory.updateMedList();
     });
 
-
-
+//initiate the POST and GET request in medFactory and store the response in the medListController
     $scope.addMed = function(med, personsid) {
         medFactory.findRx(med.name).then(function() {
             med.rxnumber = medFactory.getNewRx();
@@ -30,12 +30,14 @@ app.controller("contentController", function($scope, medFactory, $timeout, $loca
         });
     }
 
+//initiate the DELETE request in the medFactory and store the response in the medListController
     $scope.deleteMed = function(medId, personid) {
         medFactory.deleteMedicine(medId, personid).then(function() {
             $scope.medicine = medFactory.updateMedList();
         });
     }
 
+//initiate the PUT request in the medFactory and store the response in the medListController
     $scope.updateMed = function(newMed, medId, personid) {
         medFactory.findRx(newMed.name).then(function() {
             newMed.rxnumber = medFactory.getNewRx();
@@ -45,12 +47,11 @@ app.controller("contentController", function($scope, medFactory, $timeout, $loca
         });
     }
 
-
   //Auto-Complete Functionality Below
   medFactory.requestMedNames().then(function() {
     $scope.masterList = medFactory.returnMedNames();
   });
-  
+
   $scope.complete = function(string) {
     $scope.hidethis = false;
     var output = [];
@@ -70,7 +71,7 @@ app.controller("contentController", function($scope, medFactory, $timeout, $loca
     $scope.hidethis = true;
   };
 
-
+//clash change functionality for flip
   $scope.flipped = false;
 
   $scope.flip = function() {

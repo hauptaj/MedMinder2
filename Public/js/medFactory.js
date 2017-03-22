@@ -17,6 +17,7 @@ app.factory("medFactory", function($http){
     returnMedNames: returnMedNames
     }
 
+//sending a get request to the server to get the medlist info
   function getMedListInfo(personsid) {
     var promise = $http({
       method: 'GET',
@@ -32,6 +33,7 @@ app.factory("medFactory", function($http){
     return promise;
   }
 
+//sending a post request to the server to add  a new medicine
   function addMedicine(med, personsid) {
     var promise = $http({
       method: 'POST',
@@ -52,6 +54,7 @@ app.factory("medFactory", function($http){
     return "alert";
   }
 
+//sending a delete request to the server to delete a medicine
   function deleteMedicine(medId, personsid) {
     var promise = $http({
       method: 'DELETE',
@@ -64,6 +67,7 @@ app.factory("medFactory", function($http){
     return promise;
   }
 
+//sending a put request to the server to update the medicine
   function updateMedicine(newMed,medId, personsid) {
     var promise = $http({
       method: 'PUT',
@@ -83,6 +87,7 @@ app.factory("medFactory", function($http){
     return promise;
   }
 
+//sending a get to the server to find the rxnumber and store it in the medfactory
   function findRx(medName){
     var promise = $http({
       method: 'GET',
@@ -95,14 +100,17 @@ app.factory("medFactory", function($http){
     return promise;
   }
 
+//take the updated medicine list and pass it to the medListController
   function updateMedList(){
     return medicine;
   }
 
+//take the new rxnumber and pass it to the medListController
   function getNewRx() {
     return newRx;
   }
 
+//sending a get request to the server to get the medicine name
   function requestMedNames() {
     var promise = $http({
       method: 'GET',
@@ -115,6 +123,7 @@ app.factory("medFactory", function($http){
     return promise;
   }
 
+//take the medname from the factory and pass it to the medListController
   function returnMedNames() {
     return medNames;
   }

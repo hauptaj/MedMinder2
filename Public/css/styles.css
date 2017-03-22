@@ -489,6 +489,16 @@ button#addButton:active {
   transform: translateY(-3px);
 }
 
+.flip-container {
+  perspective: 1000px;
+}
+
+.flip-container .flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  transform-origin: 100% 25px;
+  position: relative;
+}
 /* =============================================================================
   FOOTER
 ============================================================================= */

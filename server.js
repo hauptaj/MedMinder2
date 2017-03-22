@@ -24,7 +24,7 @@ app.get('/login/:username/:password', function(req, res, next){
     });
     query.on('end', function(){
       console.log(user);
-      client.end();
+      done();
       return res.json(user);
     });
   });
@@ -47,7 +47,7 @@ app.get('/lovedones/:userid', function(req, res, next) {
 
    query.on('end', function() {
       console.log(list);
-      client.end();
+      done();
       return res.json(list);
     });
   });
@@ -77,7 +77,7 @@ app.post('/lovedones-add', function(req, res, next) {
 
     query.on('end', function() {
       console.log(list);
-      client.end();
+      done();
       return res.json(list);
     });
   });
@@ -103,7 +103,7 @@ app.delete('/lovedones-delete/:id/:userId', function(req, res, next) {
 
       query.on('end', function() {
         console.log(list);
-        client.end();
+        done();
         return res.json(list);
       });
     });
@@ -132,7 +132,7 @@ app.put('/lovedones-edit/:id/:userId', function(req, res, next) {
 
     query.on('end', function() {
       console.log(list);
-      client.end();
+      done();
       return res.json(list);
     });
   });
@@ -156,7 +156,7 @@ app.get('/meds/:personid', function(req, res, next) {
 
     query.on('end', function() {
       console.log(medList);
-      client.end();
+      done();
       return res.json(medList);
     });
   });
@@ -183,7 +183,7 @@ app.post('/meds-add', function(req, res, next) {
 
     query.on('end', function() {
       console.log(medList);
-      client.end();
+      done();
       return res.json(medList);
     });
   });
@@ -204,7 +204,7 @@ app.delete('/meds-delete/:id/:personid', function(req, res, next) {
 
     query.on('end', function() {
       console.log(medList);
-      client.end();
+      done();
       return res.json(medList);
     });
   });
@@ -231,7 +231,7 @@ app.put('/meds-update/:id', function(req, res, next) {
 
     query.on('end', function() {
       console.log(medList);
-      client.end();
+      done();
       return res.json(medList);
     });
   });
@@ -256,7 +256,7 @@ app.put('/rx-add', function(req, res, next) {
 
     query.on('end', function() {
       console.log(medList);
-      client.end();
+      done();
       return res.json(medList);
     });
   });
@@ -281,7 +281,7 @@ app.post('/users-add', function(req, res, next) {
 
     query.on('end', function(){
       console.log(list);
-      client.end();
+      done();
       return res.json(list);
     });
   });

@@ -448,7 +448,7 @@ button#addButton:active {
   Medlist input Form
 ============================================================================= */
 
-.addDiv {
+div.addDiv {
   width: 50%;
   min-width: 285px;
   height: auto;
@@ -458,12 +458,12 @@ button#addButton:active {
   border: 1px solid #ccc;
   padding: 12px 5px 25px 5px;
 }
-.addDiv input{
+div.addDiv input{
   margin: 5%;
   color: black;
   min-width: 195px;
 }
-.addDiv input:focus{
+div.addDiv input:focus{
   color: white;
 }
 button#addButton{

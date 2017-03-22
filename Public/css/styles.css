@@ -472,45 +472,6 @@ li>span {
   background-color: rgba(0,0,0,0.5);
 }
 
-/* =============================================================================
-  Media Queries
-============================================================================= */
-@media only screen and (max-width: 768px) {
-  .outlineLogo {
-    margin-top: 40px;
-  }
-  .inlineFormInput {
-    min-width: 150px;
-  }
-  #logButton {
-    min-width: 100px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  #loginContainer {
-    margin-left: 15%;
-  }
-  #logButton {
-    margin-left: 25px;
-  }
-
-  input.btn.btn-lg.btn-success.btn-block:hover {
-    text-decoration: none;
-  }
-  .outlineLogo {
-    width: 65%;
-  }
-  p.registerNow {
-    width: 130%;
-    font-size: 12px;
-  }
-  p#disclaimer {
-    font-size: 10px;
-  }
-}
-
-
 /* Practice Styling */
 /*div.addDiv {
   position: relative;
@@ -662,6 +623,10 @@ div.addMedFormContainer {
   width: 30%;
 }
 
+#addMedButton {
+  width: 50%;
+}
+
 /* =============================================================================
   Media Queries
 ============================================================================= */
@@ -731,4 +696,60 @@ div.addMedFormContainer {
 
 .loved-page.ng-leave, .med-page.ng-leave, .registration-page.ng-leave {
   animation: slideOutLeft 0.7s both ease-in;
+}
+
+/* =============================================================================
+  Media Queries
+============================================================================= */
+@media only screen and (max-width: 768px) {
+  .outlineLogo {
+    margin-top: 40px;
+  }
+  .inlineFormInput {
+    min-width: 150px;
+  }
+  #logButton {
+    min-width: 100px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #loginContainer {
+    margin-left: 15%;
+  }
+  #logButton {
+    margin-left: 25px;
+  }
+
+  input.btn.btn-lg.btn-success.btn-block:hover {
+    text-decoration: none;
+  }
+  .outlineLogo {
+    width: 65%;
+  }
+  p.registerNow {
+    width: 130%;
+    font-size: 12px;
+  }
+  p#disclaimer {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 1061px) {
+  div.medListContainer {
+    min-width: 420px;
+    float: none;
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  div.addMedFormContainer {
+    float: none;
+    clear: both;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

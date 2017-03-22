@@ -216,6 +216,7 @@ input.btn.btn-lg.btn-success.btn-block {
   border: 2px solid white;
 }
 
+
 #userInput::-webkit-input-placeholder, #passInput::-webkit-input-placeholder {
   color: white;
 }
@@ -232,6 +233,32 @@ input.btn.btn-lg.btn-success.btn-block {
 
 #userInput:-ms-input-placeholder { /* Internet Explorer 10-11 */
    color: white;
+}
+
+/*Login Button*/
+
+input#logButton {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #86acd4;
+  color: white;
+  width: 50%;
+  -webkit-box-shadow: -9px 10px 22px -2px rgba(0,0,0,0.51);
+  -moz-box-shadow: -9px 10px 22px -2px rgba(0,0,0,0.51);
+  box-shadow: -9px 10px 22px -2px rgba(0,0,0,0.51);
+}
+
+input#logButton:hover {
+  border-color: #86acd4;
+  background-color: white;
+  color: black;
+}
+
+input#logButton:active {
+  -webkit-box-shadow: -9px 10px 22px -26px rgba(0,0,0,0.51);
+  -moz-box-shadow: -9px 10px 22px -26px rgba(0,0,0,0.51);
+  box-shadow: -9px 10px 22px -26px rgba(0,0,0,0.51);
+  transform: translateY(-3px);
 }
 
 /* =============================================================================
@@ -297,7 +324,12 @@ p.registerNow {
 }
 
 p.registerNow a {
-  color: #c0c0c0;
+  color: #86acd4;
+  text-decoration: underline;
+}
+
+p.registerNow a:hover {
+  color: white;
   text-decoration: underline;
 }
 
@@ -365,6 +397,12 @@ li>span {
   lovedOnes input Form
 ============================================================================= */
 
+.add{
+  float:left;
+}
+.list{
+  float:right;
+}
 .addDiv {
   width: 50%;
   min-width: 285px;
@@ -386,7 +424,7 @@ button#addButton{
   margin-right: auto;
   background-color: #86acd4;
   color: white;
-  width: 25%;
+  width: 50%;
   border-radius: 50px;
   border:2px solid white;
   -webkit-box-shadow: -9px 10px 22px -2px rgba(0,0,0,0.51);
@@ -431,7 +469,7 @@ button#addButton{
   margin-right: auto;
   background-color: #86acd4;
   color: white;
-  width: 25%;
+  width: 50%;
   border-radius: 50px;
   border:2px solid white;
   -webkit-box-shadow: -9px 10px 22px -2px rgba(0,0,0,0.51);

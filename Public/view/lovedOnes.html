@@ -1,30 +1,40 @@
 <section class="tablePosition">
 
   <article>
+    <h2>Loved Ones</h2>
+    <div class="row viewRow">
+        <div class="col-xs-6 columns" class="add">
+            <div class="addDiv">
+              <input type "text" placeholder="Loved One's Name" ng-model="object.name" class="form-control">
+              <input type "text" placeholder="Weight" ng-model="object.weight" class="form-control">
+              <input type="number" placeholder="Age" ng-model="object.age" class="form-control"><br>
+              <button ng-click="addLovedOne(object)" id="addButton">Add New Loved One</button>
+            </div>
+        </div>
+        <div class="col-xs-6 columns" class="list">
+            <div class="table-view">
 
-    <div class="table-view">
-      <h2>Loved Ones</h2>
-      <ul class="list-group header">
-        <li class="list-group-item">
-                <span><strong>Name</strong></span>
-                <span><strong>Weight(lb)</strong></span>
-                <span><strong>Age</strong></span>
-                <span><strong>Person Id</strong></span>
-            </li>
-          </ul>
+              <ul class="list-group header">
+                <li class="list-group-item">
+                    <span><strong>Name</strong></span>
+                    <span><strong>Weight(lb)</strong></span>
+                    <span><strong>Age</strong></span>
+                    <span><strong>Person Id</strong></span>
+                </li>
+              </ul>
 
-            <ul class="list-group" ng-repeat ="person in personList">
+              <ul class="list-group" ng-repeat ="person in personList">
                 <li class="list-group-item"><button type="button" name="delete" class="li-delete" ng-click="removeLovedOne(person.personid, userId)"><span class="glyphicon glyphicon-remove"></button>
 
-                <span><a ng-click="moveAndLoad(person)" href="#/content"> {{person.name}} </a></span>
-                <span>{{person.weight}}</span>
-                <span>{{person.age}}</span>
-                <span>{{person.personid}}</span>
-            </li>
-          </ul>
+                    <span><a ng-click="moveAndLoad(person)" href="#/content"> {{person.name}} </a></span>
+                    <span>{{person.weight}}</span>
+                    <span>{{person.age}}</span>
+                    <span>{{person.personid}}</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-
-
       <div class="editView" id="editView">
         <div class="backDrop">
           <button type="button" name="button" id="flipButton" ng-click="switchForms()">Edit</button>
@@ -40,12 +50,7 @@
       </div>
     </div>
 
-    <div class="addDiv">
-      <input type "text" placeholder="Loved One's Name" ng-model="object.name" class="form-control">
-      <input type "text" placeholder="Weight" ng-model="object.weight" class="form-control">
-      <input type="number" placeholder="Age" ng-model="object.age" class="form-control"><br>
-      <button ng-click="addLovedOne(object)" id="addButton">Add New Loved One</button>
-    </div>
+
 
   </article>
 </section>

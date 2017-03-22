@@ -9,7 +9,9 @@
                 <span><strong>Weight(lb)<br></strong></span>
                 <span><strong>Age</strong></span>
             </li>
+        </ul>
 
+            <ul class="itemList">
               <div class="switchContainer" ng-repeat="person in personList">
                 <li class="list-group-item medListItem">
                 <div class="flip-container" ng-class="{flip: med.flipped}">
@@ -28,12 +30,13 @@
                       <input type "text" placeholder="Loved One's Name" ng-model="newObject.name" class="form-control">
                       <input type "number" placeholder="Weight" ng-model="newObject.weight"class="form-control">
                       <input type "text" placeholder="Age" ng-model="newObject.age" class="form-control">
-                      <button class="subButton" ng-click="med.flipped = false; alterLovedOne(newObject, person.personid, userId)">Submit</button>
+                      <btn class="subButton" ng-click="med.flipped = false; alterLovedOne(newObject, person.personid, userId)">Submit</btn>
                     </div>
                  </div>
                 </div>
                 </li>
               </div>
+            </ul>
     </div>
 
     <div class="addMedFormContainer">

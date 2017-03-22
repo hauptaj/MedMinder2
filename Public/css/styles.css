@@ -661,6 +661,9 @@ btn.editFlip {
     width: 45px;
     height: 22px;
     float: right;
+  }
+
+  btn.editFlip.medEdit {
     top: -20px;
   }
 

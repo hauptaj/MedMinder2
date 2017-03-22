@@ -12,42 +12,46 @@ body {
 }
 
 
-
 /* =============================================================================
   HEADER
 ============================================================================= */
-.navbar-default
-.navbar-toggle
-{
-  border-color: #86acd4;
-  border-radius: 50px;
+
+.navbar-default .navbar-toggle {
+    border-color: #86acd4;
+    border-radius: 50px;
 }
 
 button.navbar-toggle:visited {
-  background-color: transparent;
+    background-color: transparent;
 }
 
 .navbar-header {
-  background: #86acd4; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#fff, #86acd4); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#fff, #86acd4); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#fff, #86acd4); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#fff, #86acd4); /* Standard syntax */
+    background: #86acd4;
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#fff, #86acd4);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#fff, #86acd4);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#fff, #86acd4);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#fff, #86acd4);
+    /* Standard syntax */
 }
 
 .navbar-nav>li>a {
-  padding-top: 5px;
+    padding-top: 5px;
 }
 
 .navbar-nav>li>a:hover {
-  color: #000;
-  text-decoration: underline;
+    color: #000;
+    text-decoration: underline;
 }
 
 .headerImg {
     display: block;
     margin: 0 auto 0 auto;
 }
+
 
 /* =============================================================================
   CONTENT
@@ -64,32 +68,34 @@ row.overlay {
 
 a {
     display: inline-block;
-  }
+}
+
 
 /* =============================================================================
   VIEW ELEMENTS
 ============================================================================= */
+
 h2 {
-  margin: 0 auto 0 auto;
-  font-family: Helvetica, Arial, sans-serif;
-  text-align: center;
+    margin: 0 auto 0 auto;
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: center;
 }
 
 .login {
-  position: relative;
-  top: -100px;
-  z-index: 5;
+    position: relative;
+    top: -100px;
+    z-index: 5;
 }
 
 .outlineLogo {
-  width: 40%;
-  z-index: 5;
-  margin: 0 auto 0 auto;
+    width: 40%;
+    z-index: 5;
+    margin: 0 auto 0 auto;
 }
 
 .img-responsive {
-  position: relative;
-  top: -100px;
+    position: relative;
+    top: -100px;
 }
 
 .overlayRow {
@@ -117,7 +123,7 @@ h2 {
 }
 
 video {
-  min-width: 110%;
+    min-width: 110%;
 }
 
 
@@ -163,16 +169,16 @@ label {
 }*/
 
 .form-inline {
-  display: block;
-  margin: 0 auto;
-  text-align: center;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .form-control {
-display: inline-block;
-  width: 100%;
-  color: white;
-  margin: 0 auto 0 auto;
+    display: inline-block;
+    width: 100%;
+    color: white;
+    margin: 0 auto 0 auto;
 }
 
 input.form-control {
@@ -198,305 +204,321 @@ input.form-control:focus {
 }
 
 input.inlineFormInput {
-  color: white;
+    color: white;
 }
 
 input.btn.btn-lg.btn-success.btn-block {
-  display: block;
-  height: 40px;
-  width: 30%;
-  margin: 15px auto 0 auto;
-  padding: 0;
-  text-align: center;
-  background-color: transparent;
-  background-image: none;
-  border-radius: 50px;
-  color: white;
-  text-decoration: none;
-  border: 2px solid white;
+    display: block;
+    height: 40px;
+    width: 30%;
+    margin: 15px auto 0 auto;
+    padding: 0;
+    text-align: center;
+    background-color: transparent;
+    background-image: none;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
 }
-
 
 #userInput::-webkit-input-placeholder, #passInput::-webkit-input-placeholder {
-  color: white;
+    color: white;
 }
 
-#userInput:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-   color: white;
-   opacity:  1;
+#userInput:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: white;
+    opacity: 1;
 }
 
-#userInput::-moz-placeholder { /* Mozilla Firefox 19+ */
-   color: white;
-   opacity:  1;
+#userInput::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: white;
+    opacity: 1;
 }
 
-#userInput:-ms-input-placeholder { /* Internet Explorer 10-11 */
-   color: white;
+#userInput:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: white;
 }
+
 
 /*Login Button*/
 
 input#logButton {
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #86acd4;
-  color: white;
-  width: 50%;
-  -webkit-box-shadow: -9px 10px 22px -2px rgba(0,0,0,0.51);
-  -moz-box-shadow: -9px 10px 22px -2px rgba(0,0,0,0.51);
-  box-shadow: -9px 10px 22px -2px rgba(0,0,0,0.51);
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #86acd4;
+    color: white;
+    width: 50%;
+    -webkit-box-shadow: -9px 10px 22px -2px rgba(0, 0, 0, 0.51);
+    -moz-box-shadow: -9px 10px 22px -2px rgba(0, 0, 0, 0.51);
+    box-shadow: -9px 10px 22px -2px rgba(0, 0, 0, 0.51);
 }
 
 input#logButton:hover {
-  border-color: #86acd4;
-  background-color: white;
-  color: black;
+    border-color: #86acd4;
+    background-color: white;
+    color: black;
 }
 
 input#logButton:active {
-  -webkit-box-shadow: -9px 10px 22px -26px rgba(0,0,0,0.51);
-  -moz-box-shadow: -9px 10px 22px -26px rgba(0,0,0,0.51);
-  box-shadow: -9px 10px 22px -26px rgba(0,0,0,0.51);
-  transform: translateY(-3px);
+    -webkit-box-shadow: -9px 10px 22px -26px rgba(0, 0, 0, 0.51);
+    -moz-box-shadow: -9px 10px 22px -26px rgba(0, 0, 0, 0.51);
+    box-shadow: -9px 10px 22px -26px rgba(0, 0, 0, 0.51);
+    transform: translateY(-3px);
 }
+
 
 /* =============================================================================
   Registration Form
 ============================================================================= */
+
 div.registrationContainer {
-  width: 100%;
-  text-align: center;
+    width: 100%;
+    text-align: center;
 }
 
 div.registrationSpacer {
-  height: 70px;
+    height: 70px;
 }
 
 #registrationForm.form-control {
-  width: 25%;
-  min-width: 285px;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+    width: 25%;
+    min-width: 285px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
 #registrationForm input, .addMedForm input {
-  margin: 5%;
-  color: black;
-  min-width: 195px;
+    margin: 5%;
+    color: black;
+    min-width: 195px;
 }
 
 #registrationForm input:focus, .addMedForm input:focus {
-  color: white;
+    color: white;
 }
 
 input#registerButton, input#addMedButton {
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #86acd4;
-  color: white;
-  width: 50%;
-  -webkit-box-shadow: -9px 10px 22px -2px rgba(0,0,0,0.51);
-  -moz-box-shadow: -9px 10px 22px -2px rgba(0,0,0,0.51);
-  box-shadow: -9px 10px 22px -2px rgba(0,0,0,0.51);
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #86acd4;
+    color: white;
+    width: 50%;
+    -webkit-box-shadow: -9px 10px 22px -2px rgba(0, 0, 0, 0.51);
+    -moz-box-shadow: -9px 10px 22px -2px rgba(0, 0, 0, 0.51);
+    box-shadow: -9px 10px 22px -2px rgba(0, 0, 0, 0.51);
 }
 
 input#registerButton:hover, input#addMedButton:hover {
-  border-color: #86acd4;
-  background-color: white;
-  color: black;
+    border-color: #86acd4;
+    background-color: white;
+    color: black;
 }
 
 input#registerButton:active, input#addMedButton:active {
-  -webkit-box-shadow: -9px 10px 22px -26px rgba(0,0,0,0.51);
-  -moz-box-shadow: -9px 10px 22px -26px rgba(0,0,0,0.51);
-  box-shadow: -9px 10px 22px -26px rgba(0,0,0,0.51);
-  transform: translateY(-3px);
+    -webkit-box-shadow: -9px 10px 22px -26px rgba(0, 0, 0, 0.51);
+    -moz-box-shadow: -9px 10px 22px -26px rgba(0, 0, 0, 0.51);
+    box-shadow: -9px 10px 22px -26px rgba(0, 0, 0, 0.51);
+    transform: translateY(-3px);
 }
 
 p.registerNow {
-  color: white;
-  font-size: 18px;
-  margin-top: 20px;
-  text-align: center;
+    color: white;
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: center;
 }
 
 p.registerNow a {
-  color: #86acd4;
-  text-decoration: underline;
+    color: #86acd4;
+    text-decoration: underline;
 }
 
 p.registerNow a:hover {
-  color: white;
-  text-decoration: underline;
+    color: white;
+    text-decoration: underline;
 }
 
 div.table-view {
-  display: table;
-  margin: 0 auto 0 auto;
-  width: 100%;
-  text-align: center;
+    display: table;
+    margin: 0 auto 0 auto;
+    width: 100%;
+    text-align: center;
 }
 
 .list-group.listView {
-  width: 20%;
+    width: 20%;
 }
 
 input.form-control#medicine {
-  width: 20%;
+    width: 20%;
 }
 
 ul.list-group.header {
-  border-bottom: 2px solid lightgray;
-  padding-bottom: 10px;
-  color: black;
-  display: table;
-  line-height: 20px;
-  margin-left: auto;
-  margin-right: auto;
+    border-bottom: 2px solid lightgray;
+    padding-bottom: 10px;
+    color: black;
+    display: table;
+    line-height: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 li.list-group-item {
-  padding: 0 0 10px 50px;
-  border: 0px;
-  margin: 0 auto 0 auto;
-  margin-bottom: 5%;
-  display: block;
-
+    padding: 0 0 10px 50px;
+    border: 0px;
+    margin: 0 auto 0 auto;
+    margin-bottom: 5%;
+    display: block;
 }
 
 button.li-delete {
-  border-radius: 50%;
-  background-color: red;
-  border-color: white;
-  color: white;
-  margin-left: -40px;
-  margin-right: 10px;
-  box-shadow: 2px 2px 7px grey;
-float:left;
+    border-radius: 50%;
+    background-color: red;
+    border-color: white;
+    color: white;
+    margin-left: -40px;
+    margin-right: 10px;
+    box-shadow: 2px 2px 7px grey;
+    float: left;
 }
 
 button.li-delete:hover {
-  background-color: white;
-  color: #333;
+    background-color: white;
+    color: #333;
 }
 
 button.li-delete:active {
-  background-color: white;
-  border-color: white;
-  color: #333;
+    background-color: white;
+    border-color: white;
+    color: #333;
 }
 
 button.li-delete .glyphicon {
-  top: 3px;
+    top: 3px;
 }
 
 li>span {
-  display: inline-block;
-  width: 90px;
-  padding: 0 2% 0 2%;
-  text-align: center;
+    display: inline-block;
+    width: 90px;
+    padding: 0 2% 0 2%;
+    text-align: center;
 }
+
 
 /* =============================================================================
   lovedOnes input Form
 ============================================================================= */
 
-.add{
-  float:left;
+.add {
+    float: left;
 }
-.list{
-  float:right;
-}
-.addDiv {
-  width: 50%;
-  min-width: 285px;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-.addDiv input{
 
-  color: black;
-  min-width: 195px;
+.list {
+    float: right;
 }
-.addDiv input:focus{
-  color: white;
+
+.addDiv {
+    width: 50%;
+    min-width: 285px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
-button#addButton{
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #86acd4;
-  color: white;
-  width: 50%;
-  border-radius: 50px;
-  border:2px solid white;
-  -webkit-box-shadow: -9px 10px 22px -2px rgba(0,0,0,0.51);
-  -moz-box-shadow: -9px 10px 22px -2px rgba(0,0,0,0.51);
-  box-shadow: -9px 10px 22px -2px rgba(0,0,0,0.51);
+
+.addDiv input {
+    color: black;
+    min-width: 195px;
 }
+
+.addDiv input:focus {
+    color: white;
+}
+
+button#addButton {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #86acd4;
+    color: white;
+    width: 50%;
+    border-radius: 50px;
+    border: 2px solid white;
+    -webkit-box-shadow: -9px 10px 22px -2px rgba(0, 0, 0, 0.51);
+    -moz-box-shadow: -9px 10px 22px -2px rgba(0, 0, 0, 0.51);
+    box-shadow: -9px 10px 22px -2px rgba(0, 0, 0, 0.51);
+}
+
 button#addButton:hover {
-  border-color: #86acd4;
-  background-color: white;
-  color: black;
+    border-color: #86acd4;
+    background-color: white;
+    color: black;
 }
 
 button#addButton:active {
-  -webkit-box-shadow: -9px 10px 22px -26px rgba(0,0,0,0.51);
-  -moz-box-shadow: -9px 10px 22px -26px rgba(0,0,0,0.51);
-  box-shadow: -9px 10px 22px -26px rgba(0,0,0,0.51);
-  transform: translateY(-3px);
+    -webkit-box-shadow: -9px 10px 22px -26px rgba(0, 0, 0, 0.51);
+    -moz-box-shadow: -9px 10px 22px -26px rgba(0, 0, 0, 0.51);
+    box-shadow: -9px 10px 22px -26px rgba(0, 0, 0, 0.51);
+    transform: translateY(-3px);
 }
+
 
 /* =============================================================================
   Medlist input Form
 ============================================================================= */
 
 div.addDiv {
-  width: 50%;
-  min-width: 285px;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  border: 1px solid #ccc;
-  padding: 12px 5px 25px 5px;
+    width: 50%;
+    min-width: 285px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 12px 5px 25px 5px;
 }
-div.addDiv input{
-  margin: 5%;
-  color: black;
-  min-width: 195px;
+
+div.addDiv input {
+    margin: 5%;
+    color: black;
+    min-width: 195px;
 }
-div.addDiv input:focus{
-  color: white;
+
+div.addDiv input:focus {
+    color: white;
 }
-button#addButton{
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #86acd4;
-  color: white;
-  width: 50%;
-  border-radius: 50px;
-  border:2px solid white;
-  -webkit-box-shadow: -9px 10px 22px -2px rgba(0,0,0,0.51);
-  -moz-box-shadow: -9px 10px 22px -2px rgba(0,0,0,0.51);
-  box-shadow: -9px 10px 22px -2px rgba(0,0,0,0.51);
+
+button#addButton {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #86acd4;
+    color: white;
+    width: 50%;
+    border-radius: 50px;
+    border: 2px solid white;
+    -webkit-box-shadow: -9px 10px 22px -2px rgba(0, 0, 0, 0.51);
+    -moz-box-shadow: -9px 10px 22px -2px rgba(0, 0, 0, 0.51);
+    box-shadow: -9px 10px 22px -2px rgba(0, 0, 0, 0.51);
 }
+
 button#addButton:hover {
-  border-color: #86acd4;
-  background-color: white;
-  color: black;
+    border-color: #86acd4;
+    background-color: white;
+    color: black;
 }
 
 button#addButton:active {
-  -webkit-box-shadow: -9px 10px 22px -26px rgba(0,0,0,0.51);
-  -moz-box-shadow: -9px 10px 22px -26px rgba(0,0,0,0.51);
-  box-shadow: -9px 10px 22px -26px rgba(0,0,0,0.51);
-  transform: translateY(-3px);
+    -webkit-box-shadow: -9px 10px 22px -26px rgba(0, 0, 0, 0.51);
+    -moz-box-shadow: -9px 10px 22px -26px rgba(0, 0, 0, 0.51);
+    box-shadow: -9px 10px 22px -26px rgba(0, 0, 0, 0.51);
+    transform: translateY(-3px);
 }
+
 
 /* =============================================================================
   FOOTER
@@ -509,11 +531,14 @@ button#addButton:active {
 }
 
 .navbar-fixed-bottom {
-  background-color: rgba(0,0,0,0.5);
-  height: 5%;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 5%;
 }
 
+
 /* Practice Styling */
+
+
 /*div.addDiv {
   position: relative;
   top: 200px;
@@ -560,240 +585,252 @@ div.editView.slideLeft {
 }
 
 /* Flipping Styling */
+
 div.switchContainer {
- width: 100%;
- height: auto;
- text-align: center;
- margin-top: 5%;
- margin-bottom: 10px;
- position: relative;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 10px;
+    position: relative;
 }
 
 .flip-container {
-	perspective: 1000px;
-  display: inline;
-  position: relative;
+    perspective: 1000px;
+    display: inline;
+    position: relative;
 }
 
 .flip-container, .front, .back {
-	width: auto;
-	height: auto;
+    width: auto;
+    height: auto;
 }
 
 .flipper {
-	transition: 0.6s;
-	transform-style: preserve-3d;
-  transform-origin: 100% 25px;
-	position: relative;
-  margin-left: -19%;
-  height: 10px;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    transform-origin: 100% 25px;
+    position: relative;
+    margin-left: -19%;
+    height: 10px;
 }
 
 .front, .back {
-	backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 .front {
-	z-index: 2;
-	/* for firefox 31 */
-	transform: rotateY(0deg);
-  margin-left: 138px;
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
+    margin-left: 138px;
 }
 
 div.front button, div.front span {
-  display: inline;
+    display: inline;
 }
 
 .back {
-	transform: rotateX(180deg);
-  margin-left: 100px;
+    transform: rotateX(180deg);
+    margin-left: 100px;
 }
 
 .back input {
-  width: 15%;
-  min-width: 10px;
-  margin-right: 10px;
+    width: 15%;
+    min-width: 10px;
+    margin-right: 10px;
 }
 
 .flip-container.flip .flipper {
-	transform: rotateX(-180deg);
+    transform: rotateX(-180deg);
 }
 
 .editFlip {
-  display: inline;
-  position: relative;
-  right: 0;
+    display: inline;
+    position: relative;
+    right: 0;
 }
 
 span.medSpan {
-  padding: 25px;
-  width: 95px;
-  float: left;
+    padding: 25px;
+    width: 95px;
+    float: left;
 }
 
 .list-group.medList {
-  width: 90%;
-  margin: 0;
+    width: 90%;
+    margin: 0;
 }
 
 li.list-group-item.autoCompleteItem {
-  color: black;
+    color: black;
 }
 
+
 /* Med Form */
+
 .addMedForm.form-control {
-  width: 25%;
-  min-width: 285px;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  padding-bottom: 10px;
+    width: 25%;
+    min-width: 285px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-bottom: 10px;
 }
 
 .addMedForm h2 {
-  color: black;
-  text-decoration: underline;
+    color: black;
+    text-decoration: underline;
 }
 
 div.medListContainer {
-  float: right;
-  width: 60%;
-  margin-right: 10%;
+    float: right;
+    width: 60%;
+    margin-right: 10%;
 }
 
 div.addMedFormContainer {
-  float: left;
-  width: 30%;
+    float: left;
+    width: 30%;
 }
 
 #addMedButton {
-  width: 50%;
+    width: 50%;
 }
+
 
 /* =============================================================================
   Media Queries
 ============================================================================= */
 
-
 @keyframes slideRightThenLeft {
-  0% {
-    tranform: translateX(0%);
-  }
-  50% {
-    transform: translateX(60%);
-  }
-  100% {
-    transform: translateX(0%);
-    z-index: 9;
-  }
+    0% {
+        tranform: translateX(0%);
+    }
+    50% {
+        transform: translateX(60%);
+    }
+    100% {
+        transform: translateX(0%);
+        z-index: 9;
+    }
 }
 
 @keyframes slideLeftThenRight {
-  0% {
-    tranform: translateX(0%);
-  }
-  50% {
-    transform: translateX(-60%);
-  }
-  100% {
-    transform: translateX(0%);
-    z-index: 10;
-  }
+    0% {
+        tranform: translateX(0%);
+    }
+    50% {
+        transform: translateX(-60%);
+    }
+    100% {
+        transform: translateX(0%);
+        z-index: 10;
+    }
 }
 
 @keyframes scaleUp {
-  from {
-    opacity: 0.1;
-    transform: scale(0.4);
-  }
+    from {
+        opacity: 0.1;
+        transform: scale(0.4);
+    }
 }
 
 @keyframes slideOutLeft {
-  to { transform: translateX(-100%);
-  }
+    to {
+        transform: translateX(-100%);
+    }
 }
+
 @keyframes slideInRight {
-    from    { transform:translateX(100%); }
-    to      { transform: translateX(0); }
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
 }
 
 .page {
-  bottom:0;
-  position:absolute;
-  text-align:center;
-  top:0;
-  width:100%;
+    bottom: 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
 }
+
 
 /*.ng-enter {
   animation: slideInRight 0.7s both ease-in;
 }*/
+
 
 /*.ng-leave {
   animation: slideOutLeft 0.4s both ease-in;
 }*/
 
 .loved-page.ng-enter, .med-page.ng-enter, .registration-page.ng-enter {
-  animation: scaleUp 0.7s both ease-in;
+    animation: scaleUp 0.7s both ease-in;
 }
 
 .loved-page.ng-leave, .med-page.ng-leave, .registration-page.ng-leave {
-  animation: slideOutLeft 0.7s both ease-in;
+    animation: slideOutLeft 0.7s both ease-in;
 }
+
 
 /* =============================================================================
   Media Queries
 ============================================================================= */
+
 @media only screen and (max-width: 768px) {
-  .outlineLogo {
-    margin-top: 40px;
-  }
-  .inlineFormInput {
-    min-width: 150px;
-  }
-  #logButton {
-    min-width: 100px;
-  }
+    .outlineLogo {
+        margin-top: 40px;
+    }
+    .inlineFormInput {
+        min-width: 150px;
+    }
+    #logButton {
+        min-width: 100px;
+    }
 }
 
 @media screen and (max-width: 320px) {
-  #loginContainer {
-    margin-left: 15%;
-  }
-  #logButton {
-    margin-left: 25px;
-  }
-
-  input.btn.btn-lg.btn-success.btn-block:hover {
-    text-decoration: none;
-  }
-  .outlineLogo {
-    width: 65%;
-  }
-  p.registerNow {
-    width: 130%;
-    font-size: 12px;
-  }
-  p#disclaimer {
-    font-size: 10px;
-  }
+    #loginContainer {
+        margin-left: 15%;
+    }
+    #logButton {
+        margin-left: 25px;
+    }
+    input.btn.btn-lg.btn-success.btn-block:hover {
+        text-decoration: none;
+    }
+    .outlineLogo {
+        width: 65%;
+    }
+    p.registerNow {
+        width: 130%;
+        font-size: 12px;
+    }
+    p#disclaimer {
+        font-size: 10px;
+    }
 }
 
 @media only screen and (max-width: 1061px) {
-  div.medListContainer {
-    min-width: 420px;
-    float: none;
-    display: block;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  div.addMedFormContainer {
-    float: none;
-    clear: both;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-  }
+    div.medListContainer {
+        min-width: 420px;
+        float: none;
+        display: block;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    div.addMedFormContainer {
+        float: none;
+        clear: both;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

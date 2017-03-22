@@ -693,6 +693,10 @@ btn.subButton {
   top: 10px;
 }
 
+btn.editFlip:hover, btn.subButton:hover {
+  cursor: pointer;
+}
+
 ul.itemList {
   /*background-color: grey*/
 }
@@ -709,8 +713,14 @@ span.medSpan {
 
 li.list-group-item.autoCompleteItem {
     color: black;
+    width: 200px;
 }
 
+li.list-group-item.autoCompleteItem:hover {
+  font-weight: 200px;
+  color: green;
+  cursor: pointer;
+}
 
 /* Med Form */
 
@@ -732,6 +742,7 @@ div.medListContainer {
     float: right;
     width: 60%;
     margin-right: 10%;
+    margin-bottom: 10%;
 }
 
 div.addMedFormContainer {

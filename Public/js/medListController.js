@@ -45,6 +45,10 @@ app.controller("contentController", function($scope, medFactory, $timeout, $loca
         });
     }
 
+  medFactory.requestMedNames().then(function() {
+    $scope.masterList = medFactory.returnMedNames();
+  });
+  
   //Auto-Complete Functionality Below
   $scope.complete = function(string) {
     $scope.hidethis = false;

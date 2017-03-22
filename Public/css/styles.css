@@ -395,6 +395,8 @@ transform: translateX(-50%);
 div.table-view {
   display: table;
   margin: 0 auto 0 auto;
+  width: 45%;
+  text-align: center;
 }
 
 .list-group.listView {
@@ -411,6 +413,8 @@ ul.list-group.header {
   color: black;
   display: table;
   line-height: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 li.list-group-item {
@@ -555,6 +559,7 @@ div.editView.slideLeft {
 /* Flipping Styling */
 div.switchContainer {
  width: 100%;
+ height: auto;
  text-align: center;
  margin-top: 5%;
  margin-bottom: 10px;
@@ -563,16 +568,13 @@ div.switchContainer {
 
 .flip-container {
 	perspective: 1000px;
-  margin-left: auto;
-  margin-right: auto;
   display: inline;
   position: relative;
-  margin-bottom: 10px;
 }
 
 .flip-container, .front, .back {
-	width: 700px;
-	height: 50px;
+	width: auto;
+	height: auto;
 }
 
 .flipper {
@@ -580,23 +582,34 @@ div.switchContainer {
 	transform-style: preserve-3d;
   transform-origin: 100% 25px;
 	position: relative;
+  margin-left: -19%;
+  height: 10px;
 }
 
 .front, .back {
 	backface-visibility: hidden;
-	position: absolute;
-	top: 0;
-	left: 0;
 }
 
 .front {
 	z-index: 2;
 	/* for firefox 31 */
 	transform: rotateY(0deg);
+  margin-left: 138px;
+}
+
+div.front button, div.front span {
+  display: inline;
 }
 
 .back {
 	transform: rotateX(180deg);
+  margin-left: 100px;
+}
+
+.back input {
+  width: 15%;
+  min-width: 10px;
+  margin-right: 10px;
 }
 
 .flip-container.flip .flipper {
@@ -605,9 +618,26 @@ div.switchContainer {
 
 .editFlip {
   display: inline;
-  float: right;
-  position: absolute;
-  right: -61px;
+  position: relative;
+  right: 0;
+}
+
+span.medSpan {
+  padding: 25px;
+}
+
+.list-group.medList {
+  width: 90%;
+  margin: 0;
+}
+
+.addMedForm.form-control {
+  width: 25%;
+  min-width: 285px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 /* =============================================================================
   Media Queries

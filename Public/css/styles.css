@@ -635,13 +635,14 @@ div.front button, div.front span {
 
 .back {
     transform: rotateX(180deg);
-    margin-left: 100px;
+    position: absolute;
 }
 
 .back input {
-    width: 15%;
+    width: 20%;
     min-width: 10px;
     margin-right: 10px;
+    color: black;
 }
 
 .flip-container.flip .flipper {
@@ -662,6 +663,21 @@ btn.editFlip {
     float: right;
     top: -20px;
   }
+
+btn.subButton {
+  display: inline;
+  position: relative;
+  right: 0;
+  background-color: rgb(134, 172, 212);
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.5) -9px 10px 22px -2px;
+  border-radius: 50px;
+  border: 1px solid white;
+  width: 55px;
+  height: 22px;
+  float: right;
+  top: 10px;
+}
 
 ul.itemList {
   /*background-color: grey*/
@@ -712,6 +728,8 @@ div.addMedFormContainer {
 #addMedButton {
     width: 50%;
 }
+
+
 
 
 /* =============================================================================

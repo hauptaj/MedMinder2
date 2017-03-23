@@ -874,6 +874,12 @@ Keyframes
       width: 320px;
       padding: 5px;
     }
+    div.medListContainer.medPage {
+      width: 95%;
+    }
+    div.medListContainer.lovedPage {
+      margin-right: 10%;
+    }
     li.list-group-item {
       width: 300px;
       padding: 0;
@@ -885,6 +891,9 @@ Keyframes
     }
     li.list-group-item.medListItem.personItem {
       margin-right: 50px;
+    }
+    list-group-item:last-child {
+      margin-right: 0;
     }
     span.lastSpan {
       display: none;
@@ -918,13 +927,13 @@ Keyframes
       top: -35px;
     }
     button.li-delete {
-      margin-left: -42px;
+      margin-left: -23px;
     }
     ul.list-group.header {
       padding-bottom: 0;
     }
     btn.editFlip.loveFlip {
-      right: -40px;
+      right: -29px;
       top: -20px;
     }
     .back.loveBack {

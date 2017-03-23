@@ -23,3 +23,10 @@ app.config(function($routeProvider, $locationProvider){
   $locationProvider.hashPrefix('');
 
 });
+
+app.directive("lovedTitle", function() {
+  return {
+    restrict: "E",
+    template: "<h2>{{personsPage.name}}'s Med List</h2>"
+  }
+});

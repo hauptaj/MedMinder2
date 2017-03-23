@@ -10,7 +10,7 @@
         <!-- <div class="table-view"> -->
           <div class="medListContainer container medPage">
             <div class="col-xs-12">
-              <h2> {{personsPage.name}}'s Med List</h2>
+              <loved-title></loved-title>
             </div>
               <ul class="list-group header">
                   <li class="list-group-item">
@@ -30,9 +30,9 @@
                             <button type="button" name="delete" class="li-delete" ng-click="deleteMed(med.id, personsPage.personid)">
                               <span class="glyphicon glyphicon-remove">
                             </button>
-                      			<span class="medSpan">{{med.name.substr(0,10)}}</span>
+                      			<span class="medSpan">{{med.name}}</span>
                             <span class="medSpan">{{med.dosage}}</span>
-                            <span class="medSpan">{{med.time.substr(0,5)}}</span>
+                            <span class="medSpan">{{med.time.substr(0,5)}} </span>
                             <span class="medSpan lastSpan">{{med.rxnumber}}</span>
                             <btn class="editFlip medEdit" ng-click="med.flipped = true;">Edit</btn>
                       		</div>

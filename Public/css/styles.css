@@ -626,6 +626,7 @@ div.switchContainer {
 
 .front, .back {
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
 .front {

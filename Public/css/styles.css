@@ -6,7 +6,7 @@
 }*/
 
 html, body {
-    height: 100vh;
+    height: 100%;
 }
 
 body {
@@ -748,13 +748,13 @@ div.medListContainer {
 }
 
 div.medListContainer.medPage {
-  width: 60%;
-  margin-right: 5%;
+  width: 50%;
+  /*margin-right: 5%;*/
 }
 
-div.medListContainer.lovedPage {
+/*div.medListContainer.lovedPage {
   margin-right: 20%;
-}
+}*/
 
 div.addMedFormContainer {
     float: left;
@@ -877,9 +877,9 @@ Keyframes
     div.medListContainer.medPage {
       width: 95%;
     }
-    div.medListContainer.lovedPage {
+    /*div.medListContainer.lovedPage {
       margin-right: 10%;
-    }
+    }*/
     li.list-group-item {
       width: 300px;
       padding: 0;

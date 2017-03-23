@@ -59,8 +59,8 @@ button.navbar-toggle:visited {
 
 .navbar-collapse {
   background-color: rgba(0, 0, 0, 0.5);
-  height: 10px;
-  top: -21px;
+  /*height: 110px;*/
+  top: -22px;
   position: relative;
 }
 

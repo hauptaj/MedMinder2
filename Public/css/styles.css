@@ -9,22 +9,29 @@ html, body {
 body {
     font-family: "Oxygen", sans-serif;
     color: #888;
-    background: #fff;
+    /*background: #fff;*/
     /* For browsers that do not support gradients */
-    background-image: -webkit-linear-gradient(#fff, #86acd4);
+    /*background-image: -webkit-linear-gradient(#fff, #86acd4);*/
     /* For Safari 5.1 to 6.0 */
-    background-image: -o-linear-gradient(#fff, #86acd4);
+    /*background-image: -o-linear-gradient(#fff, #86acd4);*/
     /* For Opera 11.1 to 12.0 */
-    background-image: -moz-linear-gradient(#fff, #86acd4);
+    /*background-image: -moz-linear-gradient(#fff, #86acd4);*/
     /* For Firefox 3.6 to 15 */
-    background-image: linear-gradient(#fff, #86acd4);
+    /*background-image: linear-gradient(#fff, #86acd4);*/
     /* Standard syntax */
+    /*background-image: url("../assets/bkgd.jpg");*/
+    /*background-size: cover;*/
+    background-color: white;
 }
 
 div.container-fluid {
   padding-left: 0;
   padding-right: 0;
 
+}
+
+div.container-fluid {
+  background-color: transparent;
 }
 /* =============================================================================
   HEADER

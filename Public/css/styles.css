@@ -104,12 +104,12 @@ a {
 
 h2 {
     margin: 0 auto 0 auto;
-    font-family: 'Oxygen', Helvetica, Arial, sans-serif;
+    font-family: 'Slabo 27px', Helvetica, Arial, sans-serif;
     text-align: center;
-    color: whitesmoke;
+    color: #545351;
     font-size: 24px;
     padding: 15px 0 15px 0;
-    font-weight: bold;
+    /*font-weight: bold;*/
 }
 
 .login {
@@ -400,9 +400,9 @@ input.form-control#medicine {
 }
 
 ul.list-group.header {
-    border-bottom: 2px solid lightgray;
+    border-bottom: 2px solid #545351;
     padding-bottom: 10px;
-    color: black;
+    color: #545351;
     display: table;
     line-height: 20px;
     margin-left: auto;

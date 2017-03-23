@@ -730,7 +730,7 @@ li.list-group-item.autoCompleteItem:hover {
 
 .addMedForm.form-control {
     width: 25%;
-    min-width: 285px;
+    min-width: 240px;
     height: auto;
     margin-left: auto;
     margin-right: auto;

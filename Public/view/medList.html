@@ -8,14 +8,16 @@
         </div>
 
         <!-- <div class="table-view"> -->
-          <div class="medListContainer">
-            <h2>Medication List</h2>
+          <div class="medListContainer container">
+            <div class="col-xs-12">
+              <h2>Medication List</h2>
+            </div>
               <ul class="list-group header">
                   <li class="list-group-item">
                       <span><strong>Name</strong></span>
                       <span><strong>Dosage<br><em>(mg)</em></strong></span>
                       <span><strong>Time</strong></span>
-                      <span><strong>Rx Number</strong></span>
+                      <span class="lastSpan"><strong>Rx Number</strong></span>
                   </li>
                 </ul>
 
@@ -28,10 +30,10 @@
                             <button type="button" name="delete" class="li-delete" ng-click="deleteMed(med.id, personsPage.personid)">
                               <span class="glyphicon glyphicon-remove">
                             </button>
-                      			<span class="medSpan">{{med.name}}</span>
+                      			<span class="medSpan">{{med.name.substr(0,10)}}</span>
                             <span class="medSpan">{{med.dosage}}</span>
                             <span class="medSpan">{{med.time.substr(0,5)}}</span>
-                            <span class="medSpan">{{med.rxnumber}}</span>
+                            <span class="medSpan lastSpan">{{med.rxnumber}}</span>
                             <btn class="editFlip medEdit" ng-click="med.flipped = true;">Edit</btn>
                       		</div>
 
@@ -68,7 +70,7 @@
           </div> -->
       </div>
 
-      <div class="addMedFormContainer">
+      <div class="addMedFormContainer container">
         <h2>Add a Medicine</h2>
         <form class="form-control form-inline addMedForm" >
           <input type="text" name="medicine" value="" ng-model="med.name" ng-keyup="complete(med.name)" class="form-control" placeholder="medicine">

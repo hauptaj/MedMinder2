@@ -331,6 +331,10 @@ div.registrationSpacer {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    background: transparent;
+    -webkit-box-shadow: 9px 10px 22px -2px rgba(0, 0, 0, 0.51);
+    -moz-box-shadow: 9px 10px 22px -2px rgba(0, 0, 0, 0.51);
+    box-shadow: 9px 10px 22px -2px rgba(0, 0, 0, 0.51);
 }
 
 #registrationForm input, .addMedForm input {
@@ -744,34 +748,8 @@ div.addMedFormContainer {
 
 
 /* =============================================================================
-  Media Queries
+Keyframes
 ============================================================================= */
-
-@keyframes slideRightThenLeft {
-    0% {
-        tranform: translateX(0%);
-    }
-    50% {
-        transform: translateX(60%);
-    }
-    100% {
-        transform: translateX(0%);
-        z-index: 9;
-    }
-}
-
-@keyframes slideLeftThenRight {
-    0% {
-        tranform: translateX(0%);
-    }
-    50% {
-        transform: translateX(-60%);
-    }
-    100% {
-        transform: translateX(0%);
-        z-index: 10;
-    }
-}
 
 @keyframes scaleUp {
     from {

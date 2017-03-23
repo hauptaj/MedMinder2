@@ -1,9 +1,6 @@
 /* =============================================================================
   HTML, BODY
 ============================================================================= */
-/** {
-  border: 1px solid black;
-}*/
 
 html, body {
     height: 100%;
@@ -633,6 +630,7 @@ div.switchContainer {
 
 .front, .back {
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
 .front {

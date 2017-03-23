@@ -44,9 +44,9 @@ function getUserInfo(user){
     }
 
  }).then(function successCallback(response) {
-    users = response.data[0].userid;
+      users = response.data[0].userid;
   }, function(error) {
-    console.log(error);
+      console.log(error);
   });
   return promise;
 }

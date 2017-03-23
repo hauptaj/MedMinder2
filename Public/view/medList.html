@@ -30,7 +30,7 @@
                             <button type="button" name="delete" class="li-delete" ng-click="deleteMed(med.id, personsPage.personid)">
                               <span class="glyphicon glyphicon-remove">
                             </button>
-                      			<span class="medSpan">{{med.name.substr(0,10)}}</span>
+                      			<span class="medSpan">{{med.name}}</span>
                             <span class="medSpan">{{med.dosage}}</span>
                             <span class="medSpan">{{med.time.substr(0,5)}} </span>
                             <span class="medSpan lastSpan">{{med.rxnumber}}</span>
@@ -78,7 +78,7 @@
               <li ng-repeat="medData in filterMedicine" ng-click="fillTextBox(medData)" class="list-group-item autoCompleteItem"> {{ medData }}</li>
           </ul>
           <input type "number" placeholder="Dosage" ng-model="med.dosage" class="form-control">
-          <input type="text" placeholder="04:00" ng-model="med.time" class="form-control"><br>
+          <input type="text" placeholder="04:00PM" ng-model="med.time" class="form-control"><br>
           <input class="btn btn-lg btn-success btn-block" type="submit" value="Add" id="addMedButton" ng-click="addMed(med, personsPage.personid)">
         </form>
       </div>

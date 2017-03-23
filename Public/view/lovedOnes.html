@@ -2,7 +2,7 @@
 <section class="tablePosition">
   <article>
 
-    <div class="medListContainer">
+    <div class="medListContainer lovedPage">
       <h2>Loved Ones</h2>
         <ul class="list-group header">
             <li class="list-group-item">
@@ -30,7 +30,7 @@
                     <div class="back loveBack">
                       <input type "text" placeholder="Loved One's Name" ng-model="newObject.name" class="form-control">
                       <input type "number" placeholder="Weight" ng-model="newObject.weight"class="form-control">
-                      <input type "text" placeholder="Age" ng-model="newObject.age" class="form-control">
+                      <input type "number" placeholder="Age" ng-model="newObject.age" class="form-control">
                       <btn class="subButton" ng-click="med.flipped = false; alterLovedOne(newObject, person.personid, userId)">Submit</btn>
                     </div>
                  </div>

@@ -675,6 +675,10 @@ btn.editFlip:hover, btn.subButton:hover {
   cursor: pointer;
 }
 
+btn.editFlip:active, btn.subButton:active {
+  transform: translateY(3px);
+}
+
 ul.itemList {
   /*background-color: grey*/
 }

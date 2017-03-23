@@ -14,13 +14,13 @@ body {
     color: #888;
     background: #fff;
     /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#878583, #fff);
+    background: -webkit-linear-gradient(#fff, #86acd4);
     /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#878583, #fff);
+    background: -o-linear-gradient(#fff, #86acd4);
     /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#878583, #fff);
+    background: -moz-linear-gradient(#fff, #86acd4);
     /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#878583, #fff);
+    background: linear-gradient(#fff, #86acd4);
     /* Standard syntax */
 }
 
@@ -104,12 +104,12 @@ a {
 
 h2 {
     margin: 0 auto 0 auto;
-    font-family: 'Oxygen', Helvetica, Arial, sans-serif;
+    font-family: 'Slabo 27px', Helvetica, Arial, sans-serif;
     text-align: center;
-    color: whitesmoke;
+    color: #545351;
     font-size: 24px;
     padding: 15px 0 15px 0;
-    font-weight: bold;
+    /*font-weight: bold;*/
 }
 
 .login {
@@ -322,6 +322,7 @@ div.registrationContainer {
 
 div.registrationSpacer {
     height: 70px;
+    background: transparent;
 }
 
 #registrationForm.form-control {
@@ -331,6 +332,10 @@ div.registrationSpacer {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    background: transparent;
+    -webkit-box-shadow: 9px 10px 22px -2px rgba(0, 0, 0, 0.51);
+    -moz-box-shadow: 9px 10px 22px -2px rgba(0, 0, 0, 0.51);
+    box-shadow: 9px 10px 22px -2px rgba(0, 0, 0, 0.51);
 }
 
 #registrationForm input, .addMedForm input {
@@ -400,9 +405,9 @@ input.form-control#medicine {
 }
 
 ul.list-group.header {
-    border-bottom: 2px solid lightgray;
+    border-bottom: 2px solid #545351;
     padding-bottom: 10px;
-    color: black;
+    color: #545351;
     display: table;
     line-height: 20px;
     margin-left: auto;
@@ -575,6 +580,7 @@ button#addButton:active {
 .navbar-fixed-bottom {
     background-color: rgba(0, 0, 0, 0.5);
     height: 5%;
+    max-width: 100%;
 }
 
 /* Flipping Styling */
@@ -675,6 +681,10 @@ btn.editFlip:hover, btn.subButton:hover {
   cursor: pointer;
 }
 
+btn.editFlip:active, btn.subButton:active {
+  transform: translateY(3px);
+}
+
 ul.itemList {
   /*background-color: grey*/
 }
@@ -740,34 +750,8 @@ div.addMedFormContainer {
 
 
 /* =============================================================================
-  Media Queries
+Keyframes
 ============================================================================= */
-
-@keyframes slideRightThenLeft {
-    0% {
-        tranform: translateX(0%);
-    }
-    50% {
-        transform: translateX(60%);
-    }
-    100% {
-        transform: translateX(0%);
-        z-index: 9;
-    }
-}
-
-@keyframes slideLeftThenRight {
-    0% {
-        tranform: translateX(0%);
-    }
-    50% {
-        transform: translateX(-60%);
-    }
-    100% {
-        transform: translateX(0%);
-        z-index: 10;
-    }
-}
 
 @keyframes scaleUp {
     from {
@@ -922,7 +906,9 @@ div.addMedFormContainer {
     btn.subButton {
       right: -40px;
     }
-
+    .navbar-fixed-bottom {
+      height: 13%;
+    }
 }
 
 @media only screen and (max-width: 1061px) {

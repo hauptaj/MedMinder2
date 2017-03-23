@@ -9,6 +9,16 @@ html, body {
 body {
     font-family: "Oxygen", sans-serif;
     color: #888;
+    background: #fff;
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#878583, #fff);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#878583, #fff);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#878583, #fff);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#878583, #fff);
+    /* Standard syntax */
 }
 
 
@@ -85,8 +95,12 @@ a {
 
 h2 {
     margin: 0 auto 0 auto;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Oxygen', Helvetica, Arial, sans-serif;
     text-align: center;
+    color: whitesmoke;
+    font-size: 24px;
+    padding: 15px 0 15px 0;
+    font-weight: bold;
 }
 
 .login {
@@ -149,7 +163,7 @@ video {
 
 #warn {
   background-color: white;
-  box-shadow: 10px 10px 15px #888888;
+  box-shadow: 9px 10px 22px -2px rgba(0, 0, 0, 0.51);
   border: 1px solid #888;
   border-radius: 15px;
   margin: 0 auto 0 auto;
@@ -268,9 +282,9 @@ input#logButton {
     margin-right: auto;
     background-color: #86acd4;
     color: white;
-    -webkit-box-shadow: -9px 10px 22px -2px rgba(0, 0, 0, 0.51);
-    -moz-box-shadow: -9px 10px 22px -2px rgba(0, 0, 0, 0.51);
-    box-shadow: -9px 10px 22px -2px rgba(0, 0, 0, 0.51);
+    -webkit-box-shadow: 9px 10px 22px -2px rgba(0, 0, 0, 0.51);
+    -moz-box-shadow: 9px 10px 22px -2px rgba(0, 0, 0, 0.51);
+    box-shadow: 9px 10px 22px -2px rgba(0, 0, 0, 0.51);
     font-size: 15px;
 }
 
@@ -281,9 +295,9 @@ input#logButton:hover {
 }
 
 input#logButton:active {
-    -webkit-box-shadow: -9px 10px 22px -26px rgba(0, 0, 0, 0.51);
-    -moz-box-shadow: -9px 10px 22px -26px rgba(0, 0, 0, 0.51);
-    box-shadow: -9px 10px 22px -26px rgba(0, 0, 0, 0.51);
+    -webkit-box-shadow: 9px 10px 22px -26px rgba(0, 0, 0, 0.51);
+    -moz-box-shadow: 9px 10px 22px -26px rgba(0, 0, 0, 0.51);
+    box-shadow: 9px 10px 22px -26px rgba(0, 0, 0, 0.51);
     transform: translateY(-3px);
 }
 
@@ -326,9 +340,9 @@ input#registerButton, input#addMedButton {
     background-color: #86acd4;
     color: white;
     width: 50%;
-    -webkit-box-shadow: -9px 10px 22px -2px rgba(0, 0, 0, 0.51);
-    -moz-box-shadow: -9px 10px 22px -2px rgba(0, 0, 0, 0.51);
-    box-shadow: -9px 10px 22px -2px rgba(0, 0, 0, 0.51);
+    -webkit-box-shadow: 9px 10px 22px -2px rgba(0, 0, 0, 0.51);
+    -moz-box-shadow: 9px 10px 22px -2px rgba(0, 0, 0, 0.51);
+    box-shadow: 9px 10px 22px -2px rgba(0, 0, 0, 0.51);
 }
 
 input#registerButton:hover, input#addMedButton:hover {
@@ -338,9 +352,9 @@ input#registerButton:hover, input#addMedButton:hover {
 }
 
 input#registerButton:active, input#addMedButton:active {
-    -webkit-box-shadow: -9px 10px 22px -26px rgba(0, 0, 0, 0.51);
-    -moz-box-shadow: -9px 10px 22px -26px rgba(0, 0, 0, 0.51);
-    box-shadow: -9px 10px 22px -26px rgba(0, 0, 0, 0.51);
+    -webkit-box-shadow: 9px 10px 22px -26px rgba(0, 0, 0, 0.51);
+    -moz-box-shadow: 9px 10px 22px -26px rgba(0, 0, 0, 0.51);
+    box-shadow: 9px 10px 22px -26px rgba(0, 0, 0, 0.51);
     transform: translateY(-3px);
 }
 
@@ -393,6 +407,7 @@ li.list-group-item {
     padding-bottom: 25px;
     display: block;
     width: 500px;
+    background-color: transparent;
 }
 
 button.li-delete {
@@ -402,7 +417,7 @@ button.li-delete {
     color: white;
     margin-left: -40px;
     margin-right: 10px;
-    box-shadow: 2px 2px 7px grey;
+    box-shadow: 9px 10px 22px -2px rgba(0, 0, 0, 0.51);
     float: left;
 }
 
@@ -467,9 +482,9 @@ button#addButton {
     width: 50%;
     border-radius: 50px;
     border: 2px solid white;
-    -webkit-box-shadow: -9px 10px 22px -2px rgba(0, 0, 0, 0.51);
-    -moz-box-shadow: -9px 10px 22px -2px rgba(0, 0, 0, 0.51);
-    box-shadow: -9px 10px 22px -2px rgba(0, 0, 0, 0.51);
+    -webkit-box-shadow: 9px 10px 22px -2px rgba(0, 0, 0, 0.51);
+    -moz-box-shadow: 9px 10px 22px -2px rgba(0, 0, 0, 0.51);
+    box-shadow: 9px 10px 22px -2px rgba(0, 0, 0, 0.51);
 }
 
 button#addButton:hover {
@@ -479,9 +494,9 @@ button#addButton:hover {
 }
 
 button#addButton:active {
-    -webkit-box-shadow: -9px 10px 22px -26px rgba(0, 0, 0, 0.51);
-    -moz-box-shadow: -9px 10px 22px -26px rgba(0, 0, 0, 0.51);
-    box-shadow: -9px 10px 22px -26px rgba(0, 0, 0, 0.51);
+    -webkit-box-shadow: 9px 10px 22px -26px rgba(0, 0, 0, 0.51);
+    -moz-box-shadow: 9px 10px 22px -26px rgba(0, 0, 0, 0.51);
+    box-shadow: 9px 10px 22px -26px rgba(0, 0, 0, 0.51);
     transform: translateY(-3px);
 }
 
@@ -519,9 +534,9 @@ button#addButton {
     width: 50%;
     border-radius: 50px;
     border: 2px solid white;
-    -webkit-box-shadow: -9px 10px 22px -2px rgba(0, 0, 0, 0.51);
-    -moz-box-shadow: -9px 10px 22px -2px rgba(0, 0, 0, 0.51);
-    box-shadow: -9px 10px 22px -2px rgba(0, 0, 0, 0.51);
+    -webkit-box-shadow: 9px 10px 22px -2px rgba(0, 0, 0, 0.51);
+    -moz-box-shadow: 9px 10px 22px -2px rgba(0, 0, 0, 0.51);
+    box-shadow: 9px 10px 22px -2px rgba(0, 0, 0, 0.51);
 }
 
 button#addButton:hover {
@@ -531,9 +546,9 @@ button#addButton:hover {
 }
 
 button#addButton:active {
-    -webkit-box-shadow: -9px 10px 22px -26px rgba(0, 0, 0, 0.51);
-    -moz-box-shadow: -9px 10px 22px -26px rgba(0, 0, 0, 0.51);
-    box-shadow: -9px 10px 22px -26px rgba(0, 0, 0, 0.51);
+    -webkit-box-shadow: 9px 10px 22px -26px rgba(0, 0, 0, 0.51);
+    -moz-box-shadow: 9px 10px 22px -26px rgba(0, 0, 0, 0.51);
+    box-shadow: 9px 10px 22px -26px rgba(0, 0, 0, 0.51);
     transform: translateY(-3px);
 }
 
@@ -621,7 +636,7 @@ btn.editFlip {
     right: 0;
     background-color: rgb(134, 172, 212);
     color: white;
-    box-shadow: rgba(0, 0, 0, 0.5) -9px 10px 22px -2px;
+    box-shadow: rgba(0, 0, 0, 0.5) 9px 10px 22px -2px;
     border-radius: 50px;
     border: 1px solid white;
     width: 45px;
@@ -639,7 +654,7 @@ btn.subButton {
   right: 0;
   background-color: rgb(134, 172, 212);
   color: white;
-  box-shadow: rgba(0, 0, 0, 0.5) -9px 10px 22px -2px;
+  box-shadow: rgba(0, 0, 0, 0.5) 9px 10px 22px -2px;
   border-radius: 50px;
   border: 1px solid white;
   width: 55px;
@@ -687,6 +702,10 @@ li.list-group-item.autoCompleteItem:hover {
     margin-right: auto;
     text-align: center;
     padding-bottom: 10px;
+    -webkit-box-shadow: 9px 10px 22px -2px rgba(0, 0, 0, 0.51);
+    -moz-box-shadow: 9px 10px 22px -2px rgba(0, 0, 0, 0.51);
+    box-shadow: 9px 10px 22px -2px rgba(0, 0, 0, 0.51);
+    background: transparent;
 }
 
 .addMedForm h2 {

@@ -14,13 +14,13 @@ body {
     color: #888;
     background: #fff;
     /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#878583, #fff);
+    background: -webkit-linear-gradient(#fff, #86acd4);
     /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#878583, #fff);
+    background: -o-linear-gradient(#fff, #86acd4);
     /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#878583, #fff);
+    background: -moz-linear-gradient(#fff, #86acd4);
     /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#878583, #fff);
+    background: linear-gradient(#fff, #86acd4);
     /* Standard syntax */
 }
 
@@ -104,12 +104,12 @@ a {
 
 h2 {
     margin: 0 auto 0 auto;
-    font-family: 'Oxygen', Helvetica, Arial, sans-serif;
+    font-family: 'Slabo 27px', Helvetica, Arial, sans-serif;
     text-align: center;
-    color: whitesmoke;
+    color: #545351;
     font-size: 24px;
     padding: 15px 0 15px 0;
-    font-weight: bold;
+    /*font-weight: bold;*/
 }
 
 .login {
@@ -405,9 +405,9 @@ input.form-control#medicine {
 }
 
 ul.list-group.header {
-    border-bottom: 2px solid lightgray;
+    border-bottom: 2px solid #545351;
     padding-bottom: 10px;
-    color: black;
+    color: #545351;
     display: table;
     line-height: 20px;
     margin-left: auto;

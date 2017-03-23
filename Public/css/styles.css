@@ -65,8 +65,14 @@ button.navbar-toggle:visited {
     color:white;
 }
 
-.navbar-nav{
-  padding-left: 42;
+.navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar-collapse {
+  text-align: center;
 }
 
 .navbar-nav>li>a:hover {

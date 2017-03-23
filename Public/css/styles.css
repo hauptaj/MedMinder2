@@ -740,9 +740,19 @@ div.medListContainer {
     margin-bottom: 10%;
 }
 
+div.medListContainer.medPage {
+  width: 60%;
+  margin-right: 5%;
+}
+
+div.medListContainer.lovedPage {
+  margin-right: 20%;
+}
+
 div.addMedFormContainer {
     float: left;
     width: 30%;
+    margin-left: 5%;
 }
 
 #addMedButton {

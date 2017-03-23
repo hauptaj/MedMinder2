@@ -59,7 +59,7 @@ app.controller("contentController", function($scope, medFactory, $timeout, $loca
     var output = [];
     if (string.length >= 2) {
       angular.forEach($scope.masterList, function(medString) {
-        if(medString.toLowerCase().indexOf(string.toLowerCase()) >= 0) {
+        if(medString.toLowerCase().indexOf(string.toLowerCase()) >= 0 && medString.length < 40) {
           output.push(medString);
         }
       });
